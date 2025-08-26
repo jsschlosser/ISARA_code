@@ -1,0 +1,155 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to ISARA’s documentation! &mdash; ISARA 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Usage" href="usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            ISARA
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ISARA</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to ISARA’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-isara-s-documentation">
+<h1>Welcome to ISARA’s documentation!<a class="headerlink" href="#welcome-to-isara-s-documentation" title="Link to this heading"></a></h1>
+<p>In Situ Aerosol Retrieval Algorithm (<strong>ISARA</strong>) is an open-source Python codebase that retrieves aerosol particle refractive index and hygroscopicity using user-inputted field campaign instrument data sets. This code relies on Modeled Optical Properties of enSembles of Aerosol Particles (MOPSMAP) package [1].</p>
+<p>[1] Gasteiger, J., &amp; Wiegner, M. (2018). MOPSMAP v1.0: a versatile tool for the modeling of aerosol optical properties. Geosci. Model Dev., 11(7), 2739-2762. doi:10.5194/gmd-11-2739-2018</p>
+<p>We hope that the community uses this software to streamline verification of field aerosol data sets and ultimately advance field campaign data quality assurance. More information on this software including installation and use can be found in this “User Guide”.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This website may have trouble loading properly on Mozilla Firefox. To ensure that the website runs smoothly, go to Settings -&gt; Privacy &amp; Security -&gt; uncheck “Query OCSP responder servers to confirm the current validity of certificates.” If users have any other issues, please email us using the information listed in “Contact”.</p>
+</div>
+</section>
+<section id="contents">
+<h1>Contents<a class="headerlink" href="#contents" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#acknowledgements">Acknowledgements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#copyright">Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#retrieve-complex-refractive-index">Retrieve Complex Refractive Index</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#ISARA.Retr_CRI"><code class="docutils literal notranslate"><span class="pre">Retr_CRI()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#retrieve-hygroscopicity">Retrieve Hygroscopicity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#ISARA.Retr_kappa"><code class="docutils literal notranslate"><span class="pre">Retr_kappa()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#forward-model-for-aerosol-optial-properties">Forward Model for Aerosol Optial Properties</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#mopsmap_wrapper.Model"><code class="docutils literal notranslate"><span class="pre">Model()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#import-icartt-files">Import ICARTT Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#importICARTT.imp"><code class="docutils literal notranslate"><span class="pre">imp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#import-diameters-of-aerosol-size-distribution">Import Diameters of Aerosol Size Distribution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#load_sizebins.Load"><code class="docutils literal notranslate"><span class="pre">Load()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#isara-data-retrievals">ISARA Data Retrievals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/ISARA.html">ISARA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/mopsmap_wrapper.html">mopsmap_wrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/importICARTT.html">importICARTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/load_sizebins.html">load_sizebins</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Joseph Schlosser, Sanja Dmitrovic, and Snorre Stamnes.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
