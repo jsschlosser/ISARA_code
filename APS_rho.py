@@ -6,7 +6,7 @@ f_model = pwrfn.f_model
 
 def Align(D_optic,N_optic,D_aero,N_aero):
     """
-    function y = a*x^c 
+    Aligns optical and aerodynamic size distributions to determine effective density.
     
     :param D_optic: optical size distribution geometric mean diameters of each bin
     :type D_optic: numpy array
@@ -16,8 +16,8 @@ def Align(D_optic,N_optic,D_aero,N_aero):
     :type D_aero: numpy array
     :param N_aero: aerodynamic size distribution number concentration of each bin in m-3
     :type D_aero: numpy array    
-    :return y: 
-    :rtype: double, float, int
+    :return: Dictionary (output) with the effective density and size distribution peak.
+    :rtype: numpy dictionary
     """   
     rho = None
     peak = None
@@ -94,5 +94,3 @@ def Align(D_optic,N_optic,D_aero,N_aero):
         output['rho'] = 1.00
         output['peak'] = np.nan        
     return output 
-    ##
-    return output

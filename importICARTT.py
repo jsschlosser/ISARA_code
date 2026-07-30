@@ -77,7 +77,7 @@ def imp(filename, num_time_columns):
         else:
             var_macienames[i1] = 'none'   
         if len(FVT)>3:
-            var_longnames[i1] = FVT[3] 
+            var_longnames[i1] = ",".join(FVT[3:])
         else:
             var_longnames[i1] = 'none'       
 
