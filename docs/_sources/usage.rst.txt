@@ -12,13 +12,42 @@ Copyright
 .. include:: ../LICENSE
 
 
-Internal Closure
+Environmental Setup
 -------------------
+
+1) Install dependencies listed in requirements.txt. This includes SizeDistMerge from https://github.com/bochens/SizeDistMerge.
+
+2) Create directory for code and data files.
+	.. code-block:: console
+
+		$ mkdir ISARA_Repo
+		$ cd ISARA_Repo
+
+3) Clone ISARA.
+
+4) Create directory for data files that includes directories for the LUT data, desired shape distributions, and each mission of interest.
+	.. code-block:: console
+
+		$ mkdir ISARA_data_files
+		$ cd ISARA_data_files
+		$ mkdir LUT_data
+		$ mkdir ShapeDistributions
+		$ mkdir ACTIVATE
+
+5) Create directories for HSRL, RSP, and in situ data. Create directories for size distributiution info and retrievals 
+	.. code-block:: console
+
+		$ mkdir AmbientDataFiles FalconLegID HSRL InternalConsistency MatchedData Retrievals SyntheticData ExternalClosure FitSDResults InsituData RSP SDBinInfo SyntheticRetrievals
+
+6) Place data in correct files and proceed with internal closure.
+
+Internal Closure
+----------------
 
 1) Perform ISARA with in-situ data:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_V2
+		$ cd ./ISARA_Repo/ISARA_code
 		$ python3 
 		>>> import ISARA_Data_Retrieval
 		>>> ISARA_Data_Retrieval.RunISARA()
@@ -51,7 +80,7 @@ Internal Closure
 2) Collate retrievals for internal consistency analysis:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_V2
+		$ cd ./ISARA_Repo/ISARA_code
 		$ rm ./ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy
 		$ python3 
 		>>> import CollateDataFiles
@@ -64,7 +93,7 @@ Internal Closure
 3) Perform internal consistency analysis:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_V2
+		$ cd ./ISARA_Repo/ISARA_code
 		$ python3 
 		>>> import internal_closure_study
 		>>> internal_closure_study.Run()
@@ -77,15 +106,15 @@ Internal Closure
 		>>> InletFlag_LARGE_ZIEMBA
 		>>> gpsALT_m_THORNHILL
 		>>> exit()
-		$ cd ./ISARA_Repo/ISARA_V2/ACTIVATE/Retrievals
+		$ cd ./ISARA_Repo/ISARA_code/ACTIVATE/Retrievals
 
 Synthetic Closure
----------------------
+-----------------
 
 1) Generate synthetic data:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_V2
+		$ cd ./ISARA_Repo/ISARA_code
 		$ python3 
 		>>> import Synthetic_Data_Creation
 		>>> Synthetic_Data_Creation.Run()
@@ -111,7 +140,7 @@ Synthetic Closure
 2) Run ISARA on synthetic data:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_V2
+		$ cd ./ISARA_Repo/ISARA_code
 		$ python3 
 		>>> import Synthetic_Data_Retrieval
 		>>> Synthetic_Data_Retrieval.Run()
@@ -120,17 +149,17 @@ Synthetic Closure
 3) Synthetic data closure study:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_V2
+		$ cd ./ISARA_Repo/ISARA_code
 		$ python3 Synthetic_Data_Closure_Study.py
 
 
 External Closure
--------------------
+----------------
 
 1) Generate ambient data files assuming coarse mode is spherical sea salt:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_V2
+		$ cd ./ISARA_Repo/ISARA_code
 		$ mkdir ./ACTIVATE/AmbientDataFiles/
 		$ mkdir ./ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 		$ python3 
@@ -162,7 +191,7 @@ External Closure
 2) Perform external consistency analysis assuming all particles are spheres
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_V2
+		$ cd ./ISARA_Repo/ISARA_code
 		$ mkdir ./ACTIVATE/ExternalClosure/
 		$ mkdir ./ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 		$ python3 
