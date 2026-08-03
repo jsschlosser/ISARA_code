@@ -1,10 +1,7 @@
 
 import StatsCode
-import collate_remote_sensor
-ColAndMerg = collate_remote_sensor.ColAndMerg
 import load_sizebins
 import collect_netcdf
-import pause
 import numpy as np
 import numpy.matlib
 import datetime

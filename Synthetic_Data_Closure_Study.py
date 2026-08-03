@@ -90,7 +90,7 @@ plt.rcParams.update({'mathtext.fontset': 'stix',
  'mathtext.it': 'Times New Roman:italic',
  'mathtext.bf': 'Times New Roman:bold'})
 
-output_filename_suffix = f"./ACTIVATE/SyntheticRetrievals/activate_Synthetic_retrievals"
+output_filename_suffix = f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/activate_Synthetic_retrievals"
 output_filename = f'{output_filename_suffix}.npy'
 print(output_filename)
 OP_Dictionary = np.load("./%s"%output_filename,allow_pickle='TRUE')
@@ -160,7 +160,7 @@ colnames = ','.join(e for e in cols)
 rows = ["mode0_N","mode0_GM","mode0_GSD","mode1_N","mode1_GM","mode1_GSD"]
 str_data = np.char.mod("%10.6f", stats_fitparams)
 str_data= np.column_stack((rows,str_data.T))
-output_filename = f"./ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_SD_Fit_stats.csv"
+output_filename = f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_SD_Fit_stats.csv"
 with open(output_filename, 'w') as f:
      np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)  
 
@@ -182,7 +182,7 @@ for i1 in range(len(SD)):
 
 
 i0 = 1  # index used to skip header row
-G = open('./ACTIVATE/InternalConsistency/activate-mrg-activate-large-smps_hu25_DataRetrievals_SD_stats.csv', 'r')  # open .csv
+G = open('../ISARA_data_files/ACTIVATE/InternalConsistency/activate-mrg-activate-large-smps_hu25_DataRetrievals_SD_stats.csv', 'r')  # open .csv
 g = G.read().splitlines()  # read .csv
 hdrs = g[0].split(',')  # define headers
 sdfm = np.empty((len(g) - 1, len(hdrs))) # create empty array to be filled iteratively
@@ -289,7 +289,7 @@ cbar.outline.set_linewidth(lw)
 #cbar.ax.get_yaxis().set_ticks([])
 #for j, lab in enumerate(['0','$1$','$10$','$20$','$40$','$50$','$60$','$70$','$80$','$90$','$>100$']):
 cbar.set_label('count',labelpad=-10)        
-plt.savefig(f"./ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_1to1_dry", dpi=300)
+plt.savefig(f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_1to1_dry", dpi=300)
 plt.close() # #
 
 bounds = bds2[0,:]
@@ -356,7 +356,7 @@ cbar.set_ticklabels(boundsLbs)
 cbar.outline.set_linewidth(1.5)
 cbar.ax.tick_params(length=8, width=lw, which="major")
 cbar.set_label('count',labelpad=-10)
-plt.savefig(f"./ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_1to1_SSA", dpi=300)
+plt.savefig(f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_1to1_SSA", dpi=300)
 
 dattype = ["%i","%0.1f"]
 xymin = np.array([0,1])   
@@ -425,7 +425,7 @@ cbar.set_ticklabels(boundsLbs)
 cbar.outline.set_linewidth(1.5)
 cbar.ax.tick_params(length=8, width=2, which="major")
 cbar.set_label('count',labelpad=-10)
-plt.savefig(f"./ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_1to1_amb", dpi=300)        
+plt.savefig(f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_1to1_amb", dpi=300)        
 plt.close() #
 
 bounds = bds2[0,:]
@@ -489,7 +489,7 @@ cbar.set_ticklabels(boundsLbs)
 cbar.outline.set_linewidth(1.5)
 cbar.ax.tick_params(length=8, width=lw, which="major")
 cbar.set_label('count',labelpad=-10)
-plt.savefig(f"./ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_1to1_KappaIRI", dpi=300)        
+plt.savefig(f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_1to1_KappaIRI", dpi=300)        
 plt.close() # #
 for i2 in [0,1,2,3]:
   x = x2[i2,:]
@@ -510,7 +510,7 @@ rows = np.hstack(('wavelength_nm','R','log10_p-value',prctile_lst_b,'mean_b','st
                         'MoranI_zrand','MoranI_prand','count','not_enough_measurements','total_attempts','successful_retrievals'))
 str_data = np.char.mod("%10.6f", stats_dict.T)
 str_data= np.column_stack((rows,str_data))
-output_filename = f"./ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_1to1_stats.csv"
+output_filename = f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_1to1_stats.csv"
 
 with open(output_filename, 'w') as f:
    np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)  #
@@ -580,14 +580,14 @@ ax2[1].add_artist(at)
 
 #display and save figure using the *.ict data filename 
 plt.subplots_adjust(left=0.21, bottom=0.10, right=0.95, top=0.95)
-plt.savefig(f"./ACTIVATE/SyntheticRetrievals/Synthetic_FIMS&LAS_dry", dpi=300)        
+plt.savefig(f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/Synthetic_FIMS&LAS_dry", dpi=300)        
 plt.close() # #
 cols = ["Dp","0","10","25","50","75","90","100","mean","stdev","count"]
 colnames = ','.join(e for e in cols)
 rows = ["%i"%(x[ix]) for ix in range(0,len(x))]
 str_data = np.char.mod("%10.6f", stats_sd.T)
 str_data= np.column_stack((rows,str_data))
-output_filename = f"./ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_FIMS&LAS_SD_stats.csv"
+output_filename = f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_FIMS&LAS_SD_stats.csv"
 with open(output_filename, 'w') as f:
    np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)  #
 
@@ -737,7 +737,7 @@ cbar.ax.tick_params(length=8, width=lw, which="major")
 cbar.set_label('count',labelpad=-10)
 #display and save figure using the *.ict data filename 
 plt.subplots_adjust(left=0.18, bottom=0.11, right=0.75, top=0.95)
-plt.savefig(f"./ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_heatmapplot_dry", dpi=300)        
+plt.savefig(f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_heatmapplot_dry", dpi=300)        
 plt.close() # 
 
 
@@ -769,13 +769,13 @@ for i2 in range(len(y2[:,0])):
  ax2[i2].add_artist(at)
 plt.subplots_adjust(bottom=0.1, right=0.75, top=0.9)  #
 plt.tight_layout()
-plt.savefig(f"./ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_histograms", dpi=300)        
+plt.savefig(f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_histograms", dpi=300)        
 plt.close() ##
 cols = ["param","0","50","68","95","100","mn","xstdev","confint-","confint+","npt"]
 colnames = ','.join(e for e in cols)  
 rows = Lst
 str_data = np.char.mod("%10.6f", stats_y2.T)
 str_data= np.column_stack((rows,str_data))
-output_filename = f"./ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_Kappa_CRI_stats.csv"
+output_filename = f"../ISARA_data_files/ACTIVATE/SyntheticRetrievals/Synthetic_DataRetrievals_Kappa_CRI_stats.csv"
 with open(output_filename, 'w') as f:
      np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)  

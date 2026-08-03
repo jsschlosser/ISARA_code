@@ -185,7 +185,7 @@ def Run():
 
 
     # import the .ict data into a dictonary
-    (output_dict, noisy_sd, dpg, noisy_sca, noisy_abs, noisy_wet_sca, dry_wvl, wet_wvl) = grab_synthetic_Data(f'./ACTIVATE/SyntheticData/activate-mrg-activate-large-smps_hu25_Synthetic_Data.npy')
+    (output_dict, noisy_sd, dpg, noisy_sca, noisy_abs, noisy_wet_sca, dry_wvl, wet_wvl) = grab_synthetic_Data(f'../ISARA_data_files/ACTIVATE/SyntheticData/activate-mrg-activate-large-smps_hu25_Synthetic_Data.npy')
     L1 = len(noisy_sd[0,:])
     # Loop through each of the rows here using multiprocessing. This will split the rows across multiple different cores. Each row will be its own index in `line_data` 
     # with a tuple full of information. So, for instance, line_data[0] will contain (CRI_dry, CalCoef_dry, meas_coef_dry, Kappa, CalCoef_wet, meas_coef_wet, results) 
@@ -212,7 +212,7 @@ def Run():
                 output_dict[key2][i1] = results_line[key2]
     print(output_dict[f"kappa-{dry_wvl["sca"][1]}_unitless"].size)       
     output_filename = 'activate_Synthetic_retrievals'
-    np.save(f'./ACTIVATE/SyntheticRetrievals/{output_filename}.npy', output_dict)  
+    np.save(f'../ISARA_data_files/ACTIVATE/SyntheticRetrievals/{output_filename}.npy', output_dict)  
 
     # Close the pool to any new jobs and remove it
     #pool.close()
