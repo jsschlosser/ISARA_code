@@ -6,6 +6,13 @@ adapted from https://pypi.org/project/py-smps/
 :Authors: Joseph Schlosser
 :Revised: 4 Aug 2026
 :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
+
+Requirements
+------------ 
+* ``numpy``
+* ``requests``
+* ``math``
+* ``scipy``
 """
 import numpy as np
 import requests

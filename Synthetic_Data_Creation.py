@@ -3,12 +3,12 @@ import Import_ICARTT
 import Load_Size_Dists
 import LUT
 initialize = LUT.initialize_spheres
-run_LUT = LUT.run_simple
+run_LUT = LUT.run
 import sizedistmerge as sdm
 import numpy as np
 import os
 import sys
-import SDFitFigs
+import SD_Fit_Figs
 
 def Run():
     """

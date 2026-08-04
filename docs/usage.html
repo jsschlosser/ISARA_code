@@ -137,7 +137,7 @@ limitations under the License.</p>
 <h2>Internal Closure<a class="headerlink" href="#internal-closure" title="Link to this heading"></a></h2>
 <ol class="arabic">
 <li><dl>
-<dt>Perform ISARA with in-situ data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>./ISARA_Repo/ISARA_code
+<dt>Perform ISARA with in-situ data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
 <span class="gp">$ </span>python3
 <span class="go">&gt;&gt;&gt; import ISARA_Data_Retrieval</span>
 <span class="go">&gt;&gt;&gt; ISARA_Data_Retrieval.RunISARA()</span>
@@ -172,8 +172,8 @@ limitations under the License.</p>
 </dl>
 </li>
 <li><dl>
-<dt>Collate retrievals for internal consistency analysis:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>./ISARA_Repo/ISARA_code
-<span class="gp">$ </span>rm<span class="w"> </span>./ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy
+<dt>Collate retrievals for internal consistency analysis:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
+<span class="gp">$ </span>rm<span class="w"> </span>../ISARA_data_diles/ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy
 <span class="gp">$ </span>python3
 <span class="go">&gt;&gt;&gt; import CollateDataFiles</span>
 <span class="go">&gt;&gt;&gt; CollateDataFiles.Run()</span>
@@ -187,7 +187,7 @@ limitations under the License.</p>
 </dl>
 </li>
 <li><dl>
-<dt>Perform internal consistency analysis:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>./ISARA_Repo/ISARA_code
+<dt>Perform internal consistency analysis:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
 <span class="gp">$ </span>python3
 <span class="go">&gt;&gt;&gt; import internal_closure_study</span>
 <span class="go">&gt;&gt;&gt; internal_closure_study.Run()</span>
@@ -200,7 +200,7 @@ limitations under the License.</p>
 <span class="go">&gt;&gt;&gt; InletFlag_LARGE_ZIEMBA</span>
 <span class="go">&gt;&gt;&gt; gpsALT_m_THORNHILL</span>
 <span class="go">&gt;&gt;&gt; exit()</span>
-<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>./ISARA_Repo/ISARA_code/ACTIVATE/Retrievals
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code/ACTIVATE/Retrievals
 </pre></div>
 </div>
 </dd>
@@ -212,7 +212,7 @@ limitations under the License.</p>
 <h2>Synthetic Closure<a class="headerlink" href="#synthetic-closure" title="Link to this heading"></a></h2>
 <ol class="arabic">
 <li><dl>
-<dt>Generate synthetic data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>./ISARA_Repo/ISARA_code
+<dt>Generate synthetic data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
 <span class="gp">$ </span>python3
 <span class="go">&gt;&gt;&gt; import Synthetic_Data_Creation</span>
 <span class="go">&gt;&gt;&gt; Synthetic_Data_Creation.Run()</span>
@@ -240,7 +240,7 @@ limitations under the License.</p>
 </dl>
 </li>
 <li><dl>
-<dt>Run ISARA on synthetic data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>./ISARA_Repo/ISARA_code
+<dt>Run ISARA on synthetic data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
 <span class="gp">$ </span>python3
 <span class="go">&gt;&gt;&gt; import Synthetic_Data_Retrieval</span>
 <span class="go">&gt;&gt;&gt; Synthetic_Data_Retrieval.Run()</span>
@@ -251,8 +251,11 @@ limitations under the License.</p>
 </dl>
 </li>
 <li><dl>
-<dt>Synthetic data closure study:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>./ISARA_Repo/ISARA_code
-<span class="gp">$ </span>python3<span class="w"> </span>Synthetic_Data_Closure_Study.py
+<dt>Synthetic data closure study:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
+<span class="gp">$ </span>python3
+<span class="go">&gt;&gt;&gt; import Synthetic_Data_Closure_Study</span>
+<span class="go">&gt;&gt;&gt; Synthetic_Data_Closure_Study.Run()</span>
+<span class="go">&gt;&gt;&gt; exit()</span>
 </pre></div>
 </div>
 </dd>
@@ -264,9 +267,9 @@ limitations under the License.</p>
 <h2>External Closure<a class="headerlink" href="#external-closure" title="Link to this heading"></a></h2>
 <ol class="arabic">
 <li><dl>
-<dt>Generate ambient data files assuming coarse mode is spherical sea salt:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>./ISARA_Repo/ISARA_code
-<span class="gp">$ </span>mkdir<span class="w"> </span>./ACTIVATE/AmbientDataFiles/
-<span class="gp">$ </span>mkdir<span class="w"> </span>./ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
+<dt>Generate ambient data files assuming coarse mode is spherical sea salt:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
+<span class="gp">$ </span>mkdir<span class="w"> </span>../ISARA_data_files/ACTIVATE/AmbientDataFiles/
+<span class="gp">$ </span>mkdir<span class="w"> </span>../ISARA_data_files/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 <span class="gp">$ </span>python3
 <span class="go">&gt;&gt;&gt; import GenAmbDataFiles</span>
 <span class="go">&gt;&gt;&gt; GenAmbDataFiles.Run()</span>
@@ -298,9 +301,9 @@ limitations under the License.</p>
 </dl>
 </li>
 <li><dl>
-<dt>Perform external consistency analysis assuming all particles are spheres</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>./ISARA_Repo/ISARA_code
-<span class="gp">$ </span>mkdir<span class="w"> </span>./ACTIVATE/ExternalClosure/
-<span class="gp">$ </span>mkdir<span class="w"> </span>./ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
+<dt>Perform external consistency analysis assuming all particles are spheres</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
+<span class="gp">$ </span>mkdir<span class="w"> </span>../ISARA_data_files/ACTIVATE/ExternalClosure/
+<span class="gp">$ </span>mkdir<span class="w"> </span>../ISARA_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 <span class="gp">$ </span>python3
 <span class="go">&gt;&gt;&gt; import Collocate_and_Plot_Amb_Data</span>
 <span class="go">&gt;&gt;&gt; Collocate_and_Plot_Amb_Data.Run()</span>

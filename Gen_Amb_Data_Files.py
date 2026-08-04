@@ -1,20 +1,20 @@
 import Calculate_Ambient_Properties
 calprps = Calculate_Ambient_Properties.Run
-import lut
-initialize_spheres = lut.initialize_spheres
-initialize_spheroids  = lut.initialize_spheroids 
+import LUT
+initialize_spheres = LUT.initialize_spheres
+initialize_spheroids  = LUT.initialize_spheroids 
+import Load_Size_Dists
+import nc_Write
+ncwrite = nc_Write.cf19
+import Stats_Code
 import sizedistmerge as sdm
-import load_sizebins
 import itertools
 import os
 import sys
-import StatsCode
 import datetime
 from datetime import datetime
 import h5py
 import numpy as np
-import nc_write
-ncwrite = nc_write.cf19
 
 def Run(): 
     """
@@ -23,6 +23,16 @@ def Run():
     :Authors: Joseph Schlosser
     :Revised: 4 Aug 2026
     :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``sizedistmerge``
+    * ``itertools``
+    * ``os``
+    * ``sys``
+    * ``datetime``
+    * ``h5py``
     """   
     sys.path.insert(0, os.path.abspath("../"))
 

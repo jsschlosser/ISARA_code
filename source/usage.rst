@@ -151,8 +151,10 @@ Synthetic Closure
 	.. code-block:: console
 
 		$ cd ../ISARA_code
-		$ python3 Synthetic_Data_Closure_Study.py
-
+		$ python3 
+		>>> import Synthetic_Data_Closure_Study
+		>>> Synthetic_Data_Closure_Study.Run()
+		>>> exit()
 
 External Closure
 ----------------

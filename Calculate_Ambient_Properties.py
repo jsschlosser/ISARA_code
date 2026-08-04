@@ -1,5 +1,5 @@
 import LUT
-run_LUT = LUT.run_simple
+run_LUT = LUT.run
 from scipy.interpolate import pchip_interpolate
 import numpy as np
 

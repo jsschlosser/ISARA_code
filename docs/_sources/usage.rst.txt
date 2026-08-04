@@ -48,7 +48,7 @@ Internal Closure
 1) Perform ISARA with in-situ data:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_code
+		$ cd ../ISARA_code
 		$ python3 
 		>>> import ISARA_Data_Retrieval
 		>>> ISARA_Data_Retrieval.RunISARA()
@@ -81,8 +81,8 @@ Internal Closure
 2) Collate retrievals for internal consistency analysis:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_code
-		$ rm ./ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy
+		$ cd ../ISARA_code
+		$ rm ../ISARA_data_diles/ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy
 		$ python3 
 		>>> import CollateDataFiles
 		>>> CollateDataFiles.Run()
@@ -94,7 +94,7 @@ Internal Closure
 3) Perform internal consistency analysis:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_code
+		$ cd ../ISARA_code
 		$ python3 
 		>>> import internal_closure_study
 		>>> internal_closure_study.Run()
@@ -107,7 +107,7 @@ Internal Closure
 		>>> InletFlag_LARGE_ZIEMBA
 		>>> gpsALT_m_THORNHILL
 		>>> exit()
-		$ cd ./ISARA_Repo/ISARA_code/ACTIVATE/Retrievals
+		$ cd ../ISARA_code/ACTIVATE/Retrievals
 
 Synthetic Closure
 -----------------
@@ -115,7 +115,7 @@ Synthetic Closure
 1) Generate synthetic data:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_code
+		$ cd ../ISARA_code
 		$ python3 
 		>>> import Synthetic_Data_Creation
 		>>> Synthetic_Data_Creation.Run()
@@ -141,7 +141,7 @@ Synthetic Closure
 2) Run ISARA on synthetic data:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_code
+		$ cd ../ISARA_code
 		$ python3 
 		>>> import Synthetic_Data_Retrieval
 		>>> Synthetic_Data_Retrieval.Run()
@@ -150,9 +150,11 @@ Synthetic Closure
 3) Synthetic data closure study:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_code
-		$ python3 Synthetic_Data_Closure_Study.py
-
+		$ cd ../ISARA_code
+		$ python3 
+		>>> import Synthetic_Data_Closure_Study
+		>>> Synthetic_Data_Closure_Study.Run()
+		>>> exit()
 
 External Closure
 ----------------
@@ -160,9 +162,9 @@ External Closure
 1) Generate ambient data files assuming coarse mode is spherical sea salt:
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_code
-		$ mkdir ./ACTIVATE/AmbientDataFiles/
-		$ mkdir ./ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
+		$ cd ../ISARA_code
+		$ mkdir ../ISARA_data_files/ACTIVATE/AmbientDataFiles/
+		$ mkdir ../ISARA_data_files/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 		$ python3 
 		>>> import GenAmbDataFiles
 		>>> GenAmbDataFiles.Run()
@@ -192,9 +194,9 @@ External Closure
 2) Perform external consistency analysis assuming all particles are spheres
 	.. code-block:: console
 
-		$ cd ./ISARA_Repo/ISARA_code
-		$ mkdir ./ACTIVATE/ExternalClosure/
-		$ mkdir ./ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
+		$ cd ../ISARA_code
+		$ mkdir ../ISARA_data_files/ACTIVATE/ExternalClosure/
+		$ mkdir ../ISARA_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 		$ python3 
 		>>> import Collocate_and_Plot_Amb_Data
 		>>> Collocate_and_Plot_Amb_Data.Run()

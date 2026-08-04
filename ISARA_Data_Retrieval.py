@@ -26,7 +26,6 @@ def RunISARA():
     * ``os``
     * ``sys``
     * ``struct``
-
     """ 
     sys.path.insert(0, os.path.abspath("../"))  
     def grab_data(data,key_name):

@@ -2,6 +2,21 @@ import numpy as np
 import struct
 from time import time
 import copy
+'''
+Functions for loading SIR SCA look-up table (LUT) and calculating aerosol properties given the loaded LUT.
+
+:Authors: Joseph Schlosser
+:Revised: 4 Aug 2026
+:Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
+
+Requirements
+------------ 
+* ``numpy``
+* ``struct``
+* ``time``
+* ``copy``
+'''    
+
 # =========
 # CONSTANTS
 # =========
@@ -25,17 +40,6 @@ LDR = 'ldr'
 def initialize_spheres(LUT_location):
     """
     Load in the look up table (LUT) variables for use within `run_LUT`. All variables are returned in the output_variables dictionary
-
-    :Authors: Joseph Schlosser
-    :Revised: 4 Aug 2026
-    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
-
-    Requirements
-    ------------ 
-    * ``numpy``
-    * ``struct``
-    * ``time``
-    * ``copy``
 
     :param LUT_location: Path to the LUT
     :type LUT_location: str                               
@@ -93,17 +97,6 @@ def initialize_spheres(LUT_location):
 def initialize_spheroids(LUT_location):
     """
     Load in the look up table (LUT) variables for use within `run_LUT`. All variables are returned in the output_variables dictionary
-
-    :Authors: Joseph Schlosser
-    :Revised: 4 Aug 2026
-    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
-
-    Requirements
-    ------------ 
-    * ``numpy``
-    * ``struct``
-    * ``time``
-    * ``copy``
 
     :param LUT_location: Path to the LUT
     :type LUT_location: str                               
@@ -175,17 +168,6 @@ def run(
     """
     Calulates the integrated aerosol micriphysical properties for an array of data points. `load_LUT` must be called first to load the necessary output variables dictionary. 
 
-    :Authors: Joseph Schlosser
-    :Revised: 4 Aug 2026
-    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
-
-    Requirements
-    ------------ 
-    * ``numpy``
-    * ``struct``
-    * ``time``
-    * ``copy``
-    
     :param wavelength: Wavelength to run the LUT at in nanometers.
     :type wavelength: float   
     :param output_type: Set output_type to "extended" for cross section, integrated mass, assymetry, and backscattering coefficient.

@@ -32,8 +32,8 @@ ISARA_Data_Retrieval
    :members:  
 
 Collate_Data_Files
-----------------
-.. automodule:: CollateDataFiles 
+------------------
+.. automodule:: Collate_Data_Files 
    :members:  
 
 APS_Rho
@@ -47,17 +47,17 @@ Load_Size_Dists
    :members:  
 
 SD_Fit_Figs
----------
+-----------
 .. automodule:: SD_Fit_Figs 
    :members:  
 
 Import_ICARTT
-------------
+-------------
 .. automodule:: Import_ICARTT 
    :members:  
 
 Power_Function
--------------
+--------------
 .. automodule:: Power_Function 
    :members:  
 
@@ -67,7 +67,7 @@ SD_Fit
    :members:  
 
 fit
-------
+---
 .. automodule:: fit 
    :members:  
 
@@ -96,9 +96,9 @@ Calculate_Ambient_Properties
 .. automodule:: Calculate_Ambient_Properties 
    :members:  
 
-Merge_In-Situ_Data
----------------
-.. automodule:: MergeInSituData 
+Merge_Insitu_Data
+------------------
+.. automodule:: Merge_Insitu_Data 
    :members:  
 
 Collect_netCDF

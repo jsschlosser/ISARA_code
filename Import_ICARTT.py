@@ -1,8 +1,6 @@
 import numpy as np
 import datetime
 
-
-
 def imp(filename, num_time_columns): 
     """
     procedure to open ICARTT file and format the data and headers into the output (output_dictionary) python dictionary.WARNINGS: 1) numpy must be installed to the python environment, 2) importICART.py and file with the corresponding filename must be present in a directory that is in your PATH  
@@ -23,7 +21,7 @@ def imp(filename, num_time_columns):
     
     Example
     -------
-    
+
     .. code-block:: console
 
         >>> output_dictionary = importICT.imp("activate-mrg1_hu25_20200214_R0.ict")

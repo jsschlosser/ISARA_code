@@ -18,22 +18,22 @@ from mpl_toolkits import mplot3d
 from mpl_toolkits.mplot3d import Axes3D
 from pylab import rcParams#   
 def run():
-    """
-    Performs consistency analyses on synthetically generated dataset generated with ACTIVATE data.   
-    
-    :Authors: Joseph Schlosser
-    :Revised: 4 Aug 2026
-    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
-
-    Requirements
-    ------------ 
-    * ``numpy``
-    * ``datetime``
-    * ``itertools``
-    * ``matplotlib``
-    * ``mpl_toolkits``
-    * ``pylab``
-    """ 
+  """
+  Performs consistency analyses on synthetically generated dataset generated with ACTIVATE data.   
+  
+  :Authors: Joseph Schlosser
+  :Revised: 4 Aug 2026
+  :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
+  
+  Requirements
+  ------------ 
+  * ``numpy``
+  * ``datetime``
+  * ``itertools``
+  * ``matplotlib``
+  * ``mpl_toolkits``
+  * ``pylab``
+  """ 
 
   def grabvalues(
       dictionaryname,

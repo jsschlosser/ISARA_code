@@ -1,33 +1,3 @@
-#########################################################################################################################
-# StatsCode.py                                   by:  Joseph Schlosser
-#                                                revised:  4 April 2022 
-#                                    language (revision):  python3 (3.8.2-0ubuntu2)
-#
-# description: procedure to calculate closure stats between two measurements of the same property
-#
-# These statistical calculations require two 1-D parameters with the same length and units, x and y, and do not need to
-# be filtered for missing values, which is done in the procedure.
-#
-# the output of this code is StatsTable, which is a array containing on column for each of the following closure 
-# statistics:
-# R = correlation coefficient 
-# p-value = probability that the two parameters are not correlated (i.e., probability that the null-hypothesis is true)
-# NMAD = Normalized Mean Absolute Deviation
-# MAD_[units] = Mean Absolute Deviation in user provided units
-# NRMSD = Normalized Root-Mean Squared Deviation
-# RMSD_[units] = Root-Mean Squared Deviation in user provided units
-# x_min_[units] = minimum valid value of x
-# x_max_[units] = maximum valid value of x
-# y_min_[units] = minimum valid value of y
-# y_max_[units] = maximum valid value of y
-# count = number of points where both x and y had valid values
-#
-#
-# WARNINGS:
-# 1) numpy and scipy.stats must be installed to the python environment
-# 
-#########################################################################################################################
-
 import numpy as np
 import scipy.stats as st 
 from scipy.stats import t

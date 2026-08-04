@@ -1,7 +1,6 @@
 import numpy as np
 
 def Load(filename):
-
     """
     Returns an dictionary of bin diameters from a specified .csv file
     

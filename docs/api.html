@@ -45,6 +45,7 @@
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#module-ISARA">ISARA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ISARA.Retr_CRI"><code class="docutils literal notranslate"><span class="pre">Retr_CRI()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ISARA.Retr_kappa"><code class="docutils literal notranslate"><span class="pre">Retr_kappa()</span></code></a></li>
 </ul>
@@ -55,27 +56,52 @@
 <li class="toctree-l3"><a class="reference internal" href="#LUT.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#synthetic-data-creation">Synthetic_Data_Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#synthetic-data-retrieval">Synthetic_Data_Retrieval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#synthetic-data-closure-study">Synthetic_Data_Closure_Study</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#isara-data-retrieval">ISARA_Data_Retrieval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#collate-data-files">Collate_Data_Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#aps-rho">APS_Rho</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Synthetic_Data_Creation">Synthetic_Data_Creation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Synthetic_Data_Creation.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Synthetic_Data_Retrieval">Synthetic_Data_Retrieval</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Synthetic_Data_Retrieval.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Synthetic_Data_Closure_Study">Synthetic_Data_Closure_Study</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Synthetic_Data_Closure_Study.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ISARA_Data_Retrieval">ISARA_Data_Retrieval</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ISARA_Data_Retrieval.RunISARA"><code class="docutils literal notranslate"><span class="pre">RunISARA()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Collate_Data_Files">Collate_Data_Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Collate_Data_Files.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-APS_Rho">APS_Rho</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#APS_Rho.Align"><code class="docutils literal notranslate"><span class="pre">Align()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#module-Load_Size_Dists">Load_Size_Dists</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Load_Size_Dists.Load"><code class="docutils literal notranslate"><span class="pre">Load()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#sd-fit-figs">SD_Fit_Figs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#import-icartt">Import_ICARTT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-SD_Fit_Figs">SD_Fit_Figs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#SD_Fit_Figs.plot_SD"><code class="docutils literal notranslate"><span class="pre">plot_SD()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Import_ICARTT">Import_ICARTT</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Import_ICARTT.imp"><code class="docutils literal notranslate"><span class="pre">imp()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#power-function">Power_Function</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-Power_Function">Power_Function</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Power_Function.f_model"><code class="docutils literal notranslate"><span class="pre">f_model()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#sd-fit">SD_Fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-SD_Fit">SD_Fit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#SD_Fit.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#module-fit">fit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fit.LogNormal"><code class="docutils literal notranslate"><span class="pre">LogNormal</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#fit.LogNormal.fit"><code class="docutils literal notranslate"><span class="pre">LogNormal.fit()</span></code></a></li>
 </ul>
@@ -100,6 +126,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#module-utils">utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id20">Requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#utils.Table"><code class="docutils literal notranslate"><span class="pre">Table</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#utils.Table.add_border"><code class="docutils literal notranslate"><span class="pre">Table.add_border()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.Table.add_header"><code class="docutils literal notranslate"><span class="pre">Table.add_header()</span></code></a></li>
@@ -110,19 +137,40 @@
 <li class="toctree-l3"><a class="reference internal" href="#utils.roundup"><code class="docutils literal notranslate"><span class="pre">roundup()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#internal-closure-study">Internal_Closure_Study</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gen-amb-data-files">Gen_Amb_Data_Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-nc_Write">nc_Write</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#calculate-ambient-properties">Calculate_Ambient_Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#merge-in-situ-data">Merge_In-Situ_Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Internal_Closure_Study">Internal_Closure_Study</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Internal_Closure_Study.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Gen_Amb_Data_Files">Gen_Amb_Data_Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Gen_Amb_Data_Files.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nc_Write">nc_Write</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nc_Write.cf19"><code class="docutils literal notranslate"><span class="pre">cf19()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Calculate_Ambient_Properties">Calculate_Ambient_Properties</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Calculate_Ambient_Properties.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Merge_Insitu_Data">Merge_Insitu_Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Merge_Insitu_Data.Merge"><code class="docutils literal notranslate"><span class="pre">Merge()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#module-Collect_netCDF">Collect_netCDF</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">Requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Collect_netCDF.grabHSRL2"><code class="docutils literal notranslate"><span class="pre">grabHSRL2()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Collect_netCDF.grabRSP"><code class="docutils literal notranslate"><span class="pre">grabRSP()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#external-closure-study">External_Closure_Study</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#external-consistency-procedure">External_Consistency_Procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-External_Closure_Study">External_Closure_Study</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#External_Closure_Study.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-External_Consistency_Procedure">External_Consistency_Procedure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#External_Consistency_Procedure.CaseStudy"><code class="docutils literal notranslate"><span class="pre">CaseStudy()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -155,6 +203,26 @@
 <h1>API<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
 <section id="module-ISARA">
 <span id="isara"></span><h2>ISARA<a class="headerlink" href="#module-ISARA" title="Link to this heading"></a></h2>
+<p>Functions for retrieving aerosol particle real and imaginary refractive index 
+and hygroscopicity from absorption and scattering coefficient measurements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sizedistmerge</span></code></p></li>
+</ul>
+</section>
 <dl class="py function">
 <dt class="sig sig-object py" id="ISARA.Retr_CRI">
 <span class="sig-prename descclassname"><span class="pre">ISARA.</span></span><span class="sig-name descname"><span class="pre">Retr_CRI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wvl_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val_wvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measurement_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CRI_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LUT_output_variables</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISARA.Retr_CRI" title="Link to this definition"></a></dt>
@@ -263,23 +331,211 @@
 </dd></dl>
 
 </section>
-<section id="synthetic-data-creation">
-<h2>Synthetic_Data_Creation<a class="headerlink" href="#synthetic-data-creation" title="Link to this heading"></a></h2>
+<section id="module-Synthetic_Data_Creation">
+<span id="synthetic-data-creation"></span><h2>Synthetic_Data_Creation<a class="headerlink" href="#module-Synthetic_Data_Creation" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Synthetic_Data_Creation.Run">
+<span class="sig-prename descclassname"><span class="pre">Synthetic_Data_Creation.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Synthetic_Data_Creation.Run" title="Link to this definition"></a></dt>
+<dd><p>Given a set of user inputs, creates a set of synthetic data for testing the sensitivity of ISARA CRI and kappa retrievals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id1">
+<h3>Requirements<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sys</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sizedistmerge</span></code></p></li>
+</ul>
 </section>
-<section id="synthetic-data-retrieval">
-<h2>Synthetic_Data_Retrieval<a class="headerlink" href="#synthetic-data-retrieval" title="Link to this heading"></a></h2>
+</dd></dl>
+
 </section>
-<section id="synthetic-data-closure-study">
-<h2>Synthetic_Data_Closure_Study<a class="headerlink" href="#synthetic-data-closure-study" title="Link to this heading"></a></h2>
+<section id="module-Synthetic_Data_Retrieval">
+<span id="synthetic-data-retrieval"></span><h2>Synthetic_Data_Retrieval<a class="headerlink" href="#module-Synthetic_Data_Retrieval" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Synthetic_Data_Retrieval.Run">
+<span class="sig-prename descclassname"><span class="pre">Synthetic_Data_Retrieval.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Synthetic_Data_Retrieval.Run" title="Link to this definition"></a></dt>
+<dd><p>Runs ISARA retrievals on a set of synthetically generated data for testing the sensitivity of ISARA CRI and kappa retrievals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id2">
+<h3>Requirements<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sys</span></code></p></li>
+</ul>
 </section>
-<section id="isara-data-retrieval">
-<h2>ISARA_Data_Retrieval<a class="headerlink" href="#isara-data-retrieval" title="Link to this heading"></a></h2>
+</dd></dl>
+
 </section>
-<section id="collate-data-files">
-<h2>Collate_Data_Files<a class="headerlink" href="#collate-data-files" title="Link to this heading"></a></h2>
+<section id="module-Synthetic_Data_Closure_Study">
+<span id="synthetic-data-closure-study"></span><h2>Synthetic_Data_Closure_Study<a class="headerlink" href="#module-Synthetic_Data_Closure_Study" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Synthetic_Data_Closure_Study.run">
+<span class="sig-prename descclassname"><span class="pre">Synthetic_Data_Closure_Study.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Synthetic_Data_Closure_Study.run" title="Link to this definition"></a></dt>
+<dd><p>Performs consistency analyses on synthetically generated dataset generated with ACTIVATE data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id3">
+<h3>Requirements<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itertools</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mpl_toolkits</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pylab</span></code></p></li>
+</ul>
 </section>
-<section id="aps-rho">
-<h2>APS_Rho<a class="headerlink" href="#aps-rho" title="Link to this heading"></a></h2>
+</dd></dl>
+
+</section>
+<section id="module-ISARA_Data_Retrieval">
+<span id="isara-data-retrieval"></span><h2>ISARA_Data_Retrieval<a class="headerlink" href="#module-ISARA_Data_Retrieval" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ISARA_Data_Retrieval.RunISARA">
+<span class="sig-prename descclassname"><span class="pre">ISARA_Data_Retrieval.</span></span><span class="sig-name descname"><span class="pre">RunISARA</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ISARA_Data_Retrieval.RunISARA" title="Link to this definition"></a></dt>
+<dd><p>After a series of user requested inputs,  retrieves complex refractive index and hygroscopicty from the measured aerosol size distributions and optical coefficients in each file (in .ict format) of the source directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id4">
+<h3>Requirements<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sys</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">struct</span></code></p></li>
+</ul>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-Collate_Data_Files">
+<span id="collate-data-files"></span><h2>Collate_Data_Files<a class="headerlink" href="#module-Collate_Data_Files" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Collate_Data_Files.Run">
+<span class="sig-prename descclassname"><span class="pre">Collate_Data_Files.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Collate_Data_Files.Run" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Takes a set of saved retrieval dictionaries and combines them given a set of user inputs.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id5">
+<h3>Requirements<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code></p></li>
+</ul>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-APS_Rho">
+<span id="aps-rho"></span><h2>APS_Rho<a class="headerlink" href="#module-APS_Rho" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="APS_Rho.Align">
+<span class="sig-prename descclassname"><span class="pre">APS_Rho.</span></span><span class="sig-name descname"><span class="pre">Align</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">D_optic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_optic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D_aero</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_aero</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#APS_Rho.Align" title="Link to this definition"></a></dt>
+<dd><p>Aligns optical and aerodynamic size distributions to determine effective density.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id6">
+<h3>Requirements<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scipy</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">param D_optic<span class="colon">:</span></dt>
+<dd class="field-odd"><p>optical size distribution geometric mean diameters of each bin</p>
+</dd>
+<dt class="field-even">type D_optic<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy array</p>
+</dd>
+<dt class="field-odd">param N_optic<span class="colon">:</span></dt>
+<dd class="field-odd"><p>optical size distribution number concentration of each bin in m-3</p>
+</dd>
+<dt class="field-even">type N_optic<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy array</p>
+</dd>
+<dt class="field-odd">param D_aero<span class="colon">:</span></dt>
+<dd class="field-odd"><p>aerodynamic size distribution geometric mean diameters of each bin</p>
+</dd>
+<dt class="field-even">type D_aero<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy array</p>
+</dd>
+<dt class="field-odd">param N_aero<span class="colon">:</span></dt>
+<dd class="field-odd"><p>aerodynamic size distribution number concentration of each bin in m-3</p>
+</dd>
+<dt class="field-even">type D_aero<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy array</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary (output) with the effective density and size distribution peak.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy dictionary</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
 </section>
 <section id="module-Load_Size_Dists">
 <span id="load-size-dists"></span><h2>Load_Size_Dists<a class="headerlink" href="#module-Load_Size_Dists" title="Link to this heading"></a></h2>
@@ -288,79 +544,277 @@
 <span class="sig-prename descclassname"><span class="pre">Load_Size_Dists.</span></span><span class="sig-name descname"><span class="pre">Load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Load_Size_Dists.Load" title="Link to this definition"></a></dt>
 <dd><p>Returns an dictionary of bin diameters from a specified .csv file</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – String containing the name of the desired .csv file containing the size distribution bin diameters.</p>
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
 </dd>
-<dt class="field-even">Return dp<span class="colon">:</span></dt>
-<dd class="field-even"><p>dictionary of bin diameters in micrometer.</p>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>numpy dictionary</p>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
+<section id="id7">
+<h3>Requirements<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">param filename<span class="colon">:</span></dt>
+<dd class="field-odd"><p>String containing the name of the desired .csv file containing the size distribution bin diameters.</p>
+</dd>
+<dt class="field-even">type filename<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return dp<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dictionary of bin diameters in micrometer.</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy dictionary</p>
+</dd>
+</dl>
+</section>
 </dd></dl>
 
 </section>
-<section id="sd-fit-figs">
-<h2>SD_Fit_Figs<a class="headerlink" href="#sd-fit-figs" title="Link to this heading"></a></h2>
+<section id="module-SD_Fit_Figs">
+<span id="sd-fit-figs"></span><h2>SD_Fit_Figs<a class="headerlink" href="#module-SD_Fit_Figs" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="SD_Fit_Figs.plot_SD">
+<span class="sig-prename descclassname"><span class="pre">SD_Fit_Figs.</span></span><span class="sig-name descname"><span class="pre">plot_SD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dndlogdp1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dndlogdp2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename_suffix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SD_Fit_Figs.plot_SD" title="Link to this definition"></a></dt>
+<dd><p>Plots real and fitted size distributions against particle diameter, displays r and p, and saves the file at a given file location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id8">
+<h3>Requirements<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itertools</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mpl_toolkits</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pylab</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">param dp<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">type dp<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">param dndlogdp1<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">type dndlogdp1<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">param dndlogdp2<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">type dndlogdp2<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">param filename_suffix<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">type filename_suffix<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">param r<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">type r<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">param p<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">type p<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">param file_location<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">type file_location<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
 </section>
-<section id="import-icartt">
-<span id="module-SD_Fit_Figs"></span><h2>Import_ICARTT<a class="headerlink" href="#import-icartt" title="Link to this heading"></a></h2>
-<dl class="py function" id="module-Import_ICARTT">
+</dd></dl>
+
+</section>
+<section id="module-Import_ICARTT">
+<span id="import-icartt"></span><h2>Import_ICARTT<a class="headerlink" href="#module-Import_ICARTT" title="Link to this heading"></a></h2>
+<dl class="py function">
 <dt class="sig sig-object py" id="Import_ICARTT.imp">
 <span class="sig-prename descclassname"><span class="pre">Import_ICARTT.</span></span><span class="sig-name descname"><span class="pre">imp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_time_columns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Import_ICARTT.imp" title="Link to this definition"></a></dt>
 <dd><p>procedure to open ICARTT file and format the data and headers into the output (output_dictionary) python dictionary.WARNINGS: 1) numpy must be installed to the python environment, 2) importICART.py and file with the corresponding filename must be present in a directory that is in your PATH</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – String  containing the name of the desired ICARTT v2.0 (.ict) file.</p>
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the output of this code is output_dictionary, which is a python3 dictionary containing column-arrays for each of the parameters in the .ict file</p>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>numpy dictionary</p>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">output_dictionary</span> <span class="o">=</span> <span class="n">importICT</span><span class="o">.</span><span class="n">imp</span><span class="p">(</span><span class="s2">&quot;activate-mrg1_hu25_20200214_R0.ict&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">output_dictionary</span><span class="p">)</span>
+<section id="id9">
+<h3>Requirements<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">param filename<span class="colon">:</span></dt>
+<dd class="field-odd"><p>String  containing the name of the desired ICARTT v2.0 (.ict) file.</p>
+</dd>
+<dt class="field-even">type filename<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the output of this code is output_dictionary, which is a python3 dictionary containing column-arrays for each of the parameters in the .ict file</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy dictionary</p>
+</dd>
+</dl>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt; output_dictionary = importICT.imp(&quot;activate-mrg1_hu25_20200214_R0.ict&quot;)</span>
+<span class="go">&gt;&gt;&gt; print(output_dictionary)</span>
 <span class="go">output_dictionary =</span>
 <span class="go">    {&#39;Time_Start_seconds&#39;: array([61301., 61302., 61303., ..., 72258., 72259., 72260.]), </span>
 <span class="go">    &#39;Time_Stop_seconds&#39;: array([61302., 61303., 61304., ..., 72259., 72260., 72261.]), </span>
 <span class="go">    &#39;Latitude_THORNHILL_ deg&#39;: array([37.085528, 37.085798, 37.086065, ..., 37.126424, 37.126694, ...            </span>
 </pre></div>
 </div>
+</section>
 </dd></dl>
 
 </section>
-<section id="power-function">
-<h2>Power_Function<a class="headerlink" href="#power-function" title="Link to this heading"></a></h2>
-<dl class="py function" id="module-Power_Function">
+<section id="module-Power_Function">
+<span id="power-function"></span><h2>Power_Function<a class="headerlink" href="#module-Power_Function" title="Link to this heading"></a></h2>
+<dl class="py function">
 <dt class="sig sig-object py" id="Power_Function.f_model">
 <span class="sig-prename descclassname"><span class="pre">Power_Function.</span></span><span class="sig-name descname"><span class="pre">f_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Power_Function.f_model" title="Link to this definition"></a></dt>
-<dd><p>function y = a*x^c</p>
+<dd><blockquote>
+<div><p>function y = a*x^c</p>
+</div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>double</em><em>, </em><em>float</em><em>, </em><em>int</em>) – base of power function</p></li>
-<li><p><strong>a</strong> (<em>double</em><em>, </em><em>float</em><em>, </em><em>int</em>) – scale of power function</p></li>
-<li><p><strong>c</strong> (<em>double</em><em>, </em><em>float</em><em>, </em><em>int</em>) – exponent of power function</p></li>
-</ul>
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
 </dd>
-<dt class="field-even">Return y<span class="colon">:</span></dt>
-<dd class="field-even"><p></p></dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>double, float, int</p>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
+<section id="id10">
+<h3>Requirements<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param x<span class="colon">:</span></dt>
+<dd class="field-odd"><p>base of power function</p>
+</dd>
+<dt class="field-even">type x<span class="colon">:</span></dt>
+<dd class="field-even"><p>double, float, int</p>
+</dd>
+<dt class="field-odd">param a<span class="colon">:</span></dt>
+<dd class="field-odd"><p>scale of power function</p>
+</dd>
+<dt class="field-even">type a<span class="colon">:</span></dt>
+<dd class="field-even"><p>double, float, int</p>
+</dd>
+<dt class="field-odd">param c<span class="colon">:</span></dt>
+<dd class="field-odd"><p>exponent of power function</p>
+</dd>
+<dt class="field-even">type c<span class="colon">:</span></dt>
+<dd class="field-even"><p>double, float, int</p>
+</dd>
+<dt class="field-odd">return y<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>double, float, int</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ul>
+</section>
 </dd></dl>
 
 </section>
-<section id="sd-fit">
-<h2>SD_Fit<a class="headerlink" href="#sd-fit" title="Link to this heading"></a></h2>
+<section id="module-SD_Fit">
+<span id="sd-fit"></span><h2>SD_Fit<a class="headerlink" href="#module-SD_Fit" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="SD_Fit.Run">
+<span class="sig-prename descclassname"><span class="pre">SD_Fit.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_modes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dndlogdp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abs_coef</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sca_coef</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SD_Fit.Run" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Returns N (cm-3), GM (nm), and GSD from a measured number concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) fit.py must be present in a directory that is in your PATH</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id11">
+<h3>Requirements<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scipy</span></code></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param p0<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3n guesses where n is the number of modes you are fitting. They should be in the order [Ni, GMi, GSDi] for i=1 to i=number of modes</p>
+</dd>
+<dt class="field-even">type p0<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary (Results) with the retrieved complex refractive index, calculated scattering and absorption coefficients in native measurements, and calculated single scattering albedo and extinction coefficients in measured and validation wavelengths</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy dictionary</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</dd></dl>
+
 </section>
 <section id="module-fit">
 <span id="fit"></span><h2>fit<a class="headerlink" href="#module-fit" title="Link to this heading"></a></h2>
 <p>Functions to support fitting multi-modal distributions. Adapted from <a class="reference external" href="https://pypi.org/project/py-smps/">https://pypi.org/project/py-smps/</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id12">
+<h3>Requirements<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scipy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statsmodels</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">utils</span></code></p></li>
+</ul>
+</section>
 <dl class="py class">
 <dt class="sig sig-object py" id="fit.LogNormal">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">LogNormal</span></span><a class="headerlink" href="#fit.LogNormal" title="Link to this definition"></a></dt>
@@ -420,8 +874,8 @@ smps.fit.LogNormalFitResults</p>
 <dd><p>Fit parameters for the LogNormal distribution.</p>
 <p>This class is returned by the LogNormal model and is 
 not typically created from scratch.</p>
-<section id="id1">
-<h3>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<section id="id13">
+<h3>Parameters<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>params<span class="classifier">array-like</span></dt><dd><p>The parameters of the fitted model as an array.</p>
 </dd>
@@ -433,15 +887,15 @@ not typically created from scratch.</p>
 </dd>
 </dl>
 </section>
-<section id="id2">
-<h3>See Also<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<section id="id14">
+<h3>See Also<a class="headerlink" href="#id14" title="Link to this heading"></a></h3>
 <p>smps.fit.LogNormal</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="fit.LogNormalFitResults.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'number'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.LogNormalFitResults.predict" title="Link to this definition"></a></dt>
 <dd><p>Predict new values using the fit model.</p>
-<section id="id3">
-<h4>Parameters<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<section id="id15">
+<h4>Parameters<a class="headerlink" href="#id15" title="Link to this heading"></a></h4>
 <dl class="simple">
 <dt>X<span class="classifier">array-like</span></dt><dd><p>An array of particle diameters at which to predict the 
 number concentration based on the fit model.</p>
@@ -451,12 +905,12 @@ number concentration based on the fit model.</p>
 </dd>
 </dl>
 </section>
-<section id="id4">
-<h4>Returns<a class="headerlink" href="#id4" title="Link to this heading"></a></h4>
+<section id="id16">
+<h4>Returns<a class="headerlink" href="#id16" title="Link to this heading"></a></h4>
 <p>An array of number concentrations.</p>
 </section>
-<section id="id5">
-<h4>Examples<a class="headerlink" href="#id5" title="Link to this heading"></a></h4>
+<section id="id17">
+<h4>Examples<a class="headerlink" href="#id17" title="Link to this heading"></a></h4>
 <p>Predict the number concentration at 1 and 2.5 µm:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">smps.fit</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogNormal</span>
 <span class="gp">&gt;&gt;&gt;</span>
@@ -474,12 +928,12 @@ number concentration based on the fit model.</p>
 <dt class="sig sig-object py" id="fit.LogNormalFitResults.summary">
 <span class="sig-name descname"><span class="pre">summary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fit.LogNormalFitResults.summary" title="Link to this definition"></a></dt>
 <dd><p>Summary statistics for the fit LogNormal model.</p>
-<section id="id6">
-<h4>Returns<a class="headerlink" href="#id6" title="Link to this heading"></a></h4>
+<section id="id18">
+<h4>Returns<a class="headerlink" href="#id18" title="Link to this heading"></a></h4>
 <p>statsmodels.iolib.table.SimpleTable</p>
 </section>
-<section id="id7">
-<h4>Examples<a class="headerlink" href="#id7" title="Link to this heading"></a></h4>
+<section id="id19">
+<h4>Examples<a class="headerlink" href="#id19" title="Link to this heading"></a></h4>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">smps.fit</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogNormal</span>
 <span class="gp">&gt;&gt;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">LogNormal</span><span class="p">()</span>
@@ -877,6 +1331,26 @@ list of particle sizes, <cite>dp</cite>.</p>
 <section id="module-utils">
 <span id="utils"></span><h2>utils<a class="headerlink" href="#module-utils" title="Link to this heading"></a></h2>
 <p>adapted from <a class="reference external" href="https://pypi.org/project/py-smps/">https://pypi.org/project/py-smps/</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id20">
+<h3>Requirements<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requests</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scipy</span></code></p></li>
+</ul>
+</section>
 <dl class="py class">
 <dt class="sig sig-object py" id="utils.Table">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.Table" title="Link to this definition"></a></dt>
@@ -926,8 +1400,8 @@ sections: blank, “N (cm-3)”, “GM (nm)”, and “GSD”.</p>
 <dd><p>Create a 3xn array of particle size bins.</p>
 <p>Compute the lower boundary, upper boundary, and midpoint 
 diameter for each particle size bin.</p>
-<section id="id8">
-<h3>Parameters<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<section id="id21">
+<h3>Parameters<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>boundaries<span class="classifier">array-like</span></dt><dd><p>A list or array containing all unique lower and upper bounds.</p>
 </dd>
@@ -948,28 +1422,29 @@ to the arithmetic or geometric mean.</p>
 </dd>
 </dl>
 </section>
-<section id="id9">
-<h3>Returns<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<section id="id22">
+<h3>Returns<a class="headerlink" href="#id22" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>bins<span class="classifier">array-like</span></dt><dd><p>A 3xn array of particle size bins with a (lower boundary, midpoint, upper boundary)
 for each particle size bin.</p>
 </dd>
 </dl>
 </section>
-<section id="id10">
-<h3>Examples<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<section id="id23">
+<h3>Examples<a class="headerlink" href="#id23" title="Link to this heading"></a></h3>
 <p>Create a set of bins from a list of boundaries:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bins</span> <span class="o">=</span> <span class="n">make_bins</span><span class="p">(</span><span class="n">boundaries</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">]))</span>
 </pre></div>
 </div>
 <p>Create a set of bins from lists of lower and upper boundaries:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bins</span> <span class="o">=</span> <span class="n">make_bins</span><span class="p">(</span>
-<span class="gp">&gt;&gt;&gt; </span>   <span class="n">boundaries_left</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">]),</span>
-<span class="gp">&gt;&gt;&gt; </span>   <span class="n">boundaries_right</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="p">)</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt; bins = make_bins(</span>
+<span class="go">&gt;&gt;&gt;    boundaries_left=np.array([0.35, 1.0, 2.5]),</span>
+<span class="go">&gt;&gt;&gt;    boundaries_right=np.array([1.0, 2.5, 10.0])</span>
+<span class="go">&gt;&gt;&gt; )</span>
 </pre></div>
 </div>
-<p>Create a set of bins from the lowest boundary, highest boundary, and midpoints:</p>
+<p>Create a set of bins from the lowest boundary, highest boundary, and midpoints:
+.. code-block:: console</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bins</span> <span class="o">=</span> <span class="n">make_bins</span><span class="p">(</span><span class="n">lb</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span> <span class="n">ub</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">midpoints</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]))</span>
 </pre></div>
 </div>
@@ -994,20 +1469,288 @@ for each particle size bin.</p>
 </dd></dl>
 
 </section>
-<section id="internal-closure-study">
-<h2>Internal_Closure_Study<a class="headerlink" href="#internal-closure-study" title="Link to this heading"></a></h2>
+<section id="module-Internal_Closure_Study">
+<span id="internal-closure-study"></span><h2>Internal_Closure_Study<a class="headerlink" href="#module-Internal_Closure_Study" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Internal_Closure_Study.Run">
+<span class="sig-prename descclassname"><span class="pre">Internal_Closure_Study.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Internal_Closure_Study.Run" title="Link to this definition"></a></dt>
+<dd><p>Performs internal consistency analyses on retrieved dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id24">
+<h3>Requirements<a class="headerlink" href="#id24" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itertools</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mpl_toolkits</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pylab</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seaborn</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code></p></li>
+</ul>
 </section>
-<section id="gen-amb-data-files">
-<h2>Gen_Amb_Data_Files<a class="headerlink" href="#gen-amb-data-files" title="Link to this heading"></a></h2>
+</dd></dl>
+
+</section>
+<section id="module-Gen_Amb_Data_Files">
+<span id="gen-amb-data-files"></span><h2>Gen_Amb_Data_Files<a class="headerlink" href="#module-Gen_Amb_Data_Files" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Gen_Amb_Data_Files.Run">
+<span class="sig-prename descclassname"><span class="pre">Gen_Amb_Data_Files.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Gen_Amb_Data_Files.Run" title="Link to this definition"></a></dt>
+<dd><p>Saves a dictionary file of each of the merged data files in source directory that includes ISARA retrievals of CRI and kappa. Dictionary includes metadata for netCDF compliancy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id25">
+<h3>Requirements<a class="headerlink" href="#id25" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sizedistmerge</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itertools</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sys</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h5py</span></code></p></li>
+</ul>
+</section>
+</dd></dl>
+
 </section>
 <section id="module-nc_Write">
 <span id="nc-write"></span><h2>nc_Write<a class="headerlink" href="#module-nc_Write" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="nc_Write.cf19">
+<span class="sig-prename descclassname"><span class="pre">nc_Write.</span></span><span class="sig-name descname"><span class="pre">cf19</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GlobParams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nc_Write.cf19" title="Link to this definition"></a></dt>
+<dd><p>Writes a netCDF data file that is CF1.9 compliant.</p>
+<p>This function creates a new netCDF file, sets up its dimensions, 
+applies global configuration metadata, and populates the file with 
+compressed variables and their associated variable-level attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id26">
+<h3>Requirements<a class="headerlink" href="#id26" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netCDF4</span></code></p></li>
+</ul>
+<dl class="field-list">
+<dt class="field-odd">param data_path<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The filesystem path where the netCDF file should be created.</p>
+</dd>
+<dt class="field-even">type data_path<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param data<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A nested dictionary containing data arrays, variable grouping maps, 
+dimension associations, and variable-level attributes.</p>
+<p>Must contain the following keys:</p>
+<ul class="simple">
+<li><p><strong>SourceFlag</strong>: (dict) Maps variable keys to their group directory string.</p></li>
+<li><p><strong>Dims</strong>: (dict) Maps variable keys to a tuple/list of dimension names.</p></li>
+<li><p><strong>VariableAttributes</strong>: (dict) Nested dictionary mapping variable keys to another dictionary of attribute name-value pairs.</p></li>
+<li><p><strong>[variable_keys]</strong>: (numpy.ndarray) The actual data arrays to be written.</p></li>
+</ul>
+</dd>
+<dt class="field-even">type data<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+<dt class="field-odd">param Dims<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary mapping dimension names to their integer lengths.
+Example: <code class="docutils literal notranslate"><span class="pre">{&quot;time&quot;:</span> <span class="pre">24,</span> <span class="pre">&quot;lat&quot;:</span> <span class="pre">180,</span> <span class="pre">&quot;lon&quot;:</span> <span class="pre">360}</span></code></p>
+</dd>
+<dt class="field-even">type Dims<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+<dt class="field-odd">param GlobParams<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Global metadata attributes to apply directly to the netCDF dataset root.
+Must include a <code class="docutils literal notranslate"><span class="pre">'format'</span></code> key specifying the netCDF variant 
+(e.g., <code class="docutils literal notranslate"><span class="pre">'NETCDF4'</span></code>, <code class="docutils literal notranslate"><span class="pre">'NETCDF4_CLASSIC'</span></code>).</p>
+</dd>
+<dt class="field-even">type GlobParams<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>NoneType</p>
+</dd>
+<dt class="field-odd">raises KeyError<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If <code class="docutils literal notranslate"><span class="pre">GlobParams['format']</span></code> is missing, or if required keys 
+are missing from the <cite>data</cite> sub-dictionaries.</p>
+</dd>
+<dt class="field-even">raises IOError<span class="colon">:</span></dt>
+<dd class="field-even"><p>If the file data_path cannot be opened for writing.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Floating-point data (<code class="docutils literal notranslate"><span class="pre">float64</span></code>) is downcasted to single-precision (<code class="docutils literal notranslate"><span class="pre">f4</span></code>).</p></li>
+<li><p>64-bit integer data (<code class="docutils literal notranslate"><span class="pre">int64</span></code>) is downcasted to standard integer (<code class="docutils literal notranslate"><span class="pre">i4</span></code>).</p></li>
+<li><p>Deflate compression (<code class="docutils literal notranslate"><span class="pre">zlib=True</span></code>) is enabled by default at level 4.</p></li>
+<li><p>Variable attributes defined as <code class="docutils literal notranslate"><span class="pre">'unitless'</span></code> are automatically replaced with <code class="docutils literal notranslate"><span class="pre">'1'</span></code> to adhere to CF conventions.</p></li>
+</ul>
+</div>
 </section>
-<section id="calculate-ambient-properties">
-<h2>Calculate_Ambient_Properties<a class="headerlink" href="#calculate-ambient-properties" title="Link to this heading"></a></h2>
+</dd></dl>
+
 </section>
-<section id="merge-in-situ-data">
-<h2>Merge_In-Situ_Data<a class="headerlink" href="#merge-in-situ-data" title="Link to this heading"></a></h2>
+<section id="module-Calculate_Ambient_Properties">
+<span id="calculate-ambient-properties"></span><h2>Calculate_Ambient_Properties<a class="headerlink" href="#module-Calculate_Ambient_Properties" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Calculate_Ambient_Properties.Run">
+<span class="sig-prename descclassname"><span class="pre">Calculate_Ambient_Properties.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dNdlnRpg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dAdlnRpg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dVdlnRpg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LUT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape_dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kys_sizes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Calculate_Ambient_Properties.Run" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Returns aerosol particle real and imaginary refractive index from three scattering coefficeint measurements, three absorption coefficient measurements, a measured volume concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) mopsmap_wrapper.py must be present in a directory that is in your PATH</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id27">
+<h3>Requirements<a class="headerlink" href="#id27" title="Link to this heading"></a></h3>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">scipy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">param wvl_dict<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary of wavelengths associated with each of the scattering and absorption measurements</p>
+</dd>
+<dt class="field-even">type wvl_dict<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy dictionary</p>
+</dd>
+<dt class="field-odd">param val_wvl<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary of wavelengths associated with validation measurements</p>
+</dd>
+<dt class="field-even">type val_wvl<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy dictionary</p>
+</dd>
+<dt class="field-odd">param measurement_data<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary containing measured dry scattering and absorption coefficients in Mm^-1, size resolved volume concentrations in um^3 cm^-3, and geometric mean particle diameters of each size bin in mum <strong>*NOTE: The optical coefficients should be one key per channel (e.g., measurement_data[‘dry_meas_sca_coef_450_Mm-1’], measurement_data[‘dry_meas_abs_coef_470_Mm-1’], etc.).*</strong></p>
+</dd>
+<dt class="field-even">type measurement_data<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy dictionary</p>
+</dd>
+<dt class="field-odd">param CRI_p<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2-D array containing the prescribed RRI and IRI range to be searched</p>
+</dd>
+<dt class="field-even">type CRI_p<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy array[float]</p>
+</dd>
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dictionary (Results) with the retrieved complex refractive index, calculated scattering and absorption coefficients in native measurements, and calculated single scattering albedo and extinction coefficients in measured and validation wavelengths</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy dictionary</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ul>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-Merge_Insitu_Data">
+<span id="merge-insitu-data"></span><h2>Merge_Insitu_Data<a class="headerlink" href="#module-Merge_Insitu_Data" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Merge_Insitu_Data.Merge">
+<span class="sig-prename descclassname"><span class="pre">Merge_Insitu_Data.</span></span><span class="sig-name descname"><span class="pre">Merge</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Merge_Insitu_Data.Merge" title="Link to this definition"></a></dt>
+<dd><p>Merges multiple ICARTT (.ict) airborne/field instrument files into a uniform time grid.</p>
+<blockquote>
+<div><p>This function uses interactive terminal inputs to locate instrument subdirectories, 
+parse ICARTT telemetry files chronologically using the <code class="docutils literal notranslate"><span class="pre">importICARTT</span></code> module, 
+and downsample/average disparate parameters to a uniform user-defined temporal step.
+The final product is exported as an aggregated NumPy dictionary object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+</div></blockquote>
+<section id="id28">
+<h3>Requirements<a class="headerlink" href="#id28" title="Link to this heading"></a></h3>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">os</span></code></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sys</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Input source files must reside in structured paths relative to execution: 
+<code class="docutils literal notranslate"><span class="pre">./[Data_ID]/filename.ict</span></code></p></li>
+<li><p>Datetime strings containing the token substring <code class="docutils literal notranslate"><span class="pre">'fmtdatetime'</span></code> are handled 
+separately by downcasting to 64-bit integer views (<code class="docutils literal notranslate"><span class="pre">i8</span></code>) before averaging.</p></li>
+<li><p>Outputs are cleanly dumped to current working directory as 
+<code class="docutils literal notranslate"><span class="pre">pacepax-mrg[Resolution]_MARINA-TOWER_[Date]_RA.npy</span></code>.</p></li>
+</ul>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Interactive Inputs<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Data IDs</strong>: A comma-separated prompt string mapping subdirectories to parse 
+(e.g., <code class="docutils literal notranslate"><span class="pre">&quot;APS,</span> <span class="pre">UHSAS,</span> <span class="pre">MICROPHYSICAL,</span> <span class="pre">OPTICAL&quot;</span></code>).</p></li>
+<li><p><strong>Temporal Resolution</strong>: An integer window duration mapped in seconds 
+used for bin-averaging data fields.</p></li>
+</ul>
+</dd>
+<dt class="field-even">raises FileNotFoundError<span class="colon">:</span></dt>
+<dd class="field-even"><p>If an instrument data directory specified in the terminal 
+prompt does not exist on disk.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</dd></dl>
+
 </section>
 <section id="module-Collect_netCDF">
 <span id="collect-netcdf"></span><h2>Collect_netCDF<a class="headerlink" href="#module-Collect_netCDF" title="Link to this heading"></a></h2>
@@ -1021,7 +1764,7 @@ into a Python dictionary.</p>
 <dd class="field-even"><p>4 Aug 2026</p>
 </dd>
 <dt class="field-odd">Language Revision<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Python 3.8 (2:0ubuntu2)</p>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -1029,12 +1772,11 @@ into a Python dictionary.</p>
 <p>The resulting dictionary structure strictly follows the hierarchy of the 
 corresponding source .h5 file.</p>
 </div>
-<section id="requirements">
-<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h3>
+<section id="id29">
+<h3>Requirements<a class="headerlink" href="#id29" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">h5py</span></code></p></li>
 </ul>
 <div class="admonition warning">
@@ -1090,11 +1832,152 @@ directory that is included in your system environment <code class="docutils lite
 </dd></dl>
 
 </section>
-<section id="external-closure-study">
-<h2>External_Closure_Study<a class="headerlink" href="#external-closure-study" title="Link to this heading"></a></h2>
+<section id="module-External_Closure_Study">
+<span id="external-closure-study"></span><h2>External_Closure_Study<a class="headerlink" href="#module-External_Closure_Study" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="External_Closure_Study.Run">
+<span class="sig-prename descclassname"><span class="pre">External_Closure_Study.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#External_Closure_Study.Run" title="Link to this definition"></a></dt>
+<dd><p>Performs consistency analyses on every file in a directory given a set of user inputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id30">
+<h3>Requirements<a class="headerlink" href="#id30" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itertools</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sys</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pylab</span></code></p></li>
+</ul>
 </section>
-<section id="external-consistency-procedure">
-<h2>External_Consistency_Procedure<a class="headerlink" href="#external-consistency-procedure" title="Link to this heading"></a></h2>
+</dd></dl>
+
+</section>
+<section id="module-External_Consistency_Procedure">
+<span id="external-consistency-procedure"></span><h2>External_Consistency_Procedure<a class="headerlink" href="#module-External_Consistency_Procedure" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="External_Consistency_Procedure.CaseStudy">
+<span class="sig-prename descclassname"><span class="pre">External_Consistency_Procedure.</span></span><span class="sig-name descname"><span class="pre">CaseStudy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camp_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Insitu_Spherical_Retrieval_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Insitu_Nonspherical_Retrieval_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Insitu_Nonspherical_Retrieval_filename_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RSP_Filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">HSRL2_Filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ouput_filename_suffix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_separation_constraint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_separation_constraint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_directory_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_key_vars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LegID_dictionary</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#External_Consistency_Procedure.CaseStudy" title="Link to this definition"></a></dt>
+<dd><p>Performs a external closure analysis on between data from in-situ, RSP, HSRL files taken on the same day with coincident measurements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
+</dd>
+</dl>
+<section id="id31">
+<h3>Requirements<a class="headerlink" href="#id31" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itertools</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netCDF4</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mpl_toolkits</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pylab</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statsmodels</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scipy</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">param camp_name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>campaign name assocaiated with data file directory.</p>
+</dd>
+<dt class="field-even">type camp_name<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param Insitu_Spherical_Retrieval_filename<span class="colon">:</span></dt>
+<dd class="field-odd"><p>in-situ data file where coarse-mode assumed spherical.</p>
+</dd>
+<dt class="field-even">type Insitu_Spherical_Retrieval_filename<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param Insitu_Nonspherical_Retrieval_filename<span class="colon">:</span></dt>
+<dd class="field-odd"><p>in-situ data file where coarse-mode assumed non-spherical type 1.</p>
+</dd>
+<dt class="field-even">type Insitu_Nonspherical_Retrieval_filename<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param Insitu_Nonspherical_Retrieval_filename_2<span class="colon">:</span></dt>
+<dd class="field-odd"><p>in-situ data file where coarse-mode assumed non-spherical type 2.</p>
+</dd>
+<dt class="field-even">type Insitu_Nonspherical_Retrieval_filename_2<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param RSP_Filename<span class="colon">:</span></dt>
+<dd class="field-odd"><p>RSP data file.</p>
+</dd>
+<dt class="field-even">type RSP_Filename<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param HSRL2_Filename<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HSRL data file.</p>
+</dd>
+<dt class="field-even">type HSRL2_Filename<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param ouput_filename_suffix<span class="colon">:</span></dt>
+<dd class="field-odd"><p>output filename suffix.</p>
+</dd>
+<dt class="field-even">type ouput_filename_suffix<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param time_separation_constraint<span class="colon">:</span></dt>
+<dd class="field-odd"><p>maximum allowed time separation in minutes.</p>
+</dd>
+<dt class="field-even">type time_separation_constraint<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param spatial_separation_constraint<span class="colon">:</span></dt>
+<dd class="field-odd"><p>maximum allowed spatial separation in km.</p>
+</dd>
+<dt class="field-even">type spatial_separation_constraint<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+<dt class="field-odd">param out_directory_name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ouput directory filename.</p>
+</dd>
+<dt class="field-even">type out_directory_name<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param source_key_vars<span class="colon">:</span></dt>
+<dd class="field-odd"><p>source variable names that are dependent on each mission/insturment suite.</p>
+</dd>
+<dt class="field-even">type source_key_vars<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">param LegID_dictionary<span class="colon">:</span></dt>
+<dd class="field-odd"><p>filename correspoding to the file with datetimes of interest.</p>
+</dd>
+<dt class="field-even">type LegID_dictionary<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>output_dictionary</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>dictionary</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
 </section>
 </section>
 
