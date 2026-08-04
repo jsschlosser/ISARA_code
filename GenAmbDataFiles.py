@@ -166,8 +166,8 @@ def Run():
       dpl_coarse = {}
       coarse_bins = {}
       for coarse_keyname in coarsemode_keynames:
-        ifn = [f for f in os.listdir(f'./{camp_name}/SDBinInfo/') if f.__contains__(coarse_keyname)]
-        dpData = load_sizebins.Load(f'./{camp_name}/SDBinInfo/{ifn[0]}')
+        ifn = [f for f in os.listdir(f'../ISARA_data_files/{camp_name}/SDBinInfo/') if f.__contains__(coarse_keyname)]
+        dpData = load_sizebins.Load(f'../ISARA_data_files/{camp_name}/SDBinInfo/{ifn[0]}')
         dpg_coarse0 = grab_data(dpData,"Mid Points")
         dpu_coarse0 = grab_data(dpData,"Upper Bounds")
         dpl_coarse0 = grab_data(dpData,"Lower Bounds")
@@ -208,7 +208,7 @@ def Run():
     bulk_bounds[bulk_names[3]] = np.array([2])
     inputput_filename_suffix = f'{camp_name_lower}-mrg{resolution}_{reference_platform}'
     output_filename_suffix = f'{camp_name_lower}-ISARAProducts-{reference_platform}'
-    insitu_Filename =  [f for f in os.listdir(f'./{camp_name}/Retrievals/{data_directory}') if (f.startswith(inputput_filename_suffix)&f.endswith('.npy')&np.logical_not(f.endswith('_DataRetrievals.npy')))]
+    insitu_Filename =  [f for f in os.listdir(f'../ISARA_data_files/{camp_name}/Retrievals/{data_directory}') if (f.startswith(inputput_filename_suffix)&f.endswith('.npy')&np.logical_not(f.endswith('_DataRetrievals.npy')))]
     LUT_output_variables_fine = {}
     fine_shap_dist_ary = np.array([1])
     if (coarse_shape_distribution == "no"):

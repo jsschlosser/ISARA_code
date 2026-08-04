@@ -322,8 +322,8 @@ def RunISARA():
     for i1 in range(nummodes):
         keyname = input(f"Enter the instrument name for mode {i1+1} data (e.g., LAS): ")
         modelist[i1] = keyname
-        ifn = [f for f in os.listdir(f'./{DN}/SDBinInfo/') if f.__contains__(keyname)]
-        dpData = load_sizebins.Load(f'./{DN}/SDBinInfo/{ifn[0]}')
+        ifn = [f for f in os.listdir(f'../ISARA_data_files/{DN}/SDBinInfo/') if f.__contains__(keyname)]
+        dpData = load_sizebins.Load(f'../ISARA_data_files/{DN}/SDBinInfo/{ifn[0]}')
         #print(dpData)
         dpg[keyname] = grab_data(dpData,"Mid Points")*pow(10,-3) 
         dpu[keyname] = grab_data(dpData,"Upper Bounds")*pow(10,-3) 
@@ -365,14 +365,14 @@ def RunISARA():
     else:
         val_wvl = None
     data_directory = input("Enter the name of the directory that contains\nin-situ measurements (e.g., InsituData): ")
-    IFN = [f for f in os.listdir(f'./{DN}/{data_directory}/') if f.endswith('.ict')]
+    IFN = [f for f in os.listdir(f'../ISARA_data_files/{DN}/{data_directory}/') if f.endswith('.ict')]
     desired_LUT = input("Enter the filename of the desired look-up table\n(e.g., AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat): ")
     LUT_output_variables = initialize(f'./LUT_data/{desired_LUT}')
 
     for input_filename in IFN:
         print(input_filename)
         # import the .ict data into a dictonary
-        (output_dict, time, date, sd, Sc, Abs, RHsc, gamma)  = grab_ICT_Data(f'./{DN}/{data_directory}/{input_filename}', modelist, dry_wvl)
+        (output_dict, time, date, sd, Sc, Abs, RHsc, gamma)  = grab_ICT_Data(f'../ISARA_data_files/{DN}/{data_directory}/{input_filename}', modelist, dry_wvl)
         output_dict['SourceFlag'] = {}
         output_dict['Dims'] = {}
         for key in output_dict['VariableAttributes'].keys():
@@ -563,7 +563,7 @@ def RunISARA():
             print(output_dict[f'kappa-550_unitless'].size)           
             output_filename = np.array(input_filename.split('.ict'))
             output_filename = output_filename[0]
-            np.save(f'./{DN}//Retrievals/{output_filename}.npy', output_dict)  
+            np.save(f'../ISARA_data_files/{DN}/Retrievals/{output_filename}.npy', output_dict)  
 
 if __name__ == "__main__":
     RunISARA()

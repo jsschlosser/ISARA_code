@@ -290,12 +290,13 @@ def Run():
             VertData['aircraft_altitude_m'] = None
             #VertData['aircraft_horizontal_separation_m'] = None  
             countflg = {}
+            filename_prefix =  f"../ISARA_data_files/{camp_name}/{out_directory_name}/{camp_name}"
             for cntlmt in CNT_LMT:
                 countflg[cntlmt] = np.where((VertStats['naltstats'][:,-1]>cntlmt))[0]    
                 nstats_trim = VertStats['naltstats']
                 nstats_trim = nstats_trim[countflg[cntlmt],:]
                 str_data = np.char.mod("%10.6f", nstats_trim )
-                nalt_profilestats_output_filename[cntlmt] = f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_nalt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
+                nalt_profilestats_output_filename[cntlmt] = f"{filename_prefix}-External_Closure_nalt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
                 with open(nalt_profilestats_output_filename[cntlmt], 'w') as f:
                   np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)    #
                   
@@ -304,7 +305,7 @@ def Run():
                         extstats_trim = VertStats['extaltstats'][key]
                         extstats_trim = extstats_trim[countflg[cntlmt],:]
                         str_data = np.char.mod("%10.6f", extstats_trim)
-                        exalt_profilestats_output_filename[key][cntlmt] = f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_ext{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
+                        exalt_profilestats_output_filename[key][cntlmt] = f"{filename_prefix}-External_Closure_ext{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
                         with open(exalt_profilestats_output_filename[key][cntlmt], 'w') as f:
                           np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)    #  
                     else:
@@ -312,7 +313,7 @@ def Run():
                         extstats_trim = VertStats['extaltstats'][key]
                         extstats_trim = extstats_trim[countflg[cntlmt],:]
                         str_data = np.char.mod("%10.6f", extstats_trim)
-                        exalt_profilestats_output_filename[key][cntlmt] = f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_ext{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
+                        exalt_profilestats_output_filename[key][cntlmt] = f"{filename_prefix}-External_Closure_ext{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
                         with open(exalt_profilestats_output_filename[key][cntlmt], 'w') as f:
                           np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)    #   
 
@@ -321,7 +322,7 @@ def Run():
                         bsstats_trim = VertStats['bscaltstats'][key]
                         bsstats_trim = bsstats_trim[countflg[cntlmt],:]
                         str_data = np.char.mod("%10.6f", bsstats_trim)
-                        bsalt_profilestats_output_filename[key][cntlmt] = f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_bsc{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
+                        bsalt_profilestats_output_filename[key][cntlmt] = f"{filename_prefix}-External_Closure_bsc{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
                         with open(bsalt_profilestats_output_filename[key][cntlmt], 'w') as f:
                           np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)    #  
                     else:
@@ -329,7 +330,7 @@ def Run():
                         bsstats_trim = VertStats['bscaltstats'][key]
                         bsstats_trim = bsstats_trim[countflg[cntlmt],:]
                         str_data = np.char.mod("%10.6f", bsstats_trim)
-                        bsalt_profilestats_output_filename[key][cntlmt] = f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_bsc{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
+                        bsalt_profilestats_output_filename[key][cntlmt] = f"{filename_prefix}-External_Closure_bsc{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
                         with open(bsalt_profilestats_output_filename[key][cntlmt], 'w') as f:
                           np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)    #   
 
@@ -338,7 +339,7 @@ def Run():
                         bsstats_trim = VertStats['ldraltstats'][key]
                         bsstats_trim = bsstats_trim[countflg[cntlmt],:]
                         str_data = np.char.mod("%10.6f", bsstats_trim)
-                        ldralt_profilestats_output_filename[key][cntlmt] = f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_LDR{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
+                        ldralt_profilestats_output_filename[key][cntlmt] = f"{filename_prefix}-External_Closure_LDR{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
                         with open(ldralt_profilestats_output_filename[key][cntlmt], 'w') as f:
                           np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)    #  
                     else:
@@ -346,7 +347,7 @@ def Run():
                         bsstats_trim = VertStats['ldraltstats'][key]
                         bsstats_trim = bsstats_trim[countflg[cntlmt],:]
                         str_data = np.char.mod("%10.6f", bsstats_trim)
-                        ldralt_profilestats_output_filename[key][cntlmt] = f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_LDR{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
+                        ldralt_profilestats_output_filename[key][cntlmt] = f"{filename_prefix}-External_Closure_LDR{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
                         with open(ldralt_profilestats_output_filename[key][cntlmt], 'w') as f:
                           np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)    #
 
@@ -355,7 +356,7 @@ def Run():
                         lrstats_trim = VertStats['lraltstats'][key]
                         lrstats_trim = lrstats_trim[countflg[cntlmt],:]
                         str_data = np.char.mod("%10.6f", lrstats_trim)
-                        lralt_profilestats_output_filename[key][cntlmt] = f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_LR{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
+                        lralt_profilestats_output_filename[key][cntlmt] = f"{filename_prefix}-External_Closure_LR{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
                         with open(lralt_profilestats_output_filename[key][cntlmt], 'w') as f:
                           np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)    #  
                     else:
@@ -363,7 +364,7 @@ def Run():
                         lrstats_trim = VertStats['lraltstats'][key]
                         lrstats_trim = lrstats_trim[countflg[cntlmt],:]
                         str_data = np.char.mod("%10.6f", lrstats_trim)
-                        lralt_profilestats_output_filename[key][cntlmt] = f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_LR{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
+                        lralt_profilestats_output_filename[key][cntlmt] = f"{filename_prefix}-External_Closure_LR{key}alt_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
                         with open(lralt_profilestats_output_filename[key][cntlmt], 'w') as f:
                           np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)    #  
                     
@@ -472,7 +473,7 @@ def Run():
                                         bsc_stats_dict1064,ldr_stats_dict355,ldr_stats_dict532,ldr_stats_dict1064,lr_stats_dict355,lr_stats_dict532])
                 str_data = np.char.mod("%10.6f", stats_dict.T)
                 str_data= np.column_stack((rows,str_data))
-                vertallstats_output_filename[cntlmt] = f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_Vert_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
+                vertallstats_output_filename[cntlmt] = f"{filename_prefix}-External_Closure_Vert_Stats_{sep_dist}km_{sep_time}min_{cntlmt}.csv"
                 with open(vertallstats_output_filename[cntlmt], 'w') as f:
                   np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)  #                         
 
@@ -652,7 +653,7 @@ def Run():
                     colnames = ",".join([colnames,f"in-situ_{key3},RSP_{key3},in-situ_stdev_{key3},RSP_stdev_{key3}"])
                     str_data =  np.column_stack((str_data,x_col[key3],y_col[key3],sdx_col[key3],sdy_col[key3]))     
 
-                columndata_filename[cntlmt] = f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_Column_Data_{sep_dist}km_{sep_time}min_{cntlmt}.csv"               
+                columndata_filename[cntlmt] = f"{filename_prefix}-External_Closure_Column_Data_{sep_dist}km_{sep_time}min_{cntlmt}.csv"               
                 with open(columndata_filename[cntlmt], 'w') as f:
                     np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)
             df1 = {}
@@ -678,7 +679,7 @@ def Run():
                     df4b[cntlmt][key] = pd.read_csv(ldralt_profilestats_output_filename[key][cntlmt])                                   
                 df5[cntlmt] = pd.read_csv(nalt_profilestats_output_filename[cntlmt])
                 df6[cntlmt] = pd.read_csv(vertallstats_output_filename[cntlmt])
-            with pd.ExcelWriter(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_{sep_dist}km_{sep_time}min.xlsx") as writer:
+            with pd.ExcelWriter(f"{filename_prefix}-External_Closure_{sep_dist}km_{sep_time}min.xlsx") as writer:
                 for cntlmt in CNT_LMT:
                     df1[cntlmt].to_excel(writer, sheet_name=f"Col_Data_{cntlmt}")
                     for key in exalt_profilestats_output_filename:
@@ -832,7 +833,7 @@ def Run():
                     cbar.outline.set_linewidth(1.5)
                     cbar.ax.tick_params(direction='in', length=8, width=1.5, which="major", labelsize=24)
                     cbar.set_label('Altitude (km)',labelpad=-120)#
-                    plt.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_{key3}_1to1_All_alt_{sep_dist}km_{sep_time}min_{cntlmt}", dpi=300)
+                    plt.savefig(f"{filename_prefix}-External_Closure_{key3}_1to1_All_alt_{sep_dist}km_{sep_time}min_{cntlmt}", dpi=300)
                     plt.show() # function to display the plot        
                     plt.close() #       
             j1 = 0
@@ -921,7 +922,7 @@ def Run():
             #cbar.ax.tick_params(length=8, width=1.5, which="major")
             #cbar.outline.set_linewidth(1.5)
             #cbar.set_label('Altitude (km)',labelpad=5)  
-            plt.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_1to1_All_alt_{sep_dist}km_{sep_time}min", dpi=300)
+            plt.savefig(f"{filename_prefix}-External_Closure_1to1_All_alt_{sep_dist}km_{sep_time}min", dpi=300)
             plt.show() # function to display the plot        
             plt.close() #   
        

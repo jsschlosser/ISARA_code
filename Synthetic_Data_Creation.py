@@ -65,7 +65,7 @@ def Run():
     reference_platform = input("Enter the platform of interest (e.g., cirpas-to or MARINA-TOWER): ")
     LUT_output_variables = initialize(f'./LUT_data/AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat')
     output_filename_suffix = f'{camp_name_lower}-mrg{resolution}_{reference_platform}'
-    SD_Fit_Dictionary = dict_reconfig(np.load(f"./{DN}/FitSDResults/{output_filename_suffix}_SD_Fit_Data.npy",allow_pickle='TRUE'))
+    SD_Fit_Dictionary = dict_reconfig(np.load(f"../ISARA_data_files/{DN}/FitSDResults/{output_filename_suffix}_SD_Fit_Data.npy",allow_pickle='TRUE'))
     R_values = SD_Fit_Dictionary['R']
     log10_P = SD_Fit_Dictionary['log10_P']
     fit_params_mode0 = SD_Fit_Dictionary['fit_params_0']
@@ -151,4 +151,4 @@ def Run():
     output_dictionary = finalout
     output_dictionary['SD_Fit_Dictionary_ACTIVATE'] = SD_Fit_Dictionary
     output_FN = f'{camp_name_lower}-mrg{resolution}_{reference_platform}_Synthetic_Data.npy'
-    np.save(f'./{DN}/SyntheticData/{output_FN}', output_dictionary) 
+    np.save(f'../ISARA_data_files/{DN}/SyntheticData/{output_FN}', output_dictionary) 

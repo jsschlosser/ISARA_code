@@ -634,7 +634,8 @@ def CaseStudy(
                 Collocated_data_final[legid]["legstart_datetime"] = legfmtime[i1,0]
                 Collocated_data_final[legid]["legstop_datetime"] = legfmtime[i1,1]
 
-    L_ID2 = len(Collocated_data_final)    
+    L_ID2 = len(Collocated_data_final)   
+    filename_prefix = f"../ISARA_data_files/{camp_name}/{out_directory_name}/{camp_name}"    
     prctile = [0,50,68,95,100]
     prctile_lst_b = getPercentileList(prctile,"B")
     prctile_lst_ab = getPercentileList(prctile,"AB")        
@@ -1589,7 +1590,7 @@ def CaseStudy(
                 ax0[2,3].errorbar(Alt_Binned_IS_data["veff"][:,1,0], altgrid/1000, xerr=Alt_Binned_IS_data["veff"][:,1,1], linestyle='none', elinewidth=lw, ecolor='k', capsize=3)  #         
                 ax0[2,3].plot(Alt_Binned_IS_data["veff"][:,1,0], altgrid/1000, 'ok', markeredgewidth=1.5, markersize=7.5, markeredgecolor='k')    
                 ax0[2,3].add_artist(fig2_atl)                
-                fig0.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_opt_mphys_alt_{legid}_{ouput_filename_suffix}.png", dpi=300)
+                fig0.savefig(f"{filename_prefix}-External_Closure_opt_mphys_alt_{legid}_{ouput_filename_suffix}.png", dpi=300)
                 for panls in range(len(ax0[:,0])):
                     for panls2 in range(len(ax0[0,:])):
                         ax0[panls,panls2].cla()
@@ -1639,7 +1640,7 @@ def CaseStudy(
                 ax0[2,3].errorbar(Alt_Binned_IS_data["veff"][:,1,0], altgrid/1000, xerr=Alt_Binned_IS_data["veff"][:,1,1], linestyle='none', elinewidth=lw, ecolor='k', capsize=3)  #         
                 ax0[2,3].plot(Alt_Binned_IS_data["veff"][:,1,0], altgrid/1000, 'ok', markeredgewidth=1.5, markersize=7.5, markeredgecolor='k')    
                 ax0[2,3].add_artist(fig2_atl)                
-                fig0.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_opt_mphys_alt_{legid}_{ouput_filename_suffix}.png", dpi=300)
+                fig0.savefig(f"{filename_prefix}-External_Closure_opt_mphys_alt_{legid}_{ouput_filename_suffix}.png", dpi=300)
                 for panls in range(len(ax0[:,0])):
                     for panls2 in range(len(ax0[0,:])):
                         ax0[panls,panls2].cla()
@@ -1669,7 +1670,7 @@ def CaseStudy(
                 ax1[2,2].errorbar(Alt_Binned_IS_data["ctotextratio"][:,0], altgrid/1000, xerr=Alt_Binned_IS_data["ctotextratio"][:,1], linestyle='none', elinewidth=lw, ecolor='k', capsize=3)  #
                 ax1[2,2].plot(Alt_Binned_IS_data["ctotextratio"][:,0], altgrid/1000, '^', color='k', markeredgewidth=1.5, markersize=7.5, markeredgecolor='k')   
                 ax1[2,2].add_artist(fig1_at4)                                                 
-            fig1.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_extwvl_alt_{legid}_{ouput_filename_suffix}.png", dpi=300)
+            fig1.savefig(f"{filename_prefix}-External_Closure_extwvl_alt_{legid}_{ouput_filename_suffix}.png", dpi=300)
             for panls in range(len(ax1[:,0])):
                 for panls2 in range(len(ax1[0,:])):
                     ax1[panls,panls2].cla()
@@ -1687,7 +1688,7 @@ def CaseStudy(
             cbar.outline.set_linewidth(1.5)
             cbar.ax.tick_params(length=8, width=1.5, which="major")
             cbar.set_label(r"$\dfrac{{\rm d}N}{{\rm d} \log D} \ (\rm cm^{-3})$",labelpad=-40)
-            fig3.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_SD_alt_{legid}_{ouput_filename_suffix}", dpi=300)
+            fig3.savefig(f"{filename_prefix}-External_Closure_SD_alt_{legid}_{ouput_filename_suffix}", dpi=300)
             for panls in range(len(ax3)):
                 for artist in ax3[panls].lines + ax3[panls].collections:
                     artist.remove()
@@ -1702,7 +1703,7 @@ def CaseStudy(
             cbar.outline.set_linewidth(1.5)
             cbar.ax.tick_params(length=8, width=1.5, which="major")
             cbar.set_label(r"$\dfrac{{\rm d}S}{{\rm d} \log D} \ (\rm \mu m^2 \ cm^{-3})$",labelpad=-35)
-            fig4.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_SDA_alt_{legid}_{ouput_filename_suffix}", dpi=300)
+            fig4.savefig(f"{filename_prefix}-External_Closure_SDA_alt_{legid}_{ouput_filename_suffix}", dpi=300)
             for panls in range(len(ax4)):
                 for artist in ax4[panls].lines + ax4[panls].collections:
                     artist.remove()
@@ -1717,7 +1718,7 @@ def CaseStudy(
             cbar.outline.set_linewidth(1.5)
             cbar.ax.tick_params(length=8, width=1.5, which="major")
             cbar.set_label(r"$\dfrac{{\rm d}V}{{\rm d} \log D} \ (\rm \mu m^3 \ cm^{-3})$",labelpad=-5)
-            fig5.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_SDV_alt_{legid}_{ouput_filename_suffix}", dpi=300)
+            fig5.savefig(f"{filename_prefix}-External_Closure_SDV_alt_{legid}_{ouput_filename_suffix}", dpi=300)
             for panls in range(len(ax5)):
                 for artist in ax5[panls].lines + ax5[panls].collections:
                     artist.remove()
@@ -1739,7 +1740,7 @@ def CaseStudy(
                 cbar.outline.set_linewidth(1.5)
                 cbar.ax.tick_params(length=8, width=1.5, which="major")
                 cbar.set_label(r"$\dfrac{{\rm d}N}{{\rm d} \log D} \ (\rm cm^{-3})$",labelpad=-20)
-                fig3.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_SD_coarse_alt_{legid}_{ouput_filename_suffix}", dpi=300)
+                fig3.savefig(f"{filename_prefix}-External_Closure_SD_coarse_alt_{legid}_{ouput_filename_suffix}", dpi=300)
                 for panls in range(len(ax3)):
                     for artist in ax3[panls].lines + ax3[panls].collections:
                         artist.remove()
@@ -1758,7 +1759,7 @@ def CaseStudy(
                 cbar.outline.set_linewidth(1.5)
                 cbar.ax.tick_params(length=8, width=1.5, which="major")
                 cbar.set_label(r"$\dfrac{{\rm d}S}{{\rm d} \log D} \ (\rm \mu m^2 \ cm^{-3})$",labelpad=-15)
-                fig4.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_SDA_coarse_alt_{legid}_{ouput_filename_suffix}", dpi=300)
+                fig4.savefig(f"{filename_prefix}-External_Closure_SDA_coarse_alt_{legid}_{ouput_filename_suffix}", dpi=300)
                 for panls in range(len(ax4)):
                     for artist in ax4[panls].lines + ax4[panls].collections:
                         artist.remove()
@@ -1776,7 +1777,7 @@ def CaseStudy(
                 cbar.outline.set_linewidth(1.5)
                 cbar.ax.tick_params(length=8, width=1.5, which="major")
                 cbar.set_label(r"$\dfrac{{\rm d}V}{{\rm d} \log D} \ (\rm \mu m^3 \ cm^{-3})$",labelpad=0)
-                fig5.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_SDV_coarse_alt_{legid}_{ouput_filename_suffix}", dpi=300)
+                fig5.savefig(f"{filename_prefix}-External_Closure_SDV_coarse_alt_{legid}_{ouput_filename_suffix}", dpi=300)
                 for panls in range(len(ax5)):
                     for artist in ax5[panls].lines + ax5[panls].collections:
                         artist.remove()
@@ -1798,7 +1799,7 @@ def CaseStudy(
             cbar.ax.set_yticklabels(aid_categories) # Set custom tick labels for categories  
             cbar.outline.set_linewidth(1.5)
             cbar.ax.tick_params(length=8, width=1.5, which="major")               
-            fig10.savefig(f"./{camp_name}/{out_directory_name}/{camp_name}-External_Closure_AIDcount_alt_{legid}_{ouput_filename_suffix}.png", dpi=300)
+            fig10.savefig(f"{filename_prefix}-External_Closure_AIDcount_alt_{legid}_{ouput_filename_suffix}.png", dpi=300)
             ax10.cla()
             for artist in ax10.lines + ax10.collections:
                 artist.remove()

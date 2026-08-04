@@ -165,7 +165,7 @@ def Run():
 
   rsindex = 0
   output_filename_suffix = f'{camp_name_lower}-mrg{resolution}_{reference_platform}'
-  output_filename=f'./{camp_name}/Retrievals/{output_filename_suffix}_DataRetrievals.npy'
+  output_filename=f'../ISARA_data_files/{camp_name}/Retrievals/{output_filename_suffix}_DataRetrievals.npy'
   print(output_filename)
   OP_Dictionary = dict_reconfig(np.load(f'./{output_filename}',allow_pickle='TRUE'))
   CRI_flag = grabvalues(OP_Dictionary,'attempt_flag_CRI')[0]
@@ -300,14 +300,14 @@ def Run():
 
   p0 = [1e5, 1e-3, 2, 3e3, 20e-3, 2]# [5e4, 1e-3, 2, 5e4, 1e-3, 2, 1e1, 0.01, 2]#[1e5, 1e-3, 2, 3e3, 20e-3, 2]# initial guesses 
   n_modes = 2
-  fitresults = SD_Fit.Run(n_modes,p0,dpg,sd,Cal_Abs[f'{full_wvl["Abs"][1]}'],Cal_Sc[f'{full_wvl["Sc"][1]}'],f'./{camp_name}/FitSDResults/')#*10**(-6)*10**(-6)
+  fitresults = SD_Fit.Run(n_modes,p0,dpg,sd,Cal_Abs[f'{full_wvl["Abs"][1]}'],Cal_Sc[f'{full_wvl["Sc"][1]}'],f'../ISARA_data_files/{camp_name}/FitSDResults/')#*10**(-6)*10**(-6)
 
   fitresults['measured_size_distribution'] = sd
   fitresults['measured_dpg'] = dpg
   fitresults['measured_dpu'] = dpu
   fitresults['measured_dpl'] = dpl
 
-  np.save(f'./{camp_name}/FitSDResults/{output_filename_suffix}_SD_Fit_Data.npy', fitresults) 
+  np.save(f'../ISARA_data_files/{camp_name}/FitSDResults/{output_filename_suffix}_SD_Fit_Data.npy', fitresults) 
   consit_file_location = f'{camp_name}/InternalConsistency/{output_filename_suffix}'
   prctile = [0,10,50,68,90,95,100]  
 

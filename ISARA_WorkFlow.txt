@@ -83,8 +83,8 @@ RHw_DLH_DISKIN_
 InletFlag_LARGE_ZIEMBA
 gpsALT_m_THORNHILL
 exit()
-cd /mnt/b/ISARA_V2/ACTIVATE/Retrievals
-cp *.npy /mnt/b/ISARA_V2/ACTIVATE/Retrievals/SMPS
+cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/Retrievals
+cp *.npy /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/Retrievals/SMPS
 cp *.npy /mnt/d/ACTIVATE/Retrievals/SMPS
 cp *.npy /mnt/e/ACTIVATE/Retrievals/SMPS
 cp *.npy /mnt/f/Backup/ACTIVATE/Retrievals/SMPS
@@ -153,7 +153,7 @@ mkdir ./ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
-cd /mnt/b/ISARA_V2/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 rm *
 cd /mnt/b/ISARA_V2
 python3 
@@ -182,7 +182,7 @@ CAS,CDP,FCDP
 no
 exit()
 
-cd /mnt/b/ISARA_V2/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/d/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/e/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
@@ -212,7 +212,7 @@ Falcon
 FalconLegID
 exit()
 
-cd /mnt/b/ISARA_V2/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 cp * /mnt/d/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 cp * /mnt/e/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 cp * /mnt/f/Backup/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
@@ -228,7 +228,7 @@ mkdir ./ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
-cd /mnt/b/ISARA_V2/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
+cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 rm *
 cd /mnt/b/ISARA_V2
 python3 
@@ -258,7 +258,7 @@ CAS,CDP,FCDP
 no
 exit()
 
-cd /mnt/b/ISARA_V2/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
+cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/d/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/e/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
@@ -270,11 +270,11 @@ mkdir ./ACTIVATE/AmbientDataFiles/
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/
-mkdir /mnt/b/ISARA_V2/ACTIVATE/AmbientDataFiles/equiprobable-criSS
+mkdir /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/equiprobable-criSS
-cd /mnt/b/ISARA_V2/ACTIVATE/AmbientDataFiles/equiprobable-criSS
+cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 rm *
 cd /mnt/b/ISARA_V2
 python3 
@@ -304,7 +304,7 @@ CAS,CDP,FCDP
 no
 exit()
 
-cd /mnt/b/ISARA_V2/ACTIVATE/AmbientDataFiles/equiprobable-criSS
+cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 cp * /mnt/d/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 cp * /mnt/e/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/equiprobable-criSS
@@ -316,11 +316,11 @@ mkdir ./ACTIVATE/AmbientDataFiles/
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/
-mkdir /mnt/b/ISARA_V2/ACTIVATE/AmbientDataFiles/equiprobable-criDust
+mkdir /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/equiprobable-criDust
-cd /mnt/b/ISARA_V2/ACTIVATE/AmbientDataFiles/equiprobable-criDust
+cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 rm *
 cd /mnt/b/ISARA_V2
 python3 
@@ -350,7 +350,7 @@ CAS,CDP,FCDP
 no
 exit()
 
-cd /mnt/b/ISARA_V2/ACTIVATE/AmbientDataFiles/equiprobable-criDust
+cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 cp * /mnt/d/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 cp * /mnt/e/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/equiprobable-criDust
@@ -438,7 +438,7 @@ exit()
 
 #1.2)
 cd /mnt/b/ISARA_V2
-rm /mnt/b/ISARA_V2/Retrievals/pacepax-mrg30_cirpas-to_DataRetrievals.npy
+rm /mnt/b/ISARA_Repo/ISARA_code/Retrievals/pacepax-mrg30_cirpas-to_DataRetrievals.npy
 python
 import CollateDataFiles
 CollateDataFiles.Run()
@@ -462,8 +462,8 @@ InletFlag_LARGE_ZIEMBA_unitless
 GPS_Altitude_BUCHOLTZ
 exit()
 
-cd /mnt/b/ISARA_V2/PACEPAX/Retrievals
-cp *.npy /mnt/b/ISARA_V2/PACEPAX/Retrievals/30s
+cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/Retrievals
+cp *.npy /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/Retrievals/30s
 cp *.npy /mnt/d/PACEPAX/Retrievals/30s
 cp *.npy /mnt/e/PACEPAX/Retrievals/30s
 cp *.npy /mnt/f/Backup/PACEPAX/Retrievals/30s
@@ -471,11 +471,11 @@ cp *.npy /mnt/f/Backup/PACEPAX/Retrievals/30s
 
 #3.1)
 cd /mnt/b/ISARA_V2
-mkdir /mnt/b/ISARA_V2/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_code/AmbientDataFiles/
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/
-mkdir /mnt/b/ISARA_V2/AmbientDataFiles/Sphere_kappa0-cri1-33
+mkdir /mnt/b/ISARA_Repo/ISARA_code/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
@@ -510,7 +510,7 @@ yes
 -4.8032
 exit()
 
-cd /mnt/b/ISARA_V2/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/d/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/e/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
@@ -518,11 +518,11 @@ cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 
 #3.2)
 cd /mnt/b/ISARA_V2
-mkdir /mnt/b/ISARA_V2/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_code/AmbientDataFiles/
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/
-mkdir /mnt/b/ISARA_V2/AmbientDataFiles/inverse_tophat_kappa0-criSS
+mkdir /mnt/b/ISARA_Repo/ISARA_code/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
@@ -558,7 +558,7 @@ yes
 -4.8032
 exit()
 
-cd /mnt/b/ISARA_V2/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
+cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/d/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/e/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
@@ -566,11 +566,11 @@ cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 
 #3.3)
 cd /mnt/b/ISARA_V2
-mkdir /mnt/b/ISARA_V2/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_code/AmbientDataFiles/
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/
-mkdir /mnt/b/ISARA_V2/AmbientDataFiles/equiprobable_kappa0-criSS
+mkdir /mnt/b/ISARA_Repo/ISARA_code/AmbientDataFiles/equiprobable_kappa0-criSS
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
@@ -606,7 +606,7 @@ yes
 -4.8032
 exit()
 
-cd /mnt/b/ISARA_V2/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
+cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 cp * /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 cp * /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
@@ -614,11 +614,11 @@ cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 
 #3.4)
 cd /mnt/b/ISARA_V2
-mkdir /mnt/b/ISARA_V2/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_code/AmbientDataFiles/
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/
-mkdir /mnt/b/ISARA_V2/AmbientDataFiles/equiprobable_kappa0-criDust
+mkdir /mnt/b/ISARA_Repo/ISARA_code/AmbientDataFiles/equiprobable_kappa0-criDust
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
@@ -654,23 +654,23 @@ yes
 -4.8032
 exit()
 
-cd /mnt/b/ISARA_V2/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
+cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 cp * /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 cp * /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 
 
 cd /mnt/b/ISARA_V2
-mkdir /mnt/b/ISARA_V2/PACEPAX/ExternalClosure/
+mkdir /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/ExternalClosure/
 mkdir /mnt/d/PACEPAX/ExternalClosure/
 mkdir /mnt/e/PACEPAX/ExternalClosure/
 mkdir /mnt/f/Backup/PACEPAX/ExternalClosure/
-mkdir /mnt/b/ISARA_V2/PACEPAX/ExternalClosure/Sphere-SS-Dust
+mkdir /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/ExternalClosure/Sphere-SS-Dust
 mkdir /mnt/d/PACEPAX/ExternalClosure/Sphere-SS-Dust
 mkdir /mnt/e/PACEPAX/ExternalClosure/Sphere-SS-Dust
 mkdir /mnt/f/Backup/PACEPAX/ExternalClosure/Sphere-SS-Dust
 
-cd /mnt/b/ISARA_V2/PACEPAX/ExternalClosure/Sphere-SS-Dust
+cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/ExternalClosure/Sphere-SS-Dust
 rm *
 cd /mnt/b/ISARA_V2
 python3 
@@ -685,22 +685,22 @@ CIRPAS-TO
 FlightData
 exit()
 
-cd /mnt/b/ISARA_V2/PACEPAX/Retrievals/ExternalClosure/Sphere-SS-Dust
+cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/Retrievals/ExternalClosure/Sphere-SS-Dust
 cp PACEPAX-External_Closure_* /mnt/d/PACEPAX/Retrievals/ExternalClosureFigs/Sphere-SS-Dust
 cp PACEPAX-External_Closure_* /mnt/e/PACEPAX/Retrievals/ExternalClosureFigs/Sphere-SS-Dust
 cp PACEPAX-External_Closure_* /mnt/f/Backup/PACEPAX/Retrievals/ExternalClosureFigs/Sphere-SS-Dust
 
 
 cd /mnt/b/ISARA_V2
-mkdir /mnt/b/ISARA_V2/PACEPAX/ExternalClosure/
+mkdir /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/ExternalClosure/
 mkdir /mnt/d/PACEPAX/ExternalClosure/
 mkdir /mnt/e/PACEPAX/ExternalClosure/
 mkdir /mnt/f/Backup/PACEPAX/ExternalClosure/
-mkdir /mnt/b/ISARA_V2/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
+mkdir /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
 mkdir /mnt/d/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
 mkdir /mnt/e/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
 mkdir /mnt/f/Backup/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
-cd /mnt/b/ISARA_V2/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
 rm *
 cd /mnt/b/ISARA_V2
 python3 
@@ -715,7 +715,7 @@ CIRPAS-TO
 FlightData
 exit()
 
-cd /mnt/b/ISARA_V2/PACEPAX/Retrievals/ExternalClosure/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/Retrievals/ExternalClosure/Sphere_kappa0-cri1-33
 cp PACEPAX-External_Closure_* /mnt/d/PACEPAX/Retrievals/ExternalClosureFigs/Sphere_kappa0-cri1-33
 cp PACEPAX-External_Closure_* /mnt/e/PACEPAX/Retrievals/ExternalClosureFigs/Sphere_kappa0-cri1-33
 cp PACEPAX-External_Closure_* /mnt/f/Backup/PACEPAX/Retrievals/ExternalClosureFigs/Sphere_kappa0-cri1-33

@@ -15,7 +15,7 @@ def Run():
 
     # This should be at the start of the code to minimize the fork size
     #pool = ProcessPool(ncpus=number_of_cores)   
-    LUT_output_variables = initialize(f'./LUT_data/AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat')
+    LUT_output_variables = initialize(f'../ISARA_data_files/LUT_data/AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat')
     def pause():
         programPause = input("Press the <ENTER> key to continue...")    
     def dict_reconfig(
