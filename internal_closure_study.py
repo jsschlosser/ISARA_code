@@ -1,10 +1,10 @@
 import numpy as np
 import SD_Fit
 import csv
+import Stats_Code
+import Load_Size_Dists
 import os
 import datetime
-import StatsCode
-import load_sizebins
 import itertools
 import matplotlib as mpl
 import matplotlib.pyplot as plt 
@@ -30,8 +30,25 @@ clear_bkgd = {'axes.facecolor':'none', 'figure.facecolor':'none'}
 tips = seaborn.load_dataset("tips")
 iris = seaborn.load_dataset("iris")
 def Run():
-  def pause():
-      programPause = input("Press the <ENTER> key to continue...")  
+    """
+    Performs internal consistency analyses on retrieved dataset.   
+    
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``datetime``
+    * ``itertools``
+    * ``matplotlib``
+    * ``mpl_toolkits``
+    * ``pylab``
+    * ``seaborn``
+    * ``os``
+    """ 
+
 
   def flatten(l):
       return [item for sublist in l for item in sublist]  

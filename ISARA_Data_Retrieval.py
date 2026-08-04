@@ -1,11 +1,11 @@
-import APS_rho
-import importICARTT
-import load_sizebins
+import APS_Rho
+import Import_ICARTT
+import Load_Size_Dists
 import ISARA
 Retr_CRI = ISARA.Retr_CRI
 Retr_kappa = ISARA.Retr_kappa
-import lut
-initialize = lut.initialize_spheres
+import LUT
+initialize = LUT.initialize_spheres
 import numpy as np
 import os
 import sys
@@ -14,9 +14,19 @@ import struct
 def RunISARA():
 
     """
-    After a series of user requested inputs, this function retrieves complex refractive index and hygroscopicty from the measured aerosol size distributions and optical coefficients in each file (in .ict format) of the source directory.
+    After a series of user requested inputs,  retrieves complex refractive index and hygroscopicty from the measured aerosol size distributions and optical coefficients in each file (in .ict format) of the source directory.
+        
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
 
-    
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``os``
+    * ``sys``
+    * ``struct``
+
     """ 
     sys.path.insert(0, os.path.abspath("../"))  
     def grab_data(data,key_name):

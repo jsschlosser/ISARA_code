@@ -1,33 +1,38 @@
-########################################################################################################################
-# collect_netcdf.py                                   by:  Joseph Schlosser
-#                                                revised:  02 Jan 2023   
-#                                    language (revision):  python3 (3.8.2-0ubuntu2)
-# 
-# DESCRIPTION: Procedures for reading the HSRL-2 and RSP data files from their *.h5 format into a python dictionary.
-# 
-# If grabRSP is called, the input is the file name of the RSP's .h5 file and the output is a python3 dictionary with the 
-# data and metadata parameters from the RSP's .h5 file.
-#   -> the dictionary structure follows that of the corresponding .h5 file
-#
-# If grabHSRL2 is called, the input is the file name of the HSRL-2's .h5 file and the output is a python3 dictionary 
-# with the data and metadata parameters from the HSRL-2's .h5 file.
-#   -> the dictionary structure follows that of the corresponding .h5 file
-# 
-# EXAMPLE:
-#           HSRL2_Dictionary = collect_netcdf.grabHSRL2("ACTIVATE-HSRL2_UC12_20200215_R1") 
-#           print(f"HSRL-2 metadata: {hsrl2_dictionary.keys()}")
-#           HSRL-2 metadata: <KeysViewHDF5 ['000_Readme', 'DataProducts', 'Nav_Data', 'State', 'UserInput', 'header']>
-#
-# WARNINGS:
-# 1) numpy, datetime, matplotlib, and h5py must be installed to the python environment
-# 2) collect_netcdf.py and file with the corresponding filename must be present in a directory that is in your PATH
-########################################################################################################################
+"""
+Procedures for reading the HSRL-2 and RSP data files from their .h5 format 
+into a Python dictionary.
+
+:Authors: Joseph Schlosser
+:Revised: 4 Aug 2026
+:Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
+
+.. note::
+   The resulting dictionary structure strictly follows the hierarchy of the 
+   corresponding source .h5 file.
+
+Requirements
+------------
+* ``numpy``
+* ``datetime``
+* ``h5py``
+
+.. warning::
+   ``collect_netcdf.py`` and the target data files must be present in a 
+   directory that is included in your system environment ``PATH``.
+"""
 import numpy as np
 import datetime
 import h5py
 
-# function to retrieve RSP data from the appropriate .h5 file
+
 def grabRSP(RSP_filename):
+    """
+    Read RSP data from an HDF5 file into a Python dictionary.
+
+    :param str filename: The file name or path of the RSP's .h5 file.
+    :return: A dictionary containing data and metadata parameters.
+    :rtype: dict
+    """
     # read the RSP data and display all avalable data products
     rsp_dictionary = h5py.File(RSP_filename, "r")
     #print(f"RSP data products: {rsp_dictionary.keys()}")   # remove comment out to see structure
@@ -35,9 +40,7 @@ def grabRSP(RSP_filename):
 
     # take the flight date from the RSP readme line 9
     DATEinfo = np.array(RSP_filename.split("_"))[3] 
-    #DATEinfo = np.array(RSP_filename.split("_"))[2] 
-    #DATE = str(DATEinfo)[0:8]
-    #print(DATE)
+
     rsp_Date = [str(DATEinfo)[0:4],str(DATEinfo)[4:6],str(DATEinfo)[6:8]]
 #    rsp_Date = [str(rsp_dictionary["000-README"][9])[24:28],str(rsp_dictionary["000-README"][9])[28:30],
 #                str(rsp_dictionary["000-README"][9])[30:32]]  
@@ -81,8 +84,29 @@ def grabRSP(RSP_filename):
     
     return op
 
-# function to retrieve HSRL-2 data from the appropriate .h5 file
+
 def grabHSRL2(HSRL2_filename):
+    """
+    Read HSRL-2 data from an HDF5 file into a Python dictionary.
+
+    :param str filename: The file name or path of the HSRL-2's .h5 file.
+    :return: A dictionary containing data and metadata parameters.
+    :rtype: dict
+
+    :Example:
+
+    .. code-block:: python
+
+       import collect_netcdf
+
+       # Load the data
+       hsrl2_dict = collect_netcdf.grabHSRL2("ACTIVATE_HSRL2_UC12_20200215_R1")
+       
+       # Print metadata keys
+       print(f"HSRL-2 metadata: {hsrl2_dict.keys()}")
+       # Output: KeysViewHDF5 ['000_Readme', 'DataProducts', 'Nav_Data', 'State', 'UserInput', 'header']
+    """
+
     # read the HSRL-2 data and display all groups and avalable data products
     hsrl2_dictionary = h5py.File(HSRL2_filename, "r")
     # remove below comment outs to see structure
@@ -90,9 +114,6 @@ def grabHSRL2(HSRL2_filename):
     #print(hsrl2_dictionary["DataProducts"].keys())
     #    print(f"HSRL-2 navigation and time data: {hsrl2_dictionary["Nav_Data"].keys()}")
 
-    # take the flight date from the HSRL readme line 4
-#    hsrl2_Date = [str(hsrl2_dictionary['000_Readme'][4])[2:6],str(hsrl2_dictionary['000_Readme'][4])[7:9],
-#                    str(hsrl2_dictionary['000_Readme'][4])[10:12]]    
     hsrldate = hsrl2_dictionary["header"]["date"][0].astype(int)
     hsrldate = hsrldate[0]
     hsrl2_Date = [str(hsrldate)[0:4], str(hsrldate)[4:6], str(hsrldate)[6:8]]

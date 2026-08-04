@@ -18,6 +18,37 @@ from mpl_toolkits.mplot3d import Axes3D
 from pylab import rcParams#  
 
 def plot_SD(dp,dndlogdp1,dndlogdp2,filename_suffix,r,p,file_location):
+    """
+    Plots real and fitted size distributions against particle diameter, displays r and p, and saves the file at a given file location.   
+    
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``datetime``
+    * ``itertools``
+    * ``matplotlib``
+    * ``mpl_toolkits``
+    * ``pylab``
+
+    :param dp:
+    :type dp:
+    :param dndlogdp1:
+    :type dndlogdp1:
+    :param dndlogdp2:
+    :type dndlogdp2:
+    :param filename_suffix:
+    :type filename_suffix:
+    :param r:
+    :type r:
+    :param p:
+    :type p:
+    :param file_location:
+    :type file_location:
+    """ 
 
     rcParams['font.size'] = 12
     #rcParams['axes.formatter.useoffset'] = False    
@@ -47,6 +78,5 @@ def plot_SD(dp,dndlogdp1,dndlogdp2,filename_suffix,r,p,file_location):
     plt.tight_layout()
     #ax.legend()				
     #sns.despine()
-    plt.show()
     plt.savefig(f"{file_location}SD_Fit_Results_{filename_suffix}")
     plt.close()

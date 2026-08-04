@@ -1,68 +1,117 @@
 API
 ===
 
+ISARA
+-----
 .. automodule:: ISARA
    :members:   
 
-.. automodule:: lut
+LUT
+---
+.. automodule:: LUT
    :members:   
 
-.. automodule:: APS_rho 
-   :members:  
-
-.. automodule:: GenAmbDataFiles 
-   :members:  
-
-.. automodule:: cal_rho 
-   :members:  
-
-.. automodule:: load_sizebins 
-   :members:  
-
-.. automodule:: Calculate_Ambient_Properties 
-   :members:  
-
-.. automodule:: MergeInSituData 
-   :members:  
-
-.. automodule:: Synthetic_Data_Closure_Study 
-   :members:  
-
-.. automodule:: collect_netcdf 
-   :members:  
-
-.. automodule:: CollateDataFiles 
-   :members:  
-
+Synthetic_Data_Creation
+-----------------------
 .. automodule:: Synthetic_Data_Creation 
    :members:  
 
-.. automodule:: nc_write 
-   :members:  
-
-.. automodule:: Collocate_and_Plot_Amb_Data 
-   :members:  
-
-.. automodule:: ISARA_Data_Retrieval 
-   :members:  
-
-.. automodule:: SDFitFigs 
-   :members:  
-
+Synthetic_Data_Retrieval
+------------------------
 .. automodule:: Synthetic_Data_Retrieval 
    :members:  
 
-.. automodule:: importICARTT 
+Synthetic_Data_Closure_Study
+----------------------------
+.. automodule:: Synthetic_Data_Closure_Study 
    :members:  
 
-.. automodule:: powerfunction 
+ISARA_Data_Retrieval
+--------------------
+.. automodule:: ISARA_Data_Retrieval 
    :members:  
 
-.. automodule:: External_Consistency_Procedure 
+Collate_Data_Files
+----------------
+.. automodule:: CollateDataFiles 
    :members:  
 
+APS_Rho
+-------
+.. automodule:: APS_Rho 
+   :members:  
+
+Load_Size_Dists
+---------------
+.. automodule:: Load_Size_Dists 
+   :members:  
+
+SD_Fit_Figs
+---------
+.. automodule:: SD_Fit_Figs 
+   :members:  
+
+Import_ICARTT
+------------
+.. automodule:: Import_ICARTT 
+   :members:  
+
+Power_Function
+-------------
+.. automodule:: Power_Function 
+   :members:  
+
+SD_Fit
+------
 .. automodule:: SD_Fit 
    :members:  
 
-.. automodule:: internal_closure_study 
+fit
+------
+.. automodule:: fit 
+   :members:  
+
+utils
+------
+.. automodule:: utils 
+   :members:  
+
+Internal_Closure_Study
+----------------------
+.. automodule:: Internal_Closure_Study 
+   :members:  
+
+Gen_Amb_Data_Files
+------------------
+.. automodule:: Gen_Amb_Data_Files 
+   :members:  
+
+nc_Write
+--------
+.. automodule:: nc_Write 
+   :members:  
+
+Calculate_Ambient_Properties
+----------------------------
+.. automodule:: Calculate_Ambient_Properties 
+   :members:  
+
+Merge_In-Situ_Data
+---------------
+.. automodule:: MergeInSituData 
+   :members:  
+
+Collect_netCDF
+--------------
+.. automodule:: Collect_netCDF 
+   :members:  
+
+External_Closure_Study
+----------------------
+.. automodule:: External_Closure_Study 
+   :members:  
+
+External_Consistency_Procedure
+------------------------------
+.. automodule:: External_Consistency_Procedure 
    :members:  

@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
+adapted from https://pypi.org/project/py-smps/
+
+:Authors: Joseph Schlosser
+:Revised: 4 Aug 2026
+:Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
 """
 import numpy as np
 import requests
@@ -48,15 +53,18 @@ def make_bins(**kwargs):
     >>> bins = make_bins(boundaries=np.array([0.35, 1.0, 2.5, 10.0]))
     
     Create a set of bins from lists of lower and upper boundaries:
-    
-    >>> bins = make_bins(
-    >>>    boundaries_left=np.array([0.35, 1.0, 2.5]),
-    >>>    boundaries_right=np.array([1.0, 2.5, 10.0])
-    >>> )
+
+    .. code-block:: console
+
+        >>> bins = make_bins(
+        >>>    boundaries_left=np.array([0.35, 1.0, 2.5]),
+        >>>    boundaries_right=np.array([1.0, 2.5, 10.0])
+        >>> )
     
     Create a set of bins from the lowest boundary, highest boundary, and midpoints:
-    
-    >>> bins = make_bins(lb=0.35, ub=10.0, midpoints=np.array([.5, 2.0, 5.0]))
+    .. code-block:: console
+
+        >>> bins = make_bins(lb=0.35, ub=10.0, midpoints=np.array([.5, 2.0, 5.0]))
     
     """
     boundaries = kwargs.pop("boundaries", None)

@@ -1,6 +1,6 @@
 import StatsCode
-import load_sizebins
-import collect_netcdf
+import Load_Size_Dists
+import Collect_netCDF
 import numpy as np
 import numpy.matlib
 import datetime
@@ -41,6 +41,22 @@ def CaseStudy(
 ):
     """
     Performs a external closure analysis on between data from in-situ, RSP, HSRL files taken on the same day with coincident measurements.   
+    
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``datetime``
+    * ``itertools``
+    * ``netCDF4``
+    * ``matplotlib``
+    * ``mpl_toolkits``
+    * ``pylab``
+    * ``statsmodels``
+    * ``scipy``
 
     :param camp_name: campaign name assocaiated with data file directory.
     :type camp_name: str

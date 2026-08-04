@@ -5,7 +5,16 @@ from scipy.stats.stats import pearsonr
 def Run(n_modes,p0,dp,dndlogdp,abs_coef,sca_coef,file_location):
 	"""
 	Returns N (cm-3), GM (nm), and GSD from a measured number concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) fit.py must be present in a directory that is in your PATH
-	
+    
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``scipy``
+    
 	:param p0: 3n guesses where n is the number of modes you are fitting. They should be in the order [Ni, GMi, GSDi] for i=1 to i=number of modes
 	:type p0: list                      
 	:return: Dictionary (Results) with the retrieved complex refractive index, calculated scattering and absorption coefficients in native measurements, and calculated single scattering albedo and extinction coefficients in measured and validation wavelengths

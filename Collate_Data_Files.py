@@ -2,6 +2,19 @@ import numpy as np
 import os
 
 def Run():
+	"""
+	Takes a set of saved retrieval dictionaries and combines them given a set of user inputs.
+
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``os``
+
+	"""
 	camp_name = input("Enter the campaign name in upper case (e.g., ARCSIX): ") 
 	camp_name_lower = camp_name.lower()
 	resolution = input("Enter the temporal resolution of interest in seconds (e.g., 30): ") 

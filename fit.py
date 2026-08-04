@@ -1,4 +1,9 @@
-"""Functions to support fitting multi-modal distributions.
+"""
+Functions to support fitting multi-modal distributions. Adapted from https://pypi.org/project/py-smps/
+
+:Authors: Joseph Schlosser
+:Revised: 4 Aug 2026
+:Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
 """
 import numpy as np
 from scipy.optimize import curve_fit

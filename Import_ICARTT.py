@@ -6,18 +6,32 @@ import datetime
 def imp(filename, num_time_columns): 
     """
     procedure to open ICARTT file and format the data and headers into the output (output_dictionary) python dictionary.WARNINGS: 1) numpy must be installed to the python environment, 2) importICART.py and file with the corresponding filename must be present in a directory that is in your PATH  
+    
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``datetime``
 
     :param filename: String  containing the name of the desired ICARTT v2.0 (.ict) file.
     :type filename: str  
     :return: the output of this code is output_dictionary, which is a python3 dictionary containing column-arrays for each of the parameters in the .ict file
     :rtype: numpy dictionary    
+    
+    Example
+    -------
+    
+    .. code-block:: console
 
-    >>> output_dictionary = importICT.imp("activate-mrg1_hu25_20200214_R0.ict")
-    >>> print(output_dictionary)
-    output_dictionary =
-        {'Time_Start_seconds': array([61301., 61302., 61303., ..., 72258., 72259., 72260.]), 
-        'Time_Stop_seconds': array([61302., 61303., 61304., ..., 72259., 72260., 72261.]), 
-        'Latitude_THORNHILL_ deg': array([37.085528, 37.085798, 37.086065, ..., 37.126424, 37.126694, ...            
+        >>> output_dictionary = importICT.imp("activate-mrg1_hu25_20200214_R0.ict")
+        >>> print(output_dictionary)
+        output_dictionary =
+            {'Time_Start_seconds': array([61301., 61302., 61303., ..., 72258., 72259., 72260.]), 
+            'Time_Stop_seconds': array([61302., 61303., 61304., ..., 72259., 72260., 72261.]), 
+            'Latitude_THORNHILL_ deg': array([37.085528, 37.085798, 37.086065, ..., 37.126424, 37.126694, ...            
     """
     # creat empty dictionary
     output_dictionary = {}

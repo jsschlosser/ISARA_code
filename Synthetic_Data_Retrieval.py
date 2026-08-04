@@ -1,7 +1,7 @@
 import ISARA
-import lut
-initialize = lut.initialize_spheres
-run_LUT = lut.run_simple
+import LUT
+initialize = LUT.initialize_spheres
+run_LUT = LUT.run
 import numpy as np
 import os
 import sys
@@ -10,6 +10,15 @@ def Run():
     """
     Runs ISARA retrievals on a set of synthetically generated data for testing the sensitivity of ISARA CRI and kappa retrievals.   
 
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``os``
+    * ``sys`` 
     """ 
     sys.path.insert(0, os.path.abspath("../"))  
 
@@ -19,8 +28,7 @@ def Run():
     # This should be at the start of the code to minimize the fork size
     #pool = ProcessPool(ncpus=number_of_cores)   
     LUT_output_variables = initialize(f'../ISARA_data_files/LUT_data/AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat')
-    def pause():
-        programPause = input("Press the <ENTER> key to continue...")    
+  
     def dict_reconfig(
         dictionaryname,
       ):

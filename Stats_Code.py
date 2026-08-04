@@ -39,6 +39,47 @@ from esda.moran import Moran
 from libpysal.weights import W
 
 def Comparison(x,y,prctils):
+	"""
+	Calculate closure statistics between two measurements of the same property. This procedure filters out missing values internally and computes key statistical indicators to evaluate the agreement between two 1-D arrays.
+
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
+    
+    .. note::
+       Missing or invalid values in `x` and `y` are automatically filtered
+       out before calculations take place.
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``scipy``
+	* ``esda``
+	* ``libpysal``
+
+    :param x: First measurement array.
+    :type x: array_like
+    :param y: Second measurement array. Must have the same length as `x`.
+    :type y: array_like
+    :param prctils: The physical units of the measurements, defaults to 'units'.
+    :type prctils: str, optional
+    :return: A 1-D array containing the calculated closure statistics in the following order:
+
+		* **R**: Correlation coefficient
+		* **p-value**: Probability that the two parameters are not correlated
+		* **NMAD**: Normalized Mean Absolute Deviation
+		* **MAD_[units]**: Mean Absolute Deviation in user-provided units
+		* **NRMSD**: Normalized Root-Mean Squared Deviation
+		* **RMSD_[units]**: Root-Mean Squared Deviation in user-provided units
+		* **x_min_[units]**: Minimum valid value of x
+		* **x_max_[units]**: Maximum valid value of x
+		* **y_min_[units]**: Minimum valid value of y
+		* **y_max_[units]**: Maximum valid value of y
+		* **count**: Number of points where both x and y had valid values
+
+    :rtype: numpy.ndarray
+    :raises ValueError: If `x` and `y` have mismatched lengths.
+    """
 	y = y.reshape(-1, 1)
 	y[np.isinf(y)]=np.nan
 	y[y<0]=np.nan

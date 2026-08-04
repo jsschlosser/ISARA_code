@@ -1,12 +1,21 @@
-import lut
-run_LUT = lut.run_simple
+import LUT
+run_LUT = LUT.run
 import sizedistmerge as sdm#from scipy.interpolate import pchip_interpolate
 import numpy as np
 
 def Retr_CRI(wvl_dict, val_wvl, measurement_data,CRI_p,LUT_output_variables):  
     """
     Returns aerosol particle real and imaginary refractive index from three scattering coefficeint measurements, three absorption coefficient measurements, a measured volume concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) mopsmap_wrapper.py must be present in a directory that is in your PATH
-        
+    
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``sizedistmerge``
+
     :param wvl_dict: Dictionary of wavelengths associated with each of the scattering and absorption measurements
     :type wvl_dict: numpy dictionary
     :param val_wvl: Dictionary of wavelengths associated with validation measurements
@@ -114,7 +123,16 @@ def Retr_CRI(wvl_dict, val_wvl, measurement_data,CRI_p,LUT_output_variables):
 def Retr_kappa(wvl_dict,val_wvl,measurement_data,RH,kappa_p,CRI_d,LUT_output_variables):
     """
     Returns aerosol particle hygroscopic growth factor from a humdified scattering coefficeint measurement, dry complex refractive index, and a measured number concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) mopsmap_wrapper.py must be present in a directory that is in your PATH.
-        
+    
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``sizedistmerge``
+            
     :param wvl_dict: Dictionary of wavelengths associated with each of the scattering and absorption measurements
     :type wvl_dict: numpy dictionary
     :param val_wvl: Dictionary of wavelengths associated with validation measurements

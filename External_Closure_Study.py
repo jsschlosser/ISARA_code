@@ -1,7 +1,7 @@
-import importICARTT
+import Import_ICARTT
 import External_Consistency_Procedure
 CaseStudy = External_Consistency_Procedure.CaseStudy
-import StatsCode
+import Stats_Code
 import numpy as np
 import pandas as pd
 import itertools
@@ -20,7 +20,6 @@ from matplotlib import cm
 from matplotlib.collections import PolyCollection
 from matplotlib.colors import ListedColormap, LinearSegmentedColormap
 from matplotlib.offsetbox import AnchoredText
-#from mpl_toolkits.basemap import Basemap
 from mpl_toolkits import mplot3d
 from mpl_toolkits.mplot3d import Axes3D
 from pylab import rcParams
@@ -28,6 +27,21 @@ from pylab import rcParams
 def Run():
     """
     Performs consistency analyses on every file in a directory given a set of user inputs.   
+
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
+
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``pandas``
+    * ``itertools``
+    * ``os``
+    * ``sys``
+    * ``datetime``
+    * ``matplotlib``
+    * ``pylab``
 
     """ 
     camp_name = input("Enter the campaign name in upper case (e.g., ARCSIX): ") 

@@ -20,7 +20,9 @@ def Run():
     """
     Saves a dictionary file of each of the merged data files in source directory that includes ISARA retrievals of CRI and kappa. Dictionary includes metadata for netCDF compliancy.
 
-
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
     """   
     sys.path.insert(0, os.path.abspath("../"))
 

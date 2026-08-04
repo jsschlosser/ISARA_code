@@ -1,13 +1,23 @@
 import numpy as np
 import pandas as pd
-import powerfunction as pwrfn
 from scipy.optimize import curve_fit
+import Power_Function as pwrfn
 f_model = pwrfn.f_model
 
 def Align(D_optic,N_optic,D_aero,N_aero):
     """
     Aligns optical and aerodynamic size distributions to determine effective density.
     
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
+
+    Requirements
+    ------------
+    * ``numpy``
+    * ``pandas``
+    * ``scipy``  
+
     :param D_optic: optical size distribution geometric mean diameters of each bin
     :type D_optic: numpy array
     :param N_optic: optical size distribution number concentration of each bin in m-3

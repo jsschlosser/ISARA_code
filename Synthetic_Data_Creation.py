@@ -1,9 +1,9 @@
-import APS_rho
-import importICARTT
-import load_sizebins
-import lut
-initialize = lut.initialize_spheres
-run_LUT = lut.run_simple
+import APS_Rho
+import Import_ICARTT
+import Load_Size_Dists
+import LUT
+initialize = LUT.initialize_spheres
+run_LUT = LUT.run_simple
 import sizedistmerge as sdm
 import numpy as np
 import os
@@ -13,11 +13,20 @@ import SDFitFigs
 def Run():
     """
     Given a set of user inputs, creates a set of synthetic data for testing the sensitivity of ISARA CRI and kappa retrievals.   
+    
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)    
 
+    Requirements
+    ------------ 
+    * ``numpy``
+    * ``os``
+    * ``sys`` 
+    * ``sizedistmerge``
     """ 
     sys.path.insert(0, os.path.abspath("../"))  
-    def pause():
-        programPause = input("Press the <ENTER> key to continue...")
+
     def grab_data(data,key_name):
         for key in data.keys():
             if key.__contains__(key_name):

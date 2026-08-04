@@ -44,23 +44,85 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#ISARA.Retr_CRI"><code class="docutils literal notranslate"><span class="pre">Retr_CRI()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ISARA.Retr_kappa"><code class="docutils literal notranslate"><span class="pre">Retr_kappa()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#lut.initialize_spheres"><code class="docutils literal notranslate"><span class="pre">initialize_spheres()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#lut.initialize_spheroids"><code class="docutils literal notranslate"><span class="pre">initialize_spheroids()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#lut.run_simple"><code class="docutils literal notranslate"><span class="pre">run_simple()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#APS_rho.Align"><code class="docutils literal notranslate"><span class="pre">Align()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#GenAmbDataFiles.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#load_sizebins.Load"><code class="docutils literal notranslate"><span class="pre">Load()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Calculate_Ambient_Properties.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Synthetic_Data_Creation.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Collocate_and_Plot_Amb_Data.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ISARA_Data_Retrieval.RunISARA"><code class="docutils literal notranslate"><span class="pre">RunISARA()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Synthetic_Data_Retrieval.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#importICARTT.imp"><code class="docutils literal notranslate"><span class="pre">imp()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#powerfunction.f_model"><code class="docutils literal notranslate"><span class="pre">f_model()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#External_Consistency_Procedure.CaseStudy"><code class="docutils literal notranslate"><span class="pre">CaseStudy()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#SD_Fit.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ISARA">ISARA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ISARA.Retr_CRI"><code class="docutils literal notranslate"><span class="pre">Retr_CRI()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ISARA.Retr_kappa"><code class="docutils literal notranslate"><span class="pre">Retr_kappa()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-LUT">LUT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#LUT.initialize_spheres"><code class="docutils literal notranslate"><span class="pre">initialize_spheres()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#LUT.initialize_spheroids"><code class="docutils literal notranslate"><span class="pre">initialize_spheroids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#LUT.run"><code class="docutils literal notranslate"><span class="pre">run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#synthetic-data-creation">Synthetic_Data_Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#synthetic-data-retrieval">Synthetic_Data_Retrieval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#synthetic-data-closure-study">Synthetic_Data_Closure_Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#isara-data-retrieval">ISARA_Data_Retrieval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#collate-data-files">Collate_Data_Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aps-rho">APS_Rho</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Load_Size_Dists">Load_Size_Dists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Load_Size_Dists.Load"><code class="docutils literal notranslate"><span class="pre">Load()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sd-fit-figs">SD_Fit_Figs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-icartt">Import_ICARTT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Import_ICARTT.imp"><code class="docutils literal notranslate"><span class="pre">imp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#power-function">Power_Function</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Power_Function.f_model"><code class="docutils literal notranslate"><span class="pre">f_model()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sd-fit">SD_Fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-fit">fit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fit.LogNormal"><code class="docutils literal notranslate"><span class="pre">LogNormal</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fit.LogNormal.fit"><code class="docutils literal notranslate"><span class="pre">LogNormal.fit()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.LogNormalFitResults"><code class="docutils literal notranslate"><span class="pre">LogNormalFitResults</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fit.LogNormalFitResults.predict"><code class="docutils literal notranslate"><span class="pre">LogNormalFitResults.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fit.LogNormalFitResults.summary"><code class="docutils literal notranslate"><span class="pre">LogNormalFitResults.summary()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.dndlogdp"><code class="docutils literal notranslate"><span class="pre">dndlogdp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.dsdlogdp"><code class="docutils literal notranslate"><span class="pre">dsdlogdp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.dvdlogdp"><code class="docutils literal notranslate"><span class="pre">dvdlogdp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.number_weighted_single_mode"><code class="docutils literal notranslate"><span class="pre">number_weighted_single_mode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.number_weighted_three_modes"><code class="docutils literal notranslate"><span class="pre">number_weighted_three_modes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.number_weighted_two_modes"><code class="docutils literal notranslate"><span class="pre">number_weighted_two_modes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.surface_weighted_single_mode"><code class="docutils literal notranslate"><span class="pre">surface_weighted_single_mode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.surface_weighted_three_modes"><code class="docutils literal notranslate"><span class="pre">surface_weighted_three_modes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.surface_weighted_two_modes"><code class="docutils literal notranslate"><span class="pre">surface_weighted_two_modes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.volume_weighted_single_mode"><code class="docutils literal notranslate"><span class="pre">volume_weighted_single_mode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.volume_weighted_three_modes"><code class="docutils literal notranslate"><span class="pre">volume_weighted_three_modes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fit.volume_weighted_two_modes"><code class="docutils literal notranslate"><span class="pre">volume_weighted_two_modes()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils">utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#utils.Table"><code class="docutils literal notranslate"><span class="pre">Table</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#utils.Table.add_border"><code class="docutils literal notranslate"><span class="pre">Table.add_border()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.Table.add_header"><code class="docutils literal notranslate"><span class="pre">Table.add_header()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utils.Table.add_title"><code class="docutils literal notranslate"><span class="pre">Table.add_title()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#utils.make_bins"><code class="docutils literal notranslate"><span class="pre">make_bins()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utils.roundup"><code class="docutils literal notranslate"><span class="pre">roundup()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#internal-closure-study">Internal_Closure_Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gen-amb-data-files">Gen_Amb_Data_Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nc_Write">nc_Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-ambient-properties">Calculate_Ambient_Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merge-in-situ-data">Merge_In-Situ_Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Collect_netCDF">Collect_netCDF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Collect_netCDF.grabHSRL2"><code class="docutils literal notranslate"><span class="pre">grabHSRL2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Collect_netCDF.grabRSP"><code class="docutils literal notranslate"><span class="pre">grabRSP()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#external-closure-study">External_Closure_Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#external-consistency-procedure">External_Consistency_Procedure</a></li>
 </ul>
 </li>
 </ul>
@@ -89,8 +151,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-ISARA">
-<span id="api"></span><h1>API<a class="headerlink" href="#module-ISARA" title="Link to this heading"></a></h1>
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
+<section id="module-ISARA">
+<span id="isara"></span><h2>ISARA<a class="headerlink" href="#module-ISARA" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="ISARA.Retr_CRI">
 <span class="sig-prename descclassname"><span class="pre">ISARA.</span></span><span class="sig-name descname"><span class="pre">Retr_CRI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wvl_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val_wvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measurement_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CRI_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LUT_output_variables</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISARA.Retr_CRI" title="Link to this definition"></a></dt>
@@ -137,9 +201,12 @@
 </dl>
 </dd></dl>
 
-<dl class="py function" id="module-lut">
-<dt class="sig sig-object py" id="lut.initialize_spheres">
-<span class="sig-prename descclassname"><span class="pre">lut.</span></span><span class="sig-name descname"><span class="pre">initialize_spheres</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">LUT_location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lut.initialize_spheres" title="Link to this definition"></a></dt>
+</section>
+<section id="module-LUT">
+<span id="lut"></span><h2>LUT<a class="headerlink" href="#module-LUT" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="LUT.initialize_spheres">
+<span class="sig-prename descclassname"><span class="pre">LUT.</span></span><span class="sig-name descname"><span class="pre">initialize_spheres</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">LUT_location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#LUT.initialize_spheres" title="Link to this definition"></a></dt>
 <dd><p>Load in the look up table (LUT) variables for use within <cite>run_LUT</cite>. All variables are returned in the output_variables dictionary</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -155,8 +222,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="lut.initialize_spheroids">
-<span class="sig-prename descclassname"><span class="pre">lut.</span></span><span class="sig-name descname"><span class="pre">initialize_spheroids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">LUT_location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lut.initialize_spheroids" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="LUT.initialize_spheroids">
+<span class="sig-prename descclassname"><span class="pre">LUT.</span></span><span class="sig-name descname"><span class="pre">initialize_spheroids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">LUT_location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#LUT.initialize_spheroids" title="Link to this definition"></a></dt>
 <dd><p>Load in the look up table (LUT) variables for use within <cite>run_LUT</cite>. All variables are returned in the output_variables dictionary</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -172,8 +239,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="lut.run_simple">
-<span class="sig-prename descclassname"><span class="pre">lut.</span></span><span class="sig-name descname"><span class="pre">run_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wavelength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">real_part</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag_part</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dV_dlnr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_output_variables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_int_angles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lut.run_simple" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="LUT.run">
+<span class="sig-prename descclassname"><span class="pre">LUT.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wavelength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">real_part</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag_part</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dV_dlnr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_output_variables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_int_angles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#LUT.run" title="Link to this definition"></a></dt>
 <dd><p>Calulates the integrated aerosol micriphysical properties for an array of data points. <cite>load_LUT</cite> must be called first to load the necessary output variables dictionary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -195,37 +262,30 @@
 </dl>
 </dd></dl>
 
-<dl class="py function" id="module-APS_rho">
-<dt class="sig sig-object py" id="APS_rho.Align">
-<span class="sig-prename descclassname"><span class="pre">APS_rho.</span></span><span class="sig-name descname"><span class="pre">Align</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">D_optic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_optic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D_aero</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_aero</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#APS_rho.Align" title="Link to this definition"></a></dt>
-<dd><p>Aligns optical and aerodynamic size distributions to determine effective density.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>D_optic</strong> (<em>numpy array</em>) – optical size distribution geometric mean diameters of each bin</p></li>
-<li><p><strong>N_optic</strong> (<em>numpy array</em>) – optical size distribution number concentration of each bin in m-3</p></li>
-<li><p><strong>D_aero</strong> (<em>numpy array</em>) – aerodynamic size distribution geometric mean diameters of each bin</p></li>
-<li><p><strong>N_aero</strong> – aerodynamic size distribution number concentration of each bin in m-3</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Dictionary (output) with the effective density and size distribution peak.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>numpy dictionary</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function" id="module-GenAmbDataFiles">
-<dt class="sig sig-object py" id="GenAmbDataFiles.Run">
-<span class="sig-prename descclassname"><span class="pre">GenAmbDataFiles.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GenAmbDataFiles.Run" title="Link to this definition"></a></dt>
-<dd><p>Saves a dictionary file of each of the merged data files in source directory that includes ISARA retrievals of CRI and kappa. Dictionary includes metadata for netCDF compliancy.</p>
-</dd></dl>
-
-<dl class="py function" id="module-load_sizebins">
-<span id="module-cal_rho"></span><dt class="sig sig-object py" id="load_sizebins.Load">
-<span class="sig-prename descclassname"><span class="pre">load_sizebins.</span></span><span class="sig-name descname"><span class="pre">Load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_sizebins.Load" title="Link to this definition"></a></dt>
+</section>
+<section id="synthetic-data-creation">
+<h2>Synthetic_Data_Creation<a class="headerlink" href="#synthetic-data-creation" title="Link to this heading"></a></h2>
+</section>
+<section id="synthetic-data-retrieval">
+<h2>Synthetic_Data_Retrieval<a class="headerlink" href="#synthetic-data-retrieval" title="Link to this heading"></a></h2>
+</section>
+<section id="synthetic-data-closure-study">
+<h2>Synthetic_Data_Closure_Study<a class="headerlink" href="#synthetic-data-closure-study" title="Link to this heading"></a></h2>
+</section>
+<section id="isara-data-retrieval">
+<h2>ISARA_Data_Retrieval<a class="headerlink" href="#isara-data-retrieval" title="Link to this heading"></a></h2>
+</section>
+<section id="collate-data-files">
+<h2>Collate_Data_Files<a class="headerlink" href="#collate-data-files" title="Link to this heading"></a></h2>
+</section>
+<section id="aps-rho">
+<h2>APS_Rho<a class="headerlink" href="#aps-rho" title="Link to this heading"></a></h2>
+</section>
+<section id="module-Load_Size_Dists">
+<span id="load-size-dists"></span><h2>Load_Size_Dists<a class="headerlink" href="#module-Load_Size_Dists" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Load_Size_Dists.Load">
+<span class="sig-prename descclassname"><span class="pre">Load_Size_Dists.</span></span><span class="sig-name descname"><span class="pre">Load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Load_Size_Dists.Load" title="Link to this definition"></a></dt>
 <dd><p>Returns an dictionary of bin diameters from a specified .csv file</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -240,55 +300,15 @@
 </dl>
 </dd></dl>
 
-<dl class="py function" id="module-Calculate_Ambient_Properties">
-<dt class="sig sig-object py" id="Calculate_Ambient_Properties.Run">
-<span class="sig-prename descclassname"><span class="pre">Calculate_Ambient_Properties.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dNdlnRpg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dAdlnRpg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dVdlnRpg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LUT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape_dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kys_sizes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Calculate_Ambient_Properties.Run" title="Link to this definition"></a></dt>
-<dd><p>Returns aerosol particle real and imaginary refractive index from three scattering coefficeint measurements, three absorption coefficient measurements, a measured volume concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) mopsmap_wrapper.py must be present in a directory that is in your PATH</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>wvl_dict</strong> (<em>numpy dictionary</em>) – Dictionary of wavelengths associated with each of the scattering and absorption measurements</p></li>
-<li><p><strong>val_wvl</strong> (<em>numpy dictionary</em>) – Dictionary of wavelengths associated with validation measurements</p></li>
-<li><p><strong>measurement_data</strong> (<em>numpy dictionary</em>) – Dictionary containing measured dry scattering and absorption coefficients in Mm^-1, size resolved volume concentrations in um^3 cm^-3, and geometric mean particle diameters of each size bin in mum <strong>*NOTE: The optical coefficients should be one key per channel (e.g., measurement_data[‘dry_meas_sca_coef_450_Mm-1’], measurement_data[‘dry_meas_abs_coef_470_Mm-1’], etc.).*</strong></p></li>
-<li><p><strong>CRI_p</strong> (<em>numpy array</em><em>[</em><em>float</em><em>]</em>) – 2-D array containing the prescribed RRI and IRI range to be searched</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Dictionary (Results) with the retrieved complex refractive index, calculated scattering and absorption coefficients in native measurements, and calculated single scattering albedo and extinction coefficients in measured and validation wavelengths</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>numpy dictionary</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function" id="module-Synthetic_Data_Creation">
-<span id="module-CollateDataFiles"></span><span id="module-collect_netcdf"></span><span id="module-Synthetic_Data_Closure_Study"></span><span id="module-MergeInSituData"></span><dt class="sig sig-object py" id="Synthetic_Data_Creation.Run">
-<span class="sig-prename descclassname"><span class="pre">Synthetic_Data_Creation.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Synthetic_Data_Creation.Run" title="Link to this definition"></a></dt>
-<dd><p>Given a set of user inputs, creates a set of synthetic data for testing the sensitivity of ISARA CRI and kappa retrievals.</p>
-</dd></dl>
-
-<dl class="py function" id="module-Collocate_and_Plot_Amb_Data">
-<span id="module-nc_write"></span><dt class="sig sig-object py" id="Collocate_and_Plot_Amb_Data.Run">
-<span class="sig-prename descclassname"><span class="pre">Collocate_and_Plot_Amb_Data.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Collocate_and_Plot_Amb_Data.Run" title="Link to this definition"></a></dt>
-<dd><p>Performs consistency analyses on every file in a directory given a set of user inputs.</p>
-</dd></dl>
-
-<dl class="py function" id="module-ISARA_Data_Retrieval">
-<dt class="sig sig-object py" id="ISARA_Data_Retrieval.RunISARA">
-<span class="sig-prename descclassname"><span class="pre">ISARA_Data_Retrieval.</span></span><span class="sig-name descname"><span class="pre">RunISARA</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ISARA_Data_Retrieval.RunISARA" title="Link to this definition"></a></dt>
-<dd><p>After a series of user requested inputs, this function retrieves complex refractive index and hygroscopicty from the measured aerosol size distributions and optical coefficients in each file (in .ict format) of the source directory.</p>
-</dd></dl>
-
-<dl class="py function" id="module-Synthetic_Data_Retrieval">
-<span id="module-SDFitFigs"></span><dt class="sig sig-object py" id="Synthetic_Data_Retrieval.Run">
-<span class="sig-prename descclassname"><span class="pre">Synthetic_Data_Retrieval.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Synthetic_Data_Retrieval.Run" title="Link to this definition"></a></dt>
-<dd><p>Runs ISARA retrievals on a set of synthetically generated data for testing the sensitivity of ISARA CRI and kappa retrievals.</p>
-</dd></dl>
-
-<dl class="py function" id="module-importICARTT">
-<dt class="sig sig-object py" id="importICARTT.imp">
-<span class="sig-prename descclassname"><span class="pre">importICARTT.</span></span><span class="sig-name descname"><span class="pre">imp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_time_columns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#importICARTT.imp" title="Link to this definition"></a></dt>
+</section>
+<section id="sd-fit-figs">
+<h2>SD_Fit_Figs<a class="headerlink" href="#sd-fit-figs" title="Link to this heading"></a></h2>
+</section>
+<section id="import-icartt">
+<span id="module-SD_Fit_Figs"></span><h2>Import_ICARTT<a class="headerlink" href="#import-icartt" title="Link to this heading"></a></h2>
+<dl class="py function" id="module-Import_ICARTT">
+<dt class="sig sig-object py" id="Import_ICARTT.imp">
+<span class="sig-prename descclassname"><span class="pre">Import_ICARTT.</span></span><span class="sig-name descname"><span class="pre">imp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_time_columns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Import_ICARTT.imp" title="Link to this definition"></a></dt>
 <dd><p>procedure to open ICARTT file and format the data and headers into the output (output_dictionary) python dictionary.WARNINGS: 1) numpy must be installed to the python environment, 2) importICART.py and file with the corresponding filename must be present in a directory that is in your PATH</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -311,9 +331,12 @@
 </div>
 </dd></dl>
 
-<dl class="py function" id="module-powerfunction">
-<dt class="sig sig-object py" id="powerfunction.f_model">
-<span class="sig-prename descclassname"><span class="pre">powerfunction.</span></span><span class="sig-name descname"><span class="pre">f_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#powerfunction.f_model" title="Link to this definition"></a></dt>
+</section>
+<section id="power-function">
+<h2>Power_Function<a class="headerlink" href="#power-function" title="Link to this heading"></a></h2>
+<dl class="py function" id="module-Power_Function">
+<dt class="sig sig-object py" id="Power_Function.f_model">
+<span class="sig-prename descclassname"><span class="pre">Power_Function.</span></span><span class="sig-name descname"><span class="pre">f_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Power_Function.f_model" title="Link to this definition"></a></dt>
 <dd><p>function y = a*x^c</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -331,54 +354,749 @@
 </dl>
 </dd></dl>
 
-<dl class="py function" id="module-External_Consistency_Procedure">
-<dt class="sig sig-object py" id="External_Consistency_Procedure.CaseStudy">
-<span class="sig-prename descclassname"><span class="pre">External_Consistency_Procedure.</span></span><span class="sig-name descname"><span class="pre">CaseStudy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camp_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Insitu_Spherical_Retrieval_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Insitu_Nonspherical_Retrieval_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Insitu_Nonspherical_Retrieval_filename_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RSP_Filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">HSRL2_Filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ouput_filename_suffix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_separation_constraint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_separation_constraint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_directory_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_key_vars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LegID_dictionary</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#External_Consistency_Procedure.CaseStudy" title="Link to this definition"></a></dt>
-<dd><p>Performs a external closure analysis on between data from in-situ, RSP, HSRL files taken on the same day with coincident measurements.</p>
+</section>
+<section id="sd-fit">
+<h2>SD_Fit<a class="headerlink" href="#sd-fit" title="Link to this heading"></a></h2>
+</section>
+<section id="module-fit">
+<span id="fit"></span><h2>fit<a class="headerlink" href="#module-fit" title="Link to this heading"></a></h2>
+<p>Functions to support fitting multi-modal distributions. Adapted from <a class="reference external" href="https://pypi.org/project/py-smps/">https://pypi.org/project/py-smps/</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="fit.LogNormal">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">LogNormal</span></span><a class="headerlink" href="#fit.LogNormal" title="Link to this definition"></a></dt>
+<dd><p>A multi-mode LogNormal particle size distribution.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fit.LogNormal.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'number'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.LogNormal.fit" title="Link to this definition"></a></dt>
+<dd><p>Fit a multi-mode lognormal aerosol distribution.</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>X<span class="classifier">array-like</span></dt><dd><p>Training data</p>
+</dd>
+<dt>Y<span class="classifier">array-like</span></dt><dd><p>The target values.</p>
+</dd>
+<dt>modes<span class="classifier">int, default=1</span></dt><dd><p>The number of models for the model to fit to.</p>
+</dd>
+<dt>xmin<span class="classifier">float, default=None</span></dt><dd><p>The minimum particle diameter (in nm) to consider.</p>
+</dd>
+<dt>xmax<span class="classifier">float, default=None</span></dt><dd><p>The maximum particle diameter (in nm) to consider.</p>
+</dd>
+<dt>weight<span class="classifier">str, default=’number’</span></dt><dd><p>The moment of the distribution to fit. Should be one of 
+(“number”, “surface”, “volume”).</p>
+</dd>
+<dt>fit_kwargs<span class="classifier">dict</span></dt><dd><p>Optional kwargs to be passed directly to <code class="docutils literal notranslate"><span class="pre">scipy.optimize.curve_fit</span></code>.
+Read more <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html">here</a>.</p>
+</dd>
+<dt>p0<span class="classifier">array-like</span></dt><dd><p>Array of initial guesses</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<p>smps.fit.LogNormalFitResults</p>
+</section>
+<section id="see-also">
+<h3>See Also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h3>
+<p>smps.models.GenericParticleSizer
+smps.fit.LogNormalFitResults</p>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
+<p>Create a single-mode fit:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">smps.fit</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogNormal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">LogNormal</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">midpoints</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">dndlogdp</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">modes</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fit.LogNormalFitResults">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">LogNormalFitResults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fittedvalues</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modes</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.LogNormalFitResults" title="Link to this definition"></a></dt>
+<dd><p>Fit parameters for the LogNormal distribution.</p>
+<p>This class is returned by the LogNormal model and is 
+not typically created from scratch.</p>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>params<span class="classifier">array-like</span></dt><dd><p>The parameters of the fitted model as an array.</p>
+</dd>
+<dt>error_matrix<span class="classifier">array-like</span></dt><dd><p>The error matrix for the params.</p>
+</dd>
+<dt>fittedvalues<span class="classifier">array-like</span></dt><dd><p>The fitted values from the LogNormal model.</p>
+</dd>
+<dt>modes<span class="classifier">int</span></dt><dd><p>The number of modes fit.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>See Also<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>smps.fit.LogNormal</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fit.LogNormalFitResults.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'number'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.LogNormalFitResults.predict" title="Link to this definition"></a></dt>
+<dd><p>Predict new values using the fit model.</p>
+<section id="id3">
+<h4>Parameters<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<dl class="simple">
+<dt>X<span class="classifier">array-like</span></dt><dd><p>An array of particle diameters at which to predict the 
+number concentration based on the fit model.</p>
+</dd>
+<dt>weight: str, default=’number’</dt><dd><p>The moment of the model to fit at. Should be one of 
+(‘number’, ‘surface’, ‘volume’).</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h4>Returns<a class="headerlink" href="#id4" title="Link to this heading"></a></h4>
+<p>An array of number concentrations.</p>
+</section>
+<section id="id5">
+<h4>Examples<a class="headerlink" href="#id5" title="Link to this heading"></a></h4>
+<p>Predict the number concentration at 1 and 2.5 µm:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">smps.fit</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogNormal</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">LogNormal</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">midpoints</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">dndlogdp</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">modes</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">])</span>     
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fit.LogNormalFitResults.summary">
+<span class="sig-name descname"><span class="pre">summary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fit.LogNormalFitResults.summary" title="Link to this definition"></a></dt>
+<dd><p>Summary statistics for the fit LogNormal model.</p>
+<section id="id6">
+<h4>Returns<a class="headerlink" href="#id6" title="Link to this heading"></a></h4>
+<p>statsmodels.iolib.table.SimpleTable</p>
+</section>
+<section id="id7">
+<h4>Examples<a class="headerlink" href="#id7" title="Link to this heading"></a></h4>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">smps.fit</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogNormal</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">LogNormal</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">midpoints</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">dndlogdp</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">modes</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.dndlogdp">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">dndlogdp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.dndlogdp" title="Link to this definition"></a></dt>
+<dd><p>Discrete PDF for a lognormal particle size distribution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>camp_name</strong> (<em>str</em>) – campaign name assocaiated with data file directory.</p></li>
-<li><p><strong>Insitu_Spherical_Retrieval_filename</strong> (<em>str</em>) – in-situ data file where coarse-mode assumed spherical.</p></li>
-<li><p><strong>Insitu_Nonspherical_Retrieval_filename</strong> (<em>str</em>) – in-situ data file where coarse-mode assumed non-spherical type 1.</p></li>
-<li><p><strong>Insitu_Nonspherical_Retrieval_filename_2</strong> (<em>str</em>) – in-situ data file where coarse-mode assumed non-spherical type 2.</p></li>
-<li><p><strong>RSP_Filename</strong> (<em>str</em>) – RSP data file.</p></li>
-<li><p><strong>HSRL2_Filename</strong> (<em>str</em>) – HSRL data file.</p></li>
-<li><p><strong>ouput_filename_suffix</strong> (<em>str</em>) – output filename suffix.</p></li>
-<li><p><strong>time_separation_constraint</strong> (<em>int</em>) – maximum allowed time separation in minutes.</p></li>
-<li><p><strong>spatial_separation_constraint</strong> (<em>int</em>) – maximum allowed spatial separation in km.</p></li>
-<li><p><strong>out_directory_name</strong> (<em>str</em>) – ouput directory filename.</p></li>
-<li><p><strong>source_key_vars</strong> (<em>str</em>) – source variable names that are dependent on each mission/insturment suite.</p></li>
-<li><p><strong>LegID_dictionary</strong> (<em>str</em>) – filename correspoding to the file with datetimes of interest.</p></li>
+<li><p><strong>dp</strong> (<em>numpy array</em>) – Particle diameters at which to evaluate the 
+PDF in building the discrete model.</p></li>
+<li><p><strong>n</strong> (<em>float</em>) – Area under the curve of the continuous PDF 
+(the discrete model will be slightly different).</p></li>
+<li><p><strong>gm</strong> (<em>float</em>) – The geometric mean.</p></li>
+<li><p><strong>gsd</strong> (<em>float</em>) – The geometric standard deviation.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>output_dictionary</p>
+<dd class="field-even"><p>A list of concentrations respective to the 
+list of particle sizes, <cite>dp</cite>.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>dictionary</p>
+<dd class="field-odd"><p>numpy array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py function" id="module-SD_Fit">
-<dt class="sig sig-object py" id="SD_Fit.Run">
-<span class="sig-prename descclassname"><span class="pre">SD_Fit.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_modes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dndlogdp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abs_coef</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sca_coef</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SD_Fit.Run" title="Link to this definition"></a></dt>
-<dd><p>Returns N (cm-3), GM (nm), and GSD from a measured number concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) fit.py must be present in a directory that is in your PATH</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.dsdlogdp">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">dsdlogdp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.dsdlogdp" title="Link to this definition"></a></dt>
+<dd><p>Discrete PDF for a surface-weighted lognormal 
+particle size distribution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>p0</strong> (<em>list</em>) – 3n guesses where n is the number of modes you are fitting. They should be in the order [Ni, GMi, GSDi] for i=1 to i=number of modes</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dp</strong> (<em>numpy array</em>) – Particle diameters at which to evaluate 
+the PDF in building the discrete model.</p></li>
+<li><p><strong>n</strong> (<em>float</em>) – The area under the curve of the continuous PDF 
+(the discrete model will be slightly different).</p></li>
+<li><p><strong>gm</strong> (<em>float</em>) – The geometric mean.</p></li>
+<li><p><strong>gsd</strong> (<em>float</em>) – The geometric standard deviation.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Dictionary (Results) with the retrieved complex refractive index, calculated scattering and absorption coefficients in native measurements, and calculated single scattering albedo and extinction coefficients in measured and validation wavelengths</p>
+<dd class="field-even"><p>A list of concentrations respective to the 
+list of particle sizes, <cite>dp</cite>.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>numpy dictionary</p>
+<dd class="field-odd"><p>numpy array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<span class="target" id="module-internal_closure_study"></span></section>
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.dvdlogdp">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">dvdlogdp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.dvdlogdp" title="Link to this definition"></a></dt>
+<dd><p>Discrete PDF for a volume-weighted lognormal particle 
+size distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dp</strong> (<em>numpy array</em>) – Particle diameters at which to evaluate 
+the PDF in building the discrete model.</p></li>
+<li><p><strong>n</strong> (<em>float</em>) – The area under the curve of the continuous PDF 
+(the discrete model will be slightly different).</p></li>
+<li><p><strong>gm</strong> (<em>float</em>) – The geometric mean.</p></li>
+<li><p><strong>gsd</strong> (<em>float</em>) – The geometric standard deviation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of concentrations respective to 
+the list of particle sizes, <cite>dp</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.number_weighted_single_mode">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">number_weighted_single_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.number_weighted_single_mode" title="Link to this definition"></a></dt>
+<dd><p>Discrete PDF for a lognormal distribution of particle 
+size for a 1-mode distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dp</strong> (<em>numpy array</em>) – Particle diameters at which to evaluate 
+the PDF in building the discrete model.</p></li>
+<li><p><strong>n</strong> (<em>float</em>) – The  area under the curve of the continuous PDF 
+(the discrete model will be slightly different).</p></li>
+<li><p><strong>gm</strong> (<em>float</em>) – The geometric mean.</p></li>
+<li><p><strong>gsd</strong> (<em>float</em>) – The geometric standard deviation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of concentrations respective to the 
+list of particle sizes, <cite>dp</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.number_weighted_three_modes">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">number_weighted_three_modes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.number_weighted_three_modes" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Discrete PDF for a lognormal distribution of particle </dt><dd><p>size for a 3-mode distribution.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dp</strong> (<em>numpy array</em>) – The particle diameters at which to evaluate 
+the PDF in building the discrete model.</p></li>
+<li><p><strong>n1</strong> (<em>float</em>) – The area under the curve of the continuous 
+PDF for the first component (the discrete 
+model will be slightly different).</p></li>
+<li><p><strong>gm1</strong> (<em>float</em>) – The geometric mean for the first component.</p></li>
+<li><p><strong>gsd1</strong> (<em>float</em>) – The geometric standard deviation for .
+the first component</p></li>
+<li><p><strong>n2</strong> (<em>float</em>) – The area under the curve of the continuous 
+PDF for the second component (the discrete 
+model will be slightly different).</p></li>
+<li><p><strong>gm2</strong> (<em>float</em>) – The geometric mean for the second component.</p></li>
+<li><p><strong>gsd2</strong> (<em>float</em>) – The geometric standard deviation for 
+the second component.</p></li>
+<li><p><strong>n3</strong> (<em>float</em>) – The area under the curve of the continuous 
+PDF for the third component (the discrete 
+model will be slightly different).</p></li>
+<li><p><strong>gm3</strong> (<em>float</em>) – The geometric mean for the third component.</p></li>
+<li><p><strong>gsd3</strong> (<em>float</em>) – The geometric standard deviation for 
+the third component.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of concentrations respective to 
+the list of particle sizes, <cite>dp</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.number_weighted_two_modes">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">number_weighted_two_modes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.number_weighted_two_modes" title="Link to this definition"></a></dt>
+<dd><p>Discrete PDF for a lognormal distribution of particle 
+size for a 2-mode distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dp</strong> (<em>numpy array</em>) – Particle diameters at which to evaluate 
+the PDF in building the discrete model.</p></li>
+<li><p><strong>n1</strong> (<em>float</em>) – The area under the curve of the continuous 
+PDF for the first component (the discrete 
+model will be slightly different).</p></li>
+<li><p><strong>gm1</strong> (<em>float</em>) – The geometric mean for the first component.</p></li>
+<li><p><strong>gsd1</strong> (<em>float</em>) – The geometric standard deviation for 
+the first component.</p></li>
+<li><p><strong>n2</strong> (<em>float</em>) – The area under the curve of the continuous 
+PDF for the second component (the discrete 
+model will be slightly different).</p></li>
+<li><p><strong>gm2</strong> (<em>float</em>) – The geometric mean for the second component.</p></li>
+<li><p><strong>gsd2</strong> (<em>float</em>) – The geometric standard deviation for 
+the second component.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of concentrations respective to 
+the list of particle sizes, <cite>dp</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.surface_weighted_single_mode">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">surface_weighted_single_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.surface_weighted_single_mode" title="Link to this definition"></a></dt>
+<dd><p>Discrete PDF for a lognormal distribution of particle 
+size for a 1-mode distribution weighted by surface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dp</strong> (<em>numpy array</em>) – The particle diameters at which to evaluate 
+the PDF in building the discrete model.</p></li>
+<li><p><strong>n</strong> (<em>float</em>) – The area under the curve of the continuous 
+PDF (the discrete model will be slightly different).</p></li>
+<li><p><strong>gm</strong> (<em>float</em>) – The geometric mean.</p></li>
+<li><p><strong>gsd</strong> (<em>float</em>) – The geometric standard deviation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of concentrations respective to 
+the list of particle sizes, <cite>dp</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.surface_weighted_three_modes">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">surface_weighted_three_modes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.surface_weighted_three_modes" title="Link to this definition"></a></dt>
+<dd><p>Discrete PDF for a lognormal distribution of particle size 
+for a 3-mode distribution weighted by surface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dp</strong> (<em>numpy array</em>) – The particle diameters at which to evaluate 
+the PDF in building the discrete model.</p></li>
+<li><p><strong>n1</strong> (<em>float</em>) – The area under the curve of the continuous PDF 
+for the first component (the discrete model will 
+be slightly different).</p></li>
+<li><p><strong>gm1</strong> (<em>float</em>) – The geometric mean for the first component.</p></li>
+<li><p><strong>gsd1</strong> (<em>float</em>) – The geometric standard deviation for 
+the first component.</p></li>
+<li><p><strong>n2</strong> (<em>float</em>) – The area under the curve of the continuous PDF 
+for the second component (the discrete model 
+will be slightly different).</p></li>
+<li><p><strong>gm2</strong> (<em>float</em>) – The geometric mean for the second component.</p></li>
+<li><p><strong>gsd2</strong> (<em>float</em>) – The geometric standard deviation for 
+the second component.</p></li>
+<li><p><strong>n3</strong> (<em>float</em>) – The area under the curve of the continuous PDF 
+for the third component (the discrete model will be 
+slightly different).</p></li>
+<li><p><strong>gm3</strong> (<em>float</em>) – The geometric mean for the third component.</p></li>
+<li><p><strong>gsd3</strong> (<em>float</em>) – The geometric standard deviation for the 
+third component.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of concentrations respective to the 
+list of particle sizes, <cite>dp</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.surface_weighted_two_modes">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">surface_weighted_two_modes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.surface_weighted_two_modes" title="Link to this definition"></a></dt>
+<dd><p>Discrete PDF for a lognormal distribution of particle 
+size for a 2-mode distribution weighted by surface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dp</strong> (<em>numpy array</em>) – The particle diameters at which to evaluate 
+the PDF in building the discrete model.</p></li>
+<li><p><strong>n1</strong> (<em>float</em>) – The area under the curve of the continuous PDF 
+for the first component (the discrete model will 
+be slightly different).</p></li>
+<li><p><strong>gm1</strong> (<em>float</em>) – The geometric mean for the first component.</p></li>
+<li><p><strong>gsd1</strong> (<em>float</em>) – The geometric standard deviation for 
+the first component.</p></li>
+<li><p><strong>n2</strong> (<em>float</em>) – The area under the curve of the continuous 
+PDF for the second component (the discrete model 
+will be slightly different).</p></li>
+<li><p><strong>gm2</strong> (<em>float</em>) – The geometric mean for the second component.</p></li>
+<li><p><strong>gsd2</strong> (<em>float</em>) – The geometric standard deviation for the 
+second component.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of concentrations respective to the 
+list of particle sizes, <cite>dp</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.volume_weighted_single_mode">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">volume_weighted_single_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.volume_weighted_single_mode" title="Link to this definition"></a></dt>
+<dd><p>Discrete PDF for a lognormal distribution of particle 
+size for a 1-mode distribution weighted by volume.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dp</strong> (<em>numpy array</em>) – The particle diameters at which to evaluate the 
+PDF in building the discrete model.</p></li>
+<li><p><strong>n</strong> (<em>float</em>) – The area under the curve of the continuous PDF 
+(the discrete model will be slightly different).</p></li>
+<li><p><strong>gm</strong> (<em>float</em>) – The geometric mean.</p></li>
+<li><p><strong>gsd</strong> (<em>float</em>) – The geometric standard deviation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of concentrations respective to the 
+list of particle sizes, <cite>dp</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.volume_weighted_three_modes">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">volume_weighted_three_modes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.volume_weighted_three_modes" title="Link to this definition"></a></dt>
+<dd><p>Discrete PDF for a log-normal distribution of particle 
+size for a 3-mode distribution weighted by volume.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dp</strong> (<em>numpy array</em>) – The particle diameters at which to evaluate the 
+PDF in building the discrete model.</p></li>
+<li><p><strong>n1</strong> (<em>float</em>) – The area under the curve of the continuous PDF 
+for the first component (the discrete model will be 
+slightly different).</p></li>
+<li><p><strong>gm1</strong> (<em>float</em>) – The geometric mean for the first component.</p></li>
+<li><p><strong>gsd1</strong> (<em>flaot</em>) – The geometric standard deviation for the 
+first component.</p></li>
+<li><p><strong>n2</strong> (<em>float</em>) – The area under the curve of the continuous PDF 
+for the second component (the discrete model will 
+be slightly different).</p></li>
+<li><p><strong>gm2</strong> (<em>float</em>) – The geometric mean for the second component.</p></li>
+<li><p><strong>gsd2</strong> (<em>float</em>) – The geometric standard deviation for the 
+second component.</p></li>
+<li><p><strong>n3</strong> (<em>float</em>) – The area under the curve of the continuous PDF
+for the third component (the discrete model will be
+slightly different).</p></li>
+<li><p><strong>gm3</strong> (<em>float</em>) – The geometric mean for the third component.</p></li>
+<li><p><strong>gsd3</strong> (<em>float</em>) – The geometric standard deviation for the
+third component.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of concentrations respective to the list
+of particle sizes, <cite>dp</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fit.volume_weighted_two_modes">
+<span class="sig-prename descclassname"><span class="pre">fit.</span></span><span class="sig-name descname"><span class="pre">volume_weighted_two_modes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gm2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gsd2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.volume_weighted_two_modes" title="Link to this definition"></a></dt>
+<dd><p>Discrete PDF for a lognormal distribution of particle 
+size for a 2-mode distribution weighted by volume.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dp</strong> (<em>numpy array</em>) – The particle diameters at which to evaluate the 
+PDF in building the discrete model.</p></li>
+<li><p><strong>n1</strong> (<em>float</em>) – The area under the curve of the continuous PDF 
+for the first component (the discrete model will 
+be slightly different).</p></li>
+<li><p><strong>gm1</strong> (<em>float</em>) – The geometric mean for the first component.</p></li>
+<li><p><strong>gsd1</strong> (<em>float</em>) – The geometric standard deviation for the 
+first component.</p></li>
+<li><p><strong>n2</strong> (<em>float</em>) – The area under the curve of the continuous PDF 
+for the second component (the discrete model will be 
+slightly different).</p></li>
+<li><p><strong>gm2</strong> (<em>float</em>) – The geometric mean for the second component.</p></li>
+<li><p><strong>gsd2</strong> (<em>float</em>) – The geometric standard deviation for the 
+second component.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of concentrations respective to the 
+list of particle sizes, <cite>dp</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-utils">
+<span id="utils"></span><h2>utils<a class="headerlink" href="#module-utils" title="Link to this heading"></a></h2>
+<p>adapted from <a class="reference external" href="https://pypi.org/project/py-smps/">https://pypi.org/project/py-smps/</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="utils.Table">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.Table" title="Link to this definition"></a></dt>
+<dd><p>A table which can be constructed and then printed into 
+the terminal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>max_width</strong> (<em>int</em>) – The maximum width, in characters, of the 
+table to be printed in the terminal, defaults to 80.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.Table.add_border">
+<span class="sig-name descname"><span class="pre">add_border</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">char</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'='</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.Table.add_border" title="Link to this definition"></a></dt>
+<dd><p>Add a border to the bottom of the table to visually 
+delimit between data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>char</strong> (<em>string</em>) – The character to be used for the border.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.Table.add_header">
+<span class="sig-name descname"><span class="pre">add_header</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utils.Table.add_header" title="Link to this definition"></a></dt>
+<dd><p>Appends a header to the bottom of the table with four 
+sections: blank, “N (cm-3)”, “GM (nm)”, and “GSD”.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="utils.Table.add_title">
+<span class="sig-name descname"><span class="pre">add_title</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.Table.add_title" title="Link to this definition"></a></dt>
+<dd><p>Add a title to the top of the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>title</strong> (<em>string</em>) – The title to be added.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.make_bins">
+<span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">make_bins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.make_bins" title="Link to this definition"></a></dt>
+<dd><p>Create a 3xn array of particle size bins.</p>
+<p>Compute the lower boundary, upper boundary, and midpoint 
+diameter for each particle size bin.</p>
+<section id="id8">
+<h3>Parameters<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>boundaries<span class="classifier">array-like</span></dt><dd><p>A list or array containing all unique lower and upper bounds.</p>
+</dd>
+<dt>boundaries_left<span class="classifier">array-like</span></dt><dd><p>A list of lower boundaries for each bin. If used, you must also define the boundaries_right.</p>
+</dd>
+<dt>boundaries_right<span class="classifier">array-like</span></dt><dd><p>A list of upper boundaries for each bin. If used, you must also define the boundaries_left.</p>
+</dd>
+<dt>lb<span class="classifier">float</span></dt><dd><p>The lower bound of the lowest size bin. If used, you must also provide a value for ub.</p>
+</dd>
+<dt>ub<span class="classifier">float</span></dt><dd><p>The upper bound of the largest size bin. If used, you must also provide a value for lb.</p>
+</dd>
+<dt>midpoints<span class="classifier">array-like</span></dt><dd><p>A list of midpoints to use. If used, you must also provide values for lb and ub.</p>
+</dd>
+<dt>channels_per_decade<span class="classifier">int</span></dt><dd><p>A measure of the bin width on a log scale.</p>
+</dd>
+<dt>mean_calc<span class="classifier">str</span></dt><dd><p>The method of calculation for midpoints. Should be one of (‘am’, ‘gm’) corresponding 
+to the arithmetic or geometric mean.</p>
+</dd>
+</dl>
+</section>
+<section id="id9">
+<h3>Returns<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>bins<span class="classifier">array-like</span></dt><dd><p>A 3xn array of particle size bins with a (lower boundary, midpoint, upper boundary)
+for each particle size bin.</p>
+</dd>
+</dl>
+</section>
+<section id="id10">
+<h3>Examples<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<p>Create a set of bins from a list of boundaries:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bins</span> <span class="o">=</span> <span class="n">make_bins</span><span class="p">(</span><span class="n">boundaries</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>Create a set of bins from lists of lower and upper boundaries:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bins</span> <span class="o">=</span> <span class="n">make_bins</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">boundaries_left</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">]),</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">boundaries_right</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Create a set of bins from the lowest boundary, highest boundary, and midpoints:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bins</span> <span class="o">=</span> <span class="n">make_bins</span><span class="p">(</span><span class="n">lb</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span> <span class="n">ub</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">midpoints</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.roundup">
+<span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">roundup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.roundup" title="Link to this definition"></a></dt>
+<dd><p>round up to a multiple of 100</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>float</em>) – The number to be rounded up.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>x</cite> rounded up to a multiple of 100.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="internal-closure-study">
+<h2>Internal_Closure_Study<a class="headerlink" href="#internal-closure-study" title="Link to this heading"></a></h2>
+</section>
+<section id="gen-amb-data-files">
+<h2>Gen_Amb_Data_Files<a class="headerlink" href="#gen-amb-data-files" title="Link to this heading"></a></h2>
+</section>
+<section id="module-nc_Write">
+<span id="nc-write"></span><h2>nc_Write<a class="headerlink" href="#module-nc_Write" title="Link to this heading"></a></h2>
+</section>
+<section id="calculate-ambient-properties">
+<h2>Calculate_Ambient_Properties<a class="headerlink" href="#calculate-ambient-properties" title="Link to this heading"></a></h2>
+</section>
+<section id="merge-in-situ-data">
+<h2>Merge_In-Situ_Data<a class="headerlink" href="#merge-in-situ-data" title="Link to this heading"></a></h2>
+</section>
+<section id="module-Collect_netCDF">
+<span id="collect-netcdf"></span><h2>Collect_netCDF<a class="headerlink" href="#module-Collect_netCDF" title="Link to this heading"></a></h2>
+<p>Procedures for reading the HSRL-2 and RSP data files from their .h5 format 
+into a Python dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Joseph Schlosser</p>
+</dd>
+<dt class="field-even">Revised<span class="colon">:</span></dt>
+<dd class="field-even"><p>4 Aug 2026</p>
+</dd>
+<dt class="field-odd">Language Revision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Python 3.8 (2:0ubuntu2)</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The resulting dictionary structure strictly follows the hierarchy of the 
+corresponding source .h5 file.</p>
+</div>
+<section id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h5py</span></code></p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">collect_netcdf.py</span></code> and the target data files must be present in a 
+directory that is included in your system environment <code class="docutils literal notranslate"><span class="pre">PATH</span></code>.</p>
+</div>
+</section>
+<dl class="py function">
+<dt class="sig sig-object py" id="Collect_netCDF.grabHSRL2">
+<span class="sig-prename descclassname"><span class="pre">Collect_netCDF.</span></span><span class="sig-name descname"><span class="pre">grabHSRL2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">HSRL2_filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Collect_netCDF.grabHSRL2" title="Link to this definition"></a></dt>
+<dd><p>Read HSRL-2 data from an HDF5 file into a Python dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – The file name or path of the HSRL-2’s .h5 file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing data and metadata parameters.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">collect_netcdf</span>
+
+<span class="c1"># Load the data</span>
+<span class="n">hsrl2_dict</span> <span class="o">=</span> <span class="n">collect_netcdf</span><span class="o">.</span><span class="n">grabHSRL2</span><span class="p">(</span><span class="s2">&quot;ACTIVATE_HSRL2_UC12_20200215_R1&quot;</span><span class="p">)</span>
+
+<span class="c1"># Print metadata keys</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;HSRL-2 metadata: </span><span class="si">{</span><span class="n">hsrl2_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Output: KeysViewHDF5 [&#39;000_Readme&#39;, &#39;DataProducts&#39;, &#39;Nav_Data&#39;, &#39;State&#39;, &#39;UserInput&#39;, &#39;header&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Collect_netCDF.grabRSP">
+<span class="sig-prename descclassname"><span class="pre">Collect_netCDF.</span></span><span class="sig-name descname"><span class="pre">grabRSP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">RSP_filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Collect_netCDF.grabRSP" title="Link to this definition"></a></dt>
+<dd><p>Read RSP data from an HDF5 file into a Python dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – The file name or path of the RSP’s .h5 file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing data and metadata parameters.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="external-closure-study">
+<h2>External_Closure_Study<a class="headerlink" href="#external-closure-study" title="Link to this heading"></a></h2>
+</section>
+<section id="external-consistency-procedure">
+<h2>External_Consistency_Procedure<a class="headerlink" href="#external-consistency-procedure" title="Link to this heading"></a></h2>
+</section>
+</section>
 
 
            </div>

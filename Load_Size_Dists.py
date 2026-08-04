@@ -5,6 +5,14 @@ def Load(filename):
     """
     Returns an dictionary of bin diameters from a specified .csv file
     
+    :Authors: Joseph Schlosser
+    :Revised: 4 Aug 2026
+    :Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
+
+    Requirements
+    ------------ 
+    * ``numpy``
+
     :param filename: String containing the name of the desired .csv file containing the size distribution bin diameters.
     :type filename: str  
     :return dp: dictionary of bin diameters in micrometer.
