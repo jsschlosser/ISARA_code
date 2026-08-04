@@ -17,12 +17,12 @@ API
    CollateDataFiles
    Synthetic_Data_Creation
    nc_write
-   Collocate_and_Plot_Amb_Data_3shapes
+   Collocate_and_Plot_Amb_Data
    ISARA_Data_Retrieval
    SDFitFigs
    Synthetic_Data_Retrieval
    importICARTT
    powerfunction
-   External_Consistency_Procedure_3shapes
+   External_Consistency_Procedure
    SD_Fit
    internal_closure_study

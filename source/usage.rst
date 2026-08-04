@@ -195,8 +195,8 @@ External Closure
 		$ mkdir ./ACTIVATE/ExternalClosure/
 		$ mkdir ./ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 		$ python3 
-		>>> import Collocate_and_Plot_Amb_Data_3shapes
-		>>> Collocate_and_Plot_Amb_Data_3shapes.Run()
+		>>> import Collocate_and_Plot_Amb_Data
+		>>> Collocate_and_Plot_Amb_Data.Run()
 		>>> ACTIVATE
 		>>> Sphere_kappa0-cri1-33
 		>>> Sphere_kappa0-cri1-33

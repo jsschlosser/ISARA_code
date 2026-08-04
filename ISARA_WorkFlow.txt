@@ -201,8 +201,8 @@ cd ./ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 rm *
 cd /mnt/b/ISARA_V2
 python3 
-import Collocate_and_Plot_Amb_Data_3shapes
-Collocate_and_Plot_Amb_Data_3shapes.Run()
+import Collocate_and_Plot_Amb_Data
+Collocate_and_Plot_Amb_Data.Run()
 ACTIVATE
 Sphere_kappa0-cri1-33
 Sphere_kappa0-cri1-33
@@ -371,8 +371,8 @@ cd ./ACTIVATE/ExternalClosure/Sphere-SS-Dust
 rm *
 cd /mnt/b/ISARA_V2
 python3 
-import Collocate_and_Plot_Amb_Data_3shapes
-Collocate_and_Plot_Amb_Data_3shapes.Run()
+import Collocate_and_Plot_Amb_Data
+Collocate_and_Plot_Amb_Data.Run()
 ACTIVATE
 equiprobable-criSS
 equiprobable-criDust
@@ -674,8 +674,8 @@ cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/ExternalClosure/Sphere-SS-Dust
 rm *
 cd /mnt/b/ISARA_V2
 python3 
-import Collocate_and_Plot_Amb_Data_3shapes
-Collocate_and_Plot_Amb_Data_3shapes.Run()
+import Collocate_and_Plot_Amb_Data
+Collocate_and_Plot_Amb_Data.Run()
 PACEPAX
 equiprobable_kappa0-criSS
 equiprobable_kappa0-criDust
@@ -704,8 +704,8 @@ cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
 rm *
 cd /mnt/b/ISARA_V2
 python3 
-import Collocate_and_Plot_Amb_Data_3shapes
-Collocate_and_Plot_Amb_Data_3shapes.Run()
+import Collocate_and_Plot_Amb_Data
+Collocate_and_Plot_Amb_Data.Run()
 PACEPAX
 Sphere_kappa0-cri1-33
 Sphere_kappa0-cri1-33

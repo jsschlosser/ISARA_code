@@ -1,6 +1,6 @@
 import importICARTT
-import External_Consistency_Procedure_3shapes
-CaseStudy = External_Consistency_Procedure_3shapes.CaseStudy
+import External_Consistency_Procedure
+CaseStudy = External_Consistency_Procedure.CaseStudy
 import StatsCode
 import numpy as np
 import pandas as pd

@@ -1,3 +1,24 @@
 {
-    "usage": 0.026
+    "generated/APS_rho": 0.102,
+    "generated/Calculate_Ambient_Properties": 0.007,
+    "generated/CollateDataFiles": 0.005,
+    "generated/Collocate_and_Plot_Amb_Data": 0.02,
+    "generated/External_Consistency_Procedure": 0.044,
+    "generated/GenAmbDataFiles": 0.021,
+    "generated/ISARA": 0.01,
+    "generated/ISARA_Data_Retrieval": 0.015,
+    "generated/MergeInSituData": 0.005,
+    "generated/SDFitFigs": 0.005,
+    "generated/SD_Fit": 0.006,
+    "generated/Synthetic_Data_Closure_Study": 0.008,
+    "generated/Synthetic_Data_Creation": 0.008,
+    "generated/Synthetic_Data_Retrieval": 0.007,
+    "generated/cal_rho": 0.005,
+    "generated/collect_netcdf": 0.006,
+    "generated/importICARTT": 0.007,
+    "generated/internal_closure_study": 0.02,
+    "generated/load_sizebins": 0.005,
+    "generated/lut": 0.011,
+    "generated/nc_write": 0.005,
+    "generated/powerfunction": 0.005
 }
