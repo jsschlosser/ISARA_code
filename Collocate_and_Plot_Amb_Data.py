@@ -26,6 +26,10 @@ from mpl_toolkits.mplot3d import Axes3D
 from pylab import rcParams
 
 def Run():
+    """
+    Performs consistency analyses on every file in a directory given a set of user inputs.   
+
+    """ 
     camp_name = input("Enter the campaign name in upper case (e.g., ARCSIX): ") 
     nonsphere_type = input("Enter the (LDR>0.08 & LR <35) coarse-mode nonsphere assumption: ") #LDR>0.08 & LR <35
     nonsphere_type2 = input("Enter the (LDR>0.08 & LR >35) coarse-mode nonsphere assumption: ") #LDR>0.08 & LR >35

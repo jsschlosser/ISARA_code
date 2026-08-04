@@ -19,7 +19,6 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="APS_rho" href="generated/APS_rho.html" />
     <link rel="prev" title="Usage" href="usage.html" /> 
 </head>
 
@@ -45,28 +44,23 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="generated/APS_rho.html">APS_rho</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/GenAmbDataFiles.html">GenAmbDataFiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/cal_rho.html">cal_rho</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/load_sizebins.html">load_sizebins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/Calculate_Ambient_Properties.html">Calculate_Ambient_Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/ISARA.html">ISARA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/MergeInSituData.html">MergeInSituData</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/Synthetic_Data_Closure_Study.html">Synthetic_Data_Closure_Study</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/collect_netcdf.html">collect_netcdf</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/lut.html">lut</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/CollateDataFiles.html">CollateDataFiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/Synthetic_Data_Creation.html">Synthetic_Data_Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/nc_write.html">nc_write</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/Collocate_and_Plot_Amb_Data.html">Collocate_and_Plot_Amb_Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/ISARA_Data_Retrieval.html">ISARA_Data_Retrieval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/SDFitFigs.html">SDFitFigs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/Synthetic_Data_Retrieval.html">Synthetic_Data_Retrieval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/importICARTT.html">importICARTT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/powerfunction.html">powerfunction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/External_Consistency_Procedure.html">External_Consistency_Procedure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/SD_Fit.html">SD_Fit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/internal_closure_study.html">internal_closure_study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ISARA.Retr_CRI"><code class="docutils literal notranslate"><span class="pre">Retr_CRI()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ISARA.Retr_kappa"><code class="docutils literal notranslate"><span class="pre">Retr_kappa()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lut.initialize_spheres"><code class="docutils literal notranslate"><span class="pre">initialize_spheres()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lut.initialize_spheroids"><code class="docutils literal notranslate"><span class="pre">initialize_spheroids()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lut.run_simple"><code class="docutils literal notranslate"><span class="pre">run_simple()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#APS_rho.Align"><code class="docutils literal notranslate"><span class="pre">Align()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#GenAmbDataFiles.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#load_sizebins.Load"><code class="docutils literal notranslate"><span class="pre">Load()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Calculate_Ambient_Properties.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Synthetic_Data_Creation.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Collocate_and_Plot_Amb_Data.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ISARA_Data_Retrieval.RunISARA"><code class="docutils literal notranslate"><span class="pre">RunISARA()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Synthetic_Data_Retrieval.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importICARTT.imp"><code class="docutils literal notranslate"><span class="pre">imp()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#powerfunction.f_model"><code class="docutils literal notranslate"><span class="pre">f_model()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#External_Consistency_Procedure.CaseStudy"><code class="docutils literal notranslate"><span class="pre">CaseStudy()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#SD_Fit.Run"><code class="docutils literal notranslate"><span class="pre">Run()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -95,86 +89,302 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="api">
-<h1>API<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/APS_rho.html#module-APS_rho" title="APS_rho"><code class="xref py py-obj docutils literal notranslate"><span class="pre">APS_rho</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/GenAmbDataFiles.html#module-GenAmbDataFiles" title="GenAmbDataFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GenAmbDataFiles</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/cal_rho.html#module-cal_rho" title="cal_rho"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cal_rho</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/load_sizebins.html#module-load_sizebins" title="load_sizebins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_sizebins</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/Calculate_Ambient_Properties.html#module-Calculate_Ambient_Properties" title="Calculate_Ambient_Properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Calculate_Ambient_Properties</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/ISARA.html#module-ISARA" title="ISARA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ISARA</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/MergeInSituData.html#module-MergeInSituData" title="MergeInSituData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MergeInSituData</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/Synthetic_Data_Closure_Study.html#module-Synthetic_Data_Closure_Study" title="Synthetic_Data_Closure_Study"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Synthetic_Data_Closure_Study</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/collect_netcdf.html#module-collect_netcdf" title="collect_netcdf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_netcdf</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/lut.html#module-lut" title="lut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lut</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/CollateDataFiles.html#module-CollateDataFiles" title="CollateDataFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CollateDataFiles</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/Synthetic_Data_Creation.html#module-Synthetic_Data_Creation" title="Synthetic_Data_Creation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Synthetic_Data_Creation</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/nc_write.html#module-nc_write" title="nc_write"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nc_write</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/Collocate_and_Plot_Amb_Data.html#module-Collocate_and_Plot_Amb_Data" title="Collocate_and_Plot_Amb_Data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Collocate_and_Plot_Amb_Data</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/ISARA_Data_Retrieval.html#module-ISARA_Data_Retrieval" title="ISARA_Data_Retrieval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ISARA_Data_Retrieval</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/SDFitFigs.html#module-SDFitFigs" title="SDFitFigs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SDFitFigs</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/Synthetic_Data_Retrieval.html#module-Synthetic_Data_Retrieval" title="Synthetic_Data_Retrieval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Synthetic_Data_Retrieval</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/importICARTT.html#module-importICARTT" title="importICARTT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">importICARTT</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/powerfunction.html#module-powerfunction" title="powerfunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">powerfunction</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/External_Consistency_Procedure.html#module-External_Consistency_Procedure" title="External_Consistency_Procedure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">External_Consistency_Procedure</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/SD_Fit.html#module-SD_Fit" title="SD_Fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SD_Fit</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/internal_closure_study.html#module-internal_closure_study" title="internal_closure_study"><code class="xref py py-obj docutils literal notranslate"><span class="pre">internal_closure_study</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-</section>
+  <section id="module-ISARA">
+<span id="api"></span><h1>API<a class="headerlink" href="#module-ISARA" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ISARA.Retr_CRI">
+<span class="sig-prename descclassname"><span class="pre">ISARA.</span></span><span class="sig-name descname"><span class="pre">Retr_CRI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wvl_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val_wvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measurement_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CRI_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LUT_output_variables</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISARA.Retr_CRI" title="Link to this definition"></a></dt>
+<dd><p>Returns aerosol particle real and imaginary refractive index from three scattering coefficeint measurements, three absorption coefficient measurements, a measured volume concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) mopsmap_wrapper.py must be present in a directory that is in your PATH</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wvl_dict</strong> (<em>numpy dictionary</em>) – Dictionary of wavelengths associated with each of the scattering and absorption measurements</p></li>
+<li><p><strong>val_wvl</strong> (<em>numpy dictionary</em>) – Dictionary of wavelengths associated with validation measurements</p></li>
+<li><p><strong>measurement_data</strong> (<em>numpy dictionary</em>) – Dictionary containing measured dry scattering and absorption coefficients in Mm^-1, size resolved volume concentrations in um^3 cm^-3, and geometric mean particle diameters of each size bin in mum <strong>*NOTE: The optical coefficients should be one key per channel (e.g., measurement_data[‘dry_meas_sca_coef_450_Mm-1’], measurement_data[‘dry_meas_abs_coef_470_Mm-1’], etc.).*</strong></p></li>
+<li><p><strong>CRI_p</strong> (<em>numpy array</em><em>[</em><em>float</em><em>]</em>) – 2-D array containing the prescribed RRI and IRI range to be searched</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary (Results) with the retrieved complex refractive index, calculated scattering and absorption coefficients in native measurements, and calculated single scattering albedo and extinction coefficients in measured and validation wavelengths</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISARA.Retr_kappa">
+<span class="sig-prename descclassname"><span class="pre">ISARA.</span></span><span class="sig-name descname"><span class="pre">Retr_kappa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wvl_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val_wvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measurement_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RH</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CRI_d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LUT_output_variables</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISARA.Retr_kappa" title="Link to this definition"></a></dt>
+<dd><p>Returns aerosol particle hygroscopic growth factor from a humdified scattering coefficeint measurement, dry complex refractive index, and a measured number concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) mopsmap_wrapper.py must be present in a directory that is in your PATH.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wvl_dict</strong> (<em>numpy dictionary</em>) – Dictionary of wavelengths associated with each of the scattering and absorption measurements</p></li>
+<li><p><strong>val_wvl</strong> (<em>numpy dictionary</em>) – Dictionary of wavelengths associated with validation measurements</p></li>
+<li><p><strong>measurement_data</strong> (<em>numpy dictionary</em>) – Dictionary containing measured humidified scattering coefficients in Mm^-1, size resolved number concentrations in cm^-3, geometric mean particle diameters of each size bin in mum <strong>*NOTE: The optical coefficients should be one key per channel (e.g., measurement_data[‘dry_meas_sca_coef_450_Mm-1’], measurement_data[‘dry_meas_abs_coef_470_Mm-1’], etc.).*</strong></p></li>
+<li><p><strong>RH</strong> (<em>int</em>) – Array containing the percent relative humidity associated with the measured humidified scattering coefficients</p></li>
+<li><p><strong>kappa_p</strong> (<em>numpy array</em>) – Array containing the desired kappa range to be searched.</p></li>
+<li><p><strong>CRI_d</strong> (<em>numpy array</em>) – Array containing the desired dry RRI and IRI.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Real refractive index, imaginary refractive index, calculated scattering and absorption coefficients in native measurements, and calculated single scattering albedo and extinction coefficients in all wavelengths</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-lut">
+<dt class="sig sig-object py" id="lut.initialize_spheres">
+<span class="sig-prename descclassname"><span class="pre">lut.</span></span><span class="sig-name descname"><span class="pre">initialize_spheres</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">LUT_location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lut.initialize_spheres" title="Link to this definition"></a></dt>
+<dd><p>Load in the look up table (LUT) variables for use within <cite>run_LUT</cite>. All variables are returned in the output_variables dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>LUT_location</strong> (<em>str</em>) – Path to the LUT</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary (output_variables) with the variables from a given LUT file</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lut.initialize_spheroids">
+<span class="sig-prename descclassname"><span class="pre">lut.</span></span><span class="sig-name descname"><span class="pre">initialize_spheroids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">LUT_location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lut.initialize_spheroids" title="Link to this definition"></a></dt>
+<dd><p>Load in the look up table (LUT) variables for use within <cite>run_LUT</cite>. All variables are returned in the output_variables dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>LUT_location</strong> (<em>str</em>) – Path to the LUT</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary (output_variables) with the variables from a given LUT file</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lut.run_simple">
+<span class="sig-prename descclassname"><span class="pre">lut.</span></span><span class="sig-name descname"><span class="pre">run_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wavelength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">real_part</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag_part</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dV_dlnr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_output_variables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_int_angles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lut.run_simple" title="Link to this definition"></a></dt>
+<dd><p>Calulates the integrated aerosol micriphysical properties for an array of data points. <cite>load_LUT</cite> must be called first to load the necessary output variables dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wavelength</strong> (<em>float</em>) – Wavelength to run the LUT at in nanometers.</p></li>
+<li><p><strong>output_type</strong> (<em>float</em>) – Set output_type to “extended” for cross section, integrated mass, assymetry, and backscattering coefficient.</p></li>
+<li><p><strong>real_part</strong> (<em>numpy array</em><em>[</em><em>float</em><em>]</em>) – Real refractive index of the data points.</p></li>
+<li><p><strong>imag_part</strong> (<em>numpy array</em><em>[</em><em>float</em><em>]</em>) – Real refractive index of the data points.</p></li>
+<li><p><strong>dV_dlnr</strong> (<em>numpy array</em><em>[</em><em>float</em><em>]</em>) – lognormal volume particle size distributions (in um^3.cm^-3) of the data points (must be interpolated to the LUT radii bin grid).</p></li>
+<li><p><strong>T_output_variables</strong> (<em>numpy dictionary</em>) – Dictionary containing the LUT output variables from ‘loat_LUT’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary (T_output_variables) with the integrated aerosol microphysical properties</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-APS_rho">
+<dt class="sig sig-object py" id="APS_rho.Align">
+<span class="sig-prename descclassname"><span class="pre">APS_rho.</span></span><span class="sig-name descname"><span class="pre">Align</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">D_optic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_optic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D_aero</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_aero</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#APS_rho.Align" title="Link to this definition"></a></dt>
+<dd><p>Aligns optical and aerodynamic size distributions to determine effective density.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>D_optic</strong> (<em>numpy array</em>) – optical size distribution geometric mean diameters of each bin</p></li>
+<li><p><strong>N_optic</strong> (<em>numpy array</em>) – optical size distribution number concentration of each bin in m-3</p></li>
+<li><p><strong>D_aero</strong> (<em>numpy array</em>) – aerodynamic size distribution geometric mean diameters of each bin</p></li>
+<li><p><strong>N_aero</strong> – aerodynamic size distribution number concentration of each bin in m-3</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary (output) with the effective density and size distribution peak.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-GenAmbDataFiles">
+<dt class="sig sig-object py" id="GenAmbDataFiles.Run">
+<span class="sig-prename descclassname"><span class="pre">GenAmbDataFiles.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GenAmbDataFiles.Run" title="Link to this definition"></a></dt>
+<dd><p>Saves a dictionary file of each of the merged data files in source directory that includes ISARA retrievals of CRI and kappa. Dictionary includes metadata for netCDF compliancy.</p>
+</dd></dl>
+
+<dl class="py function" id="module-load_sizebins">
+<span id="module-cal_rho"></span><dt class="sig sig-object py" id="load_sizebins.Load">
+<span class="sig-prename descclassname"><span class="pre">load_sizebins.</span></span><span class="sig-name descname"><span class="pre">Load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load_sizebins.Load" title="Link to this definition"></a></dt>
+<dd><p>Returns an dictionary of bin diameters from a specified .csv file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – String containing the name of the desired .csv file containing the size distribution bin diameters.</p>
+</dd>
+<dt class="field-even">Return dp<span class="colon">:</span></dt>
+<dd class="field-even"><p>dictionary of bin diameters in micrometer.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-Calculate_Ambient_Properties">
+<dt class="sig sig-object py" id="Calculate_Ambient_Properties.Run">
+<span class="sig-prename descclassname"><span class="pre">Calculate_Ambient_Properties.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dNdlnRpg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dAdlnRpg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dVdlnRpg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iri</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LUT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape_dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kys_sizes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Calculate_Ambient_Properties.Run" title="Link to this definition"></a></dt>
+<dd><p>Returns aerosol particle real and imaginary refractive index from three scattering coefficeint measurements, three absorption coefficient measurements, a measured volume concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) mopsmap_wrapper.py must be present in a directory that is in your PATH</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wvl_dict</strong> (<em>numpy dictionary</em>) – Dictionary of wavelengths associated with each of the scattering and absorption measurements</p></li>
+<li><p><strong>val_wvl</strong> (<em>numpy dictionary</em>) – Dictionary of wavelengths associated with validation measurements</p></li>
+<li><p><strong>measurement_data</strong> (<em>numpy dictionary</em>) – Dictionary containing measured dry scattering and absorption coefficients in Mm^-1, size resolved volume concentrations in um^3 cm^-3, and geometric mean particle diameters of each size bin in mum <strong>*NOTE: The optical coefficients should be one key per channel (e.g., measurement_data[‘dry_meas_sca_coef_450_Mm-1’], measurement_data[‘dry_meas_abs_coef_470_Mm-1’], etc.).*</strong></p></li>
+<li><p><strong>CRI_p</strong> (<em>numpy array</em><em>[</em><em>float</em><em>]</em>) – 2-D array containing the prescribed RRI and IRI range to be searched</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary (Results) with the retrieved complex refractive index, calculated scattering and absorption coefficients in native measurements, and calculated single scattering albedo and extinction coefficients in measured and validation wavelengths</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-Synthetic_Data_Creation">
+<span id="module-CollateDataFiles"></span><span id="module-collect_netcdf"></span><span id="module-Synthetic_Data_Closure_Study"></span><span id="module-MergeInSituData"></span><dt class="sig sig-object py" id="Synthetic_Data_Creation.Run">
+<span class="sig-prename descclassname"><span class="pre">Synthetic_Data_Creation.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Synthetic_Data_Creation.Run" title="Link to this definition"></a></dt>
+<dd><p>Given a set of user inputs, creates a set of synthetic data for testing the sensitivity of ISARA CRI and kappa retrievals.</p>
+</dd></dl>
+
+<dl class="py function" id="module-Collocate_and_Plot_Amb_Data">
+<span id="module-nc_write"></span><dt class="sig sig-object py" id="Collocate_and_Plot_Amb_Data.Run">
+<span class="sig-prename descclassname"><span class="pre">Collocate_and_Plot_Amb_Data.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Collocate_and_Plot_Amb_Data.Run" title="Link to this definition"></a></dt>
+<dd><p>Performs consistency analyses on every file in a directory given a set of user inputs.</p>
+</dd></dl>
+
+<dl class="py function" id="module-ISARA_Data_Retrieval">
+<dt class="sig sig-object py" id="ISARA_Data_Retrieval.RunISARA">
+<span class="sig-prename descclassname"><span class="pre">ISARA_Data_Retrieval.</span></span><span class="sig-name descname"><span class="pre">RunISARA</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ISARA_Data_Retrieval.RunISARA" title="Link to this definition"></a></dt>
+<dd><p>After a series of user requested inputs, this function retrieves complex refractive index and hygroscopicty from the measured aerosol size distributions and optical coefficients in each file (in .ict format) of the source directory.</p>
+</dd></dl>
+
+<dl class="py function" id="module-Synthetic_Data_Retrieval">
+<span id="module-SDFitFigs"></span><dt class="sig sig-object py" id="Synthetic_Data_Retrieval.Run">
+<span class="sig-prename descclassname"><span class="pre">Synthetic_Data_Retrieval.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Synthetic_Data_Retrieval.Run" title="Link to this definition"></a></dt>
+<dd><p>Runs ISARA retrievals on a set of synthetically generated data for testing the sensitivity of ISARA CRI and kappa retrievals.</p>
+</dd></dl>
+
+<dl class="py function" id="module-importICARTT">
+<dt class="sig sig-object py" id="importICARTT.imp">
+<span class="sig-prename descclassname"><span class="pre">importICARTT.</span></span><span class="sig-name descname"><span class="pre">imp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_time_columns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#importICARTT.imp" title="Link to this definition"></a></dt>
+<dd><p>procedure to open ICARTT file and format the data and headers into the output (output_dictionary) python dictionary.WARNINGS: 1) numpy must be installed to the python environment, 2) importICART.py and file with the corresponding filename must be present in a directory that is in your PATH</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – String  containing the name of the desired ICARTT v2.0 (.ict) file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the output of this code is output_dictionary, which is a python3 dictionary containing column-arrays for each of the parameters in the .ict file</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy dictionary</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">output_dictionary</span> <span class="o">=</span> <span class="n">importICT</span><span class="o">.</span><span class="n">imp</span><span class="p">(</span><span class="s2">&quot;activate-mrg1_hu25_20200214_R0.ict&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">output_dictionary</span><span class="p">)</span>
+<span class="go">output_dictionary =</span>
+<span class="go">    {&#39;Time_Start_seconds&#39;: array([61301., 61302., 61303., ..., 72258., 72259., 72260.]), </span>
+<span class="go">    &#39;Time_Stop_seconds&#39;: array([61302., 61303., 61304., ..., 72259., 72260., 72261.]), </span>
+<span class="go">    &#39;Latitude_THORNHILL_ deg&#39;: array([37.085528, 37.085798, 37.086065, ..., 37.126424, 37.126694, ...            </span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function" id="module-powerfunction">
+<dt class="sig sig-object py" id="powerfunction.f_model">
+<span class="sig-prename descclassname"><span class="pre">powerfunction.</span></span><span class="sig-name descname"><span class="pre">f_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#powerfunction.f_model" title="Link to this definition"></a></dt>
+<dd><p>function y = a*x^c</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>double</em><em>, </em><em>float</em><em>, </em><em>int</em>) – base of power function</p></li>
+<li><p><strong>a</strong> (<em>double</em><em>, </em><em>float</em><em>, </em><em>int</em>) – scale of power function</p></li>
+<li><p><strong>c</strong> (<em>double</em><em>, </em><em>float</em><em>, </em><em>int</em>) – exponent of power function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return y<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>double, float, int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-External_Consistency_Procedure">
+<dt class="sig sig-object py" id="External_Consistency_Procedure.CaseStudy">
+<span class="sig-prename descclassname"><span class="pre">External_Consistency_Procedure.</span></span><span class="sig-name descname"><span class="pre">CaseStudy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camp_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Insitu_Spherical_Retrieval_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Insitu_Nonspherical_Retrieval_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Insitu_Nonspherical_Retrieval_filename_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RSP_Filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">HSRL2_Filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ouput_filename_suffix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_separation_constraint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_separation_constraint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_directory_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_key_vars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LegID_dictionary</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#External_Consistency_Procedure.CaseStudy" title="Link to this definition"></a></dt>
+<dd><p>Performs a external closure analysis on between data from in-situ, RSP, HSRL files taken on the same day with coincident measurements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camp_name</strong> (<em>str</em>) – campaign name assocaiated with data file directory.</p></li>
+<li><p><strong>Insitu_Spherical_Retrieval_filename</strong> (<em>str</em>) – in-situ data file where coarse-mode assumed spherical.</p></li>
+<li><p><strong>Insitu_Nonspherical_Retrieval_filename</strong> (<em>str</em>) – in-situ data file where coarse-mode assumed non-spherical type 1.</p></li>
+<li><p><strong>Insitu_Nonspherical_Retrieval_filename_2</strong> (<em>str</em>) – in-situ data file where coarse-mode assumed non-spherical type 2.</p></li>
+<li><p><strong>RSP_Filename</strong> (<em>str</em>) – RSP data file.</p></li>
+<li><p><strong>HSRL2_Filename</strong> (<em>str</em>) – HSRL data file.</p></li>
+<li><p><strong>ouput_filename_suffix</strong> (<em>str</em>) – output filename suffix.</p></li>
+<li><p><strong>time_separation_constraint</strong> (<em>int</em>) – maximum allowed time separation in minutes.</p></li>
+<li><p><strong>spatial_separation_constraint</strong> (<em>int</em>) – maximum allowed spatial separation in km.</p></li>
+<li><p><strong>out_directory_name</strong> (<em>str</em>) – ouput directory filename.</p></li>
+<li><p><strong>source_key_vars</strong> (<em>str</em>) – source variable names that are dependent on each mission/insturment suite.</p></li>
+<li><p><strong>LegID_dictionary</strong> (<em>str</em>) – filename correspoding to the file with datetimes of interest.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>output_dictionary</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-SD_Fit">
+<dt class="sig sig-object py" id="SD_Fit.Run">
+<span class="sig-prename descclassname"><span class="pre">SD_Fit.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_modes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dndlogdp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abs_coef</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sca_coef</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SD_Fit.Run" title="Link to this definition"></a></dt>
+<dd><p>Returns N (cm-3), GM (nm), and GSD from a measured number concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) fit.py must be present in a directory that is in your PATH</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p0</strong> (<em>list</em>) – 3n guesses where n is the number of modes you are fitting. They should be in the order [Ni, GMi, GSDi] for i=1 to i=number of modes</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary (Results) with the retrieved complex refractive index, calculated scattering and absorption coefficients in native measurements, and calculated single scattering albedo and extinction coefficients in measured and validation wavelengths</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-internal_closure_study"></span></section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="usage.html" class="btn btn-neutral float-left" title="Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="generated/APS_rho.html" class="btn btn-neutral float-right" title="APS_rho" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

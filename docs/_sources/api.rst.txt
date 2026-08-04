@@ -1,28 +1,68 @@
 API
 ===
 
-.. autosummary::
-   :toctree: generated
+.. automodule:: ISARA
+   :members:   
 
-   APS_rho
-   GenAmbDataFiles
-   cal_rho
-   load_sizebins
-   Calculate_Ambient_Properties
-   ISARA
-   MergeInSituData
-   Synthetic_Data_Closure_Study
-   collect_netcdf
-   lut
-   CollateDataFiles
-   Synthetic_Data_Creation
-   nc_write
-   Collocate_and_Plot_Amb_Data
-   ISARA_Data_Retrieval
-   SDFitFigs
-   Synthetic_Data_Retrieval
-   importICARTT
-   powerfunction
-   External_Consistency_Procedure
-   SD_Fit
-   internal_closure_study
+.. automodule:: lut
+   :members:   
+
+.. automodule:: APS_rho 
+   :members:  
+
+.. automodule:: GenAmbDataFiles 
+   :members:  
+
+.. automodule:: cal_rho 
+   :members:  
+
+.. automodule:: load_sizebins 
+   :members:  
+
+.. automodule:: Calculate_Ambient_Properties 
+   :members:  
+
+.. automodule:: MergeInSituData 
+   :members:  
+
+.. automodule:: Synthetic_Data_Closure_Study 
+   :members:  
+
+.. automodule:: collect_netcdf 
+   :members:  
+
+.. automodule:: CollateDataFiles 
+   :members:  
+
+.. automodule:: Synthetic_Data_Creation 
+   :members:  
+
+.. automodule:: nc_write 
+   :members:  
+
+.. automodule:: Collocate_and_Plot_Amb_Data 
+   :members:  
+
+.. automodule:: ISARA_Data_Retrieval 
+   :members:  
+
+.. automodule:: SDFitFigs 
+   :members:  
+
+.. automodule:: Synthetic_Data_Retrieval 
+   :members:  
+
+.. automodule:: importICARTT 
+   :members:  
+
+.. automodule:: powerfunction 
+   :members:  
+
+.. automodule:: External_Consistency_Procedure 
+   :members:  
+
+.. automodule:: SD_Fit 
+   :members:  
+
+.. automodule:: internal_closure_study 
+   :members:  

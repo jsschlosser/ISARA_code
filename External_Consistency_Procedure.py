@@ -39,6 +39,36 @@ def CaseStudy(
     source_key_vars,
     LegID_dictionary
 ):
+    """
+    Performs a external closure analysis on between data from in-situ, RSP, HSRL files taken on the same day with coincident measurements.   
+
+    :param camp_name: campaign name assocaiated with data file directory.
+    :type camp_name: str
+    :param Insitu_Spherical_Retrieval_filename: in-situ data file where coarse-mode assumed spherical.
+    :type Insitu_Spherical_Retrieval_filename: str
+    :param Insitu_Nonspherical_Retrieval_filename: in-situ data file where coarse-mode assumed non-spherical type 1.
+    :type Insitu_Nonspherical_Retrieval_filename: str    
+    :param Insitu_Nonspherical_Retrieval_filename_2: in-situ data file where coarse-mode assumed non-spherical type 2.
+    :type Insitu_Nonspherical_Retrieval_filename_2: str
+    :param RSP_Filename: RSP data file.
+    :type RSP_Filename: str    
+    :param HSRL2_Filename: HSRL data file.
+    :type HSRL2_Filename: str  
+    :param ouput_filename_suffix: output filename suffix.
+    :type ouput_filename_suffix: str  
+    :param time_separation_constraint: maximum allowed time separation in minutes.
+    :type time_separation_constraint: int
+    :param spatial_separation_constraint: maximum allowed spatial separation in km.
+    :type spatial_separation_constraint: int  
+    :param out_directory_name: ouput directory filename.
+    :type out_directory_name: str  
+    :param source_key_vars: source variable names that are dependent on each mission/insturment suite.    
+    :type source_key_vars: str     
+    :param LegID_dictionary: filename correspoding to the file with datetimes of interest.
+    :type LegID_dictionary: str                       
+    :returns: output_dictionary
+    :rtype: dictionary
+    """ 
     
     def flatten(l):
         """

@@ -7,7 +7,10 @@ import os
 import sys
 #from pathos.multiprocessing import ProcessPool
 def Run():
+    """
+    Runs ISARA retrievals on a set of synthetically generated data for testing the sensitivity of ISARA CRI and kappa retrievals.   
 
+    """ 
     sys.path.insert(0, os.path.abspath("../"))  
 
     # Number of cores you want to use

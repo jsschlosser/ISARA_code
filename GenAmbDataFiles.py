@@ -20,12 +20,7 @@ def Run():
     """
     Saves a dictionary file of each of the merged data files in source directory that includes ISARA retrievals of CRI and kappa. Dictionary includes metadata for netCDF compliancy.
 
-    >>> import ISARA_Data_Retrieval
-    >>> ISARA_Data_Retrieval.RunISARA()
-    activate-mrg-activate-large-smps_hu25_20200214_R0_20230831T150854.ict
-    182
-    182
-    182
+
     """   
     sys.path.insert(0, os.path.abspath("../"))
 
