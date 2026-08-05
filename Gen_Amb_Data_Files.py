@@ -277,7 +277,7 @@ def Run():
       dIRI = grabvalues(OP_Dictionary,'dry_IRI')[0]
       dIRI[np.isnan(dIRI)] = 0
       dRRI = grabvalues(OP_Dictionary,'dry_RRI')[0]
-      dRRI[np.isnan(dRRI)] = 1.55
+      dRRI[np.isnan(dRRI)] = 1.52
       length_data = len(dRRI)
       kappa = grabvalues(OP_Dictionary,'kappa')[0]          
       #kappa[np.where((np.logical_not(np.isnan(dIRI))&(RH<40)&np.isnan(kappa)))]=0
