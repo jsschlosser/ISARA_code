@@ -66,7 +66,7 @@ def Run():
     camp_name_lower = DN.lower()
     resolution = input("Enter the temporal resolution of interest in seconds (e.g., 30): ") 
     reference_platform = input("Enter the platform of interest (e.g., cirpas-to or MARINA-TOWER): ")
-    LUT_output_variables = initialize(f'./LUT_data/AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat')
+    LUT_output_variables = initialize(f'../ISARA_data_files/LUT_data/AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat')
     output_filename_suffix = f'{camp_name_lower}-mrg{resolution}_{reference_platform}'
     SD_Fit_Dictionary = dict_reconfig(np.load(f"../ISARA_data_files/{DN}/FitSDResults/{output_filename_suffix}_SD_Fit_Data.npy",allow_pickle='TRUE'))
     R_values = SD_Fit_Dictionary['R']

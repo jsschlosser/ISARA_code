@@ -62,8 +62,8 @@ exit()
 cd /mnt/b/ISARA_Repo/ISARA_code
 rm ../ISARA_Repo/ISARA_data_files/ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy
 python3 
-import CollateDataFiles
-CollateDataFiles.Run()
+import Collate_Data_Files
+Collate_Data_Files.Run()
 ACTIVATE
 -activate-large-smps
 hu25
@@ -72,8 +72,8 @@ exit()
 #1.3) Perform internal consistency analysis 
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import internal_closure_study
-internal_closure_study.Run()
+import Internal_Closure_Study
+Internal_Closure_Study.Run()
 450, 550, 700
 470, 532, 660
 ACTIVATE
@@ -438,10 +438,10 @@ exit()
 
 #1.2)
 cd /mnt/b/ISARA_Repo/ISARA_code
-rm /mnt/b/ISARA_Repo/ISARA_data_files/Retrievals/pacepax-mrg30_cirpas-to_DataRetrievals.npy
+rm /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/Retrievals/pacepax-mrg30_cirpas-to_DataRetrievals.npy
 python
-import CollateDataFiles
-CollateDataFiles.Run()
+import Collate_Data_Files
+Collate_Data_Files.Run()
 PACEPAX
 30
 cirpas-to
@@ -450,8 +450,8 @@ exit()
 #1.3) Perform internal consistency analysis 
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import internal_closure_study
-internal_closure_study.Run()
+import Internal_Closure_Study
+Internal_Closure_Study.Run()
 450, 550, 700
 465, 520, 640
 PACEPAX
@@ -472,13 +472,7 @@ cp *.npy /mnt/f/Backup/PACEPAX/Retrievals/30s
 #3.1)
 cd /mnt/b/ISARA_Repo/ISARA_data_files
 mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/
-mkdir /mnt/d/PACEPAX/AmbientDataFiles/
-mkdir /mnt/e/PACEPAX/AmbientDataFiles/
-mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/
 mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
-mkdir /mnt/d/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
-mkdir /mnt/e/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
-mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
 import Gen_Amb_Data_Files
@@ -511,10 +505,6 @@ yes
 exit()
 
 cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
-cp * /mnt/d/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
-cp * /mnt/e/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
-cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
-
 
 #3.2)
 cd /mnt/b/ISARA_Repo/ISARA_data_files
@@ -559,21 +549,11 @@ yes
 exit()
 
 cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
-cp * /mnt/d/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
-cp * /mnt/e/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
-cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
-
 
 #3.3)
 cd /mnt/b/ISARA_Repo/ISARA_data_files
 mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/
-mkdir /mnt/d/PACEPAX/AmbientDataFiles/
-mkdir /mnt/e/PACEPAX/AmbientDataFiles/
-mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/
 mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
-mkdir /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
-mkdir /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
-mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
 import Gen_Amb_Data_Files
@@ -607,21 +587,11 @@ yes
 exit()
 
 cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
-cp * /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
-cp * /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
-cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
-
 
 #3.4)
 cd /mnt/b/ISARA_Repo/ISARA_data_files
 mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/
-mkdir /mnt/d/PACEPAX/AmbientDataFiles/
-mkdir /mnt/e/PACEPAX/AmbientDataFiles/
-mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/
 mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
-mkdir /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
-mkdir /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
-mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
 import Gen_Amb_Data_Files
@@ -655,9 +625,6 @@ yes
 exit()
 
 cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
-cp * /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
-cp * /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
-cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 
 #3.5)
 cd /mnt/b/ISARA_Repo/ISARA_data_files

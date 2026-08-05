@@ -71,7 +71,7 @@ def Retr_CRI(wvl_dict, val_wvl, measurement_data,CRI_p,LUT_output_variables):
     Cdif2 = abs(ref_abs_coef-abs_coef)# calculate absolute difference of absoprtion coefficients in each channel 
     Cdif3 = abs(ref_scat_coef/(ref_scat_coef+ref_abs_coef)-scat_coef/(scat_coef+abs_coef))     
     a1 = ((Cdif1)<0.2).astype('int')# check if relative difference in scattering coefficient is within 20% for all and channels that the difference in absorption coefficient is within 1 Mm-1 for all channels
-    a2 = ((Cdif2)<1).astype('int')#
+    a2 = ((Cdif2)<2).astype('int')#
     a3 = ((Cdif3)<0.05).astype('int')
     valid_solns = np.where(((np.sum(a1,0)==L2)&(np.sum(a2,0)==L3)&(np.sum(a3,0)==L3)))[0]  
     if valid_solns.size>0:
@@ -94,7 +94,7 @@ def Retr_CRI(wvl_dict, val_wvl, measurement_data,CRI_p,LUT_output_variables):
         Cd2 = abs(ref_abs_coef[:,0]-abs_coef)
         Cd3 = abs(ref_scat_coef[:,0]/(ref_scat_coef[:,0]+ref_abs_coef[:,0])-scat_coef/(scat_coef+abs_coef))     
         a1 = ((Cd1)<0.2).astype('int')
-        a2 = ((Cd2)<1).astype('int')
+        a2 = ((Cd2)<2).astype('int')
         a3 = ((Cd3)<0.05).astype('int')
         valid_solns = (np.sum(a1,0)==L2)&(np.sum(a2,0)==L3)&(np.sum(a3,0)==L3)  # if solution is valid, store dry cri and dry calculated extinction, scattering, and absorption coefficients and SSA in all measured wavelengths
         if valid_solns.size>0:

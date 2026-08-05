@@ -33,7 +33,7 @@ def RunISARA():
             if key.__contains__(key_name):
                 return data[key]    
     def grab_ICT_Data(filename,modelist,dry_wvl):
-        data = importICARTT.imp(filename,2) 
+        data = Import_ICARTT.imp(filename,2) 
         def grab_keydata(key_starts_with,does_not_contain=None):
             for key in data.keys():
                 if does_not_contain is None:
@@ -106,7 +106,7 @@ def RunISARA():
         for imode in sd:
             dndlogdp[imode] = sd[imode][:, i1]
         if "APS" in modelist[:]:
-            output_dictionary_1 = APS_rho.Align(dpg["UHSAS"],dndlogdp["UHSAS"],dpg["APS"],dndlogdp["APS"])
+            output_dictionary_1 = APS_Rho.Align(dpg["UHSAS"],dndlogdp["UHSAS"],dpg["APS"],dndlogdp["APS"])
             rho_dry = output_dictionary_1["rho"]
             peak = output_dictionary_1["peak"]
         else:
@@ -376,7 +376,7 @@ def RunISARA():
     data_directory = input("Enter the name of the directory that contains\nin-situ measurements (e.g., InsituData): ")
     IFN = [f for f in os.listdir(f'../ISARA_data_files/{DN}/{data_directory}/') if f.endswith('.ict')]
     desired_LUT = input("Enter the filename of the desired look-up table\n(e.g., AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat): ")
-    LUT_output_variables = initialize(f'./LUT_data/{desired_LUT}')
+    LUT_output_variables = initialize(f'../ISARA_data_files/LUT_data/{desired_LUT}')
 
     for input_filename in IFN:
         print(input_filename)

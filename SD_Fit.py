@@ -51,5 +51,5 @@ def Run(n_modes,p0,dp,dndlogdp,abs_coef,sca_coef,file_location):
 			results['log10_P'][data_i] = log10_pvalues
 			results['R'][data_i] = R			
 			if ((R > 0.99) & (log10_pvalues < -4)):
-				SDFitFigs.plot_SD(dp,dndlogdp[:,data_i],results['predicted_size_distribution'][:,data_i],data_i,R,log10_pvalues,file_location)
+				SD_Fit_Figs.plot_SD(dp,dndlogdp[:,data_i],results['predicted_size_distribution'][:,data_i],data_i,R,log10_pvalues,file_location)
 	return results

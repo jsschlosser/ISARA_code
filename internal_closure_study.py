@@ -269,7 +269,7 @@ def Run():
 
     
   y2 = np.vstack((IRI,kappa,Cal_fRH))
-  stats_y2 = StatsCode.Survey(y2,prctile)
+  stats_y2 = Stats_Code.Survey(y2,prctile)
   print(len(kappa))
   print(len(RHa))  
 
@@ -312,7 +312,7 @@ def Run():
   alt = GPS_Alt 
 
   prctile = [0,10,25,50,75,90,100]
-  stats_sd = StatsCode.Survey(sd,prctile)#
+  stats_sd = Stats_Code.Survey(sd,prctile)#
   print(len(stats_sd[6,:]))
 
   p0 = [1e5, 1e-3, 2, 3e3, 20e-3, 2]# [5e4, 1e-3, 2, 5e4, 1e-3, 2, 1e1, 0.01, 2]#[1e5, 1e-3, 2, 3e3, 20e-3, 2]# initial guesses 
@@ -325,7 +325,7 @@ def Run():
   fitresults['measured_dpl'] = dpl
 
   np.save(f'../ISARA_data_files/{camp_name}/FitSDResults/{output_filename_suffix}_SD_Fit_Data.npy', fitresults) 
-  consit_file_location = f'{camp_name}/InternalConsistency/{output_filename_suffix}'
+  consit_file_location = f'../ISARA_data_files/{camp_name}/InternalConsistency/{output_filename_suffix}'
   prctile = [0,10,50,68,90,95,100]  
 
   pltidx = np.zeros((Lwvl*2,2)).astype(int)
@@ -380,7 +380,7 @@ def Run():
     idx = np.where(np.logical_not(np.isnan(x))&(np.logical_not(np.isnan(y))))[0]
     x = x[idx]
     y = y[idx]
-    stats_dict[i0,:] = np.hstack((wvl,StatsCode.Comparison(x,y,prctile),Npt00,Npt01+Npt02,Npt02))
+    stats_dict[i0,:] = np.hstack((wvl,Stats_Code.Comparison(x,y,prctile),Npt00,Npt01+Npt02,Npt02))
     i0 += 1   
   #  y = list(itertools.chain(*y))
   #  x = list(itertools.chain(*x))  
@@ -460,7 +460,7 @@ def Run():
     y = y[idx]
     x = x[y>0]
     y = y[y>0]  
-    stats_dict[i0,:] = np.hstack((wvl,StatsCode.Comparison(x,y,prctile),Npt00,Npt01+Npt02,Npt02))
+    stats_dict[i0,:] = np.hstack((wvl,Stats_Code.Comparison(x,y,prctile),Npt00,Npt01+Npt02,Npt02))
     i0 += 1
     #y = list(itertools.chain(*y))
     #x = list(itertools.chain(*x))
@@ -535,7 +535,7 @@ def Run():
 
     x = x[y>0]
     y = y[y>0]  
-    stats_dict[i0,:] = np.hstack((ws[i2],StatsCode.Comparison(x,y,prctile),Npt10,Npt11+Npt12,Npt12))
+    stats_dict[i0,:] = np.hstack((ws[i2],Stats_Code.Comparison(x,y,prctile),Npt10,Npt11+Npt12,Npt12))
     i0 += 1 
     #xymax = np.nanmax(np.vstack((x,y)))
     xymax = xymax_ary[i2]
@@ -609,7 +609,7 @@ def Run():
 #    y = y[idx]
 #    x = x[y>0]
 #    y = y[y>0]  
-#    stats_dict[i0,:] = np.hstack((ws[i2],StatsCode.Comparison(x,y,prctile),Npt))
+#    stats_dict[i0,:] = np.hstack((ws[i2],Stats_Code.Comparison(x,y,prctile),Npt))
 #    i0 += 1 
 #    xymax = np.nanmax(np.vstack((x,y)))
 #  #  y = list(itertools.chain(*y))
@@ -662,7 +662,7 @@ def Run():
 #                  prctile_lst_y,'mean_y','stdev_y','MoranI','MoranEI','MoranI_znorm','MoranI_pnorm','MoranI_zrand','MoranI_prand','count','total'))
 #  str_data = np.char.mod("%10.6f", stats_dict.T)
 #  str_data= np.column_stack((rows,str_data))
-#  output_filename = f"{camp_name}/InternalConsistency/{output_filename_suffix}_DataRetrievals_1to1_stats.csv"
+#  output_filename = f"../ISARA_data_files/{camp_name}/InternalConsistency/{output_filename_suffix}_DataRetrievals_1to1_stats.csv"
 #  with open(output_filename, 'w') as f:
 #      np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)    
 
@@ -674,7 +674,7 @@ def Run():
                   prctile_lst_y,'mean_y','stdev_y','MoranI','MoranEI','MoranI_znorm','MoranI_pnorm','MoranI_zrand','MoranI_prand','count','not_enough_measurements','total_attempts','successful_retrievals'))
   str_data = np.char.mod("%10.6f", stats_dict.T)
   str_data= np.column_stack((rows,str_data))
-  output_filename = f"{camp_name}/InternalConsistency/{output_filename_suffix}_DataRetrievals_1to1_stats.csv"
+  output_filename = f"../ISARA_data_files/{camp_name}/InternalConsistency/{output_filename_suffix}_DataRetrievals_1to1_stats.csv"
   with open(output_filename, 'w') as f:
       np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)   
 
@@ -956,7 +956,7 @@ def Run():
   rows = ["%0.1f"%(x[ix]) for ix in range(0,len(x))]
   str_data = np.char.mod("%10.6f", stats_sd.T)
   str_data= np.column_stack((rows,str_data))
-  output_filename = f"{camp_name}/InternalConsistency/{output_filename_suffix}_DataRetrievals_SD_stats.csv"
+  output_filename = f"../ISARA_data_files/{camp_name}/InternalConsistency/{output_filename_suffix}_DataRetrievals_SD_stats.csv"
   with open(output_filename, 'w') as f:
       np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)  
 
@@ -1062,7 +1062,7 @@ def Run():
   rows = Lst
   str_data = np.char.mod("%10.6f", stats_y2.T)
   str_data= np.column_stack((rows,str_data))
-  output_filename = f"{camp_name}/InternalConsistency/{output_filename_suffix}_DataRetrievals_Kappa_IRI_stats.csv"
+  output_filename = f"../ISARA_data_files/{camp_name}/InternalConsistency/{output_filename_suffix}_DataRetrievals_Kappa_IRI_stats.csv"
   with open(output_filename, 'w') as f:
         np.savetxt(f, str_data, delimiter=', ', fmt='%s', header=colnames)  
  
