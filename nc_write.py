@@ -47,7 +47,7 @@ def cf19(data_path, data, Dims, GlobParams):
 
     try: ncfile.close()  # just to be safe, make sure dataset is not already open.
     except: pass
-    ncfile = Dataset(path,mode='w',format=GlobParams['format']) 
+    ncfile = Dataset(data_path,mode='w',format=GlobParams['format']) 
     #print(ncfile)   
 
     #Creating dimensions 
@@ -153,4 +153,4 @@ if __name__ == "__main__":
 
     # Run the execution wrapper
     print("Initializing netCDF Generation Routine...\n")
-    cf19(path="test_output.nc", data=mock_data, Dims=mock_dims, GlobParams=mock_glob_params)
+    cf19(data_path="test_output.nc", data=mock_data, Dims=mock_dims, GlobParams=mock_glob_params)
