@@ -332,7 +332,7 @@ def RunISARA():
         keyname = input(f"Enter the instrument name for mode {i1+1} data (e.g., LAS): ")
         modelist[i1] = keyname
         ifn = [f for f in os.listdir(f'../ISARA_data_files/{DN}/SDBinInfo/') if f.__contains__(keyname)]
-        dpData = load_sizebins.Load(f'../ISARA_data_files/{DN}/SDBinInfo/{ifn[0]}')
+        dpData = Load_Size_Dists.Load(f'../ISARA_data_files/{DN}/SDBinInfo/{ifn[0]}')
         #print(dpData)
         dpg[keyname] = grab_data(dpData,"Mid Points")*pow(10,-3) 
         dpu[keyname] = grab_data(dpData,"Upper Bounds")*pow(10,-3) 

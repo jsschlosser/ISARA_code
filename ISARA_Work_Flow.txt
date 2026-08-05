@@ -157,8 +157,8 @@ cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import GenAmbDataFiles
-GenAmbDataFiles.Run()
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
 ACTIVATE
 10.5067/ASDC/SUBORBITAL/ACTIVATE/Analysis/ISARA_1
 -activate-large-smps
@@ -232,8 +232,8 @@ cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/inverse_tophat_ka
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import GenAmbDataFiles
-GenAmbDataFiles.Run()
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
 ACTIVATE
 10.5067/ASDC/SUBORBITAL/ACTIVATE/Analysis/ISARA_1
 -activate-large-smps
@@ -278,8 +278,8 @@ cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criS
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import GenAmbDataFiles
-GenAmbDataFiles.Run()
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
 ACTIVATE
 10.5067/ASDC/SUBORBITAL/ACTIVATE/Analysis/ISARA_1
 -activate-large-smps
@@ -324,8 +324,8 @@ cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criD
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import GenAmbDataFiles
-GenAmbDataFiles.Run()
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
 ACTIVATE
 10.5067/ASDC/SUBORBITAL/ACTIVATE/Analysis/ISARA_1
 -activate-large-smps
@@ -481,8 +481,8 @@ mkdir /mnt/e/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import GenAmbDataFiles
-GenAmbDataFiles.Run()
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
 PACEPAX
 10.5067/ASDC/SUBORBITAL/PACE-PAX/Analysis/ISARA_1
 30
@@ -528,8 +528,8 @@ mkdir /mnt/e/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import GenAmbDataFiles
-GenAmbDataFiles.Run()
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
 PACEPAX
 10.5067/ASDC/SUBORBITAL/PACE-PAX/Analysis/ISARA_1
 30
@@ -576,8 +576,8 @@ mkdir /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import GenAmbDataFiles
-GenAmbDataFiles.Run()
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
 PACEPAX
 10.5067/ASDC/SUBORBITAL/PACE-PAX/Analysis/ISARA_1
 30
@@ -624,8 +624,8 @@ mkdir /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import GenAmbDataFiles
-GenAmbDataFiles.Run()
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
 PACEPAX
 10.5067/ASDC/SUBORBITAL/PACE-PAX/Analysis/ISARA_1
 30

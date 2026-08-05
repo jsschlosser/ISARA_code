@@ -174,7 +174,7 @@ def Run():
       coarse_bins = {}
       for coarse_keyname in coarsemode_keynames:
         ifn = [f for f in os.listdir(f'../ISARA_data_files/{camp_name}/SDBinInfo/') if f.__contains__(coarse_keyname)]
-        dpData = load_sizebins.Load(f'../ISARA_data_files/{camp_name}/SDBinInfo/{ifn[0]}')
+        dpData = Load_Size_Dists.Load(f'../ISARA_data_files/{camp_name}/SDBinInfo/{ifn[0]}')
         dpg_coarse0 = grab_data(dpData,"Mid Points")
         dpu_coarse0 = grab_data(dpData,"Upper Bounds")
         dpl_coarse0 = grab_data(dpData,"Lower Bounds")
@@ -223,21 +223,21 @@ def Run():
       LUT_file_num = 0
       coarse_shap_dist_ary = np.array([1])
       if LUT_c.__contains__("_Twomey"):
-        LUT_output_variables_coarse[LUT_file_num] = initialize_spheres(f'./LUT_data/{LUT_c}')
+        LUT_output_variables_coarse[LUT_file_num] = initialize_spheres(f'../ISARA_data_files/LUT_data/{LUT_c}')
         LUT_output_variables_fine[LUT_file_num] = LUT_output_variables_coarse[LUT_file_num]
         LUT_f = LUT_c
       else:
-        LUT_output_variables_coarse[LUT_file_num] = initialize_spheroids(f'./LUT_data/{LUT_c}')
+        LUT_output_variables_coarse[LUT_file_num] = initialize_spheroids(f'../ISARA_data_files/LUT_data/{LUT_c}')
         pathsplit = LUT_c.split("/")
-        LUT_f = np.squeeze([f for f in os.listdir(f'./LUT_data/{pathsplit[0]}') if f.__contains__("1.000")])
-        LUT_output_variables_fine[LUT_file_num] = initialize_spheroids(f'./LUT_data/{pathsplit[0]}/{LUT_f}')   
+        LUT_f = np.squeeze([f for f in os.listdir(f'../ISARA_data_files/LUT_data/{pathsplit[0]}') if f.__contains__("1.000")])
+        LUT_output_variables_fine[LUT_file_num] = initialize_spheroids(f'../ISARA_data_files/LUT_data/{pathsplit[0]}/{LUT_f}')   
     else:
-      coarse_shap_dist_ary = np.genfromtxt(f'./ShapeDistributions/{shap_dist}.csv', delimiter=', ', skip_header=1)
+      coarse_shap_dist_ary = np.genfromtxt(f'../ISARA_data_files/ShapeDistributions/{shap_dist}.csv', delimiter=', ', skip_header=1)
       coarse_shap_dist_ary = coarse_shap_dist_ary[:,1].astype(float)
       LUT_output_variables_coarse = {}
       LUT_file_num = 0
-      for f in os.listdir(f'./LUT_data/{LUT_c}'):
-        LUT_output_variables_coarse[LUT_file_num] = initialize_spheroids(f'./LUT_data/{LUT_c}/{f}')
+      for f in os.listdir(f'../ISARA_data_files/LUT_data/{LUT_c}'):
+        LUT_output_variables_coarse[LUT_file_num] = initialize_spheroids(f'../ISARA_data_files/LUT_data/{LUT_c}/{f}')
         if f.__contains__("1.000"):
           LUT_f = f
           LUT_output_variables_fine[0] = LUT_output_variables_coarse[LUT_file_num]
@@ -246,7 +246,7 @@ def Run():
     for f in insitu_Filename:
       print(f)
       flight_number = np.array(f.split("_"))[-2]
-      OP_Dictionary= dict_reconfig(np.load(f"./{camp_name}/Retrievals/{data_directory}/{f}",allow_pickle='TRUE')) 
+      OP_Dictionary= dict_reconfig(np.load(f"../ISARA_data_files/{camp_name}/Retrievals/{data_directory}/{f}",allow_pickle='TRUE')) 
 
       for key in OP_Dictionary['VariableAttributes'].keys():
         if 'units' in OP_Dictionary['VariableAttributes'][key].keys():
@@ -1014,7 +1014,7 @@ def Run():
 
           
           if flight_number.startswith("L"):
-            Output_Filename = f"./{camp_name}/{output_directory}/{output_filename_suffix}_Analysis_{Date}_R{revision_number}_{flight_number}.nc"      
+            Output_Filename = f"../ISARA_data_files/{camp_name}/{output_directory}/{output_filename_suffix}_Analysis_{Date}_R{revision_number}_{flight_number}.nc"      
           else:   
-            Output_Filename = f"./{camp_name}/{output_directory}/{output_filename_suffix}_Analysis_{Date}_R{revision_number}.nc"       
+            Output_Filename = f"../ISARA_data_files/{camp_name}/{output_directory}/{output_filename_suffix}_Analysis_{Date}_R{revision_number}.nc"       
           ncwrite(Output_Filename, OP_Dictionary, dims, GlobParams) 

@@ -43,76 +43,69 @@ def cf19(data_path, data, Dims, GlobParams):
        * Deflate compression (``zlib=True``) is enabled by default at level 4.
        * Variable attributes defined as ``'unitless'`` are automatically replaced with ``'1'`` to adhere to CF conventions.
     """
-    # FIX: Safely check if 'ncfile' exists in the namespace before calling close()
-    if 'ncfile' in locals() or 'ncfile' in globals():
-        try: 
-            ncfile.close()  
-        except: 
-            pass
+    #Opening a file, creating a new Dataset 
 
-    ncfile = Dataset(data_path, mode='w', format=GlobParams['format']) 
+    try: ncfile.close()  # just to be safe, make sure dataset is not already open.
+    except: pass
+    ncfile = Dataset(path,mode='w',format=GlobParams['format']) 
+    #print(ncfile)   
 
-    # Creating dimensions 
+    #Creating dimensions 
     for dim_key in Dims:    
-        ncfile.createDimension(dim_key, Dims[dim_key])
+        a_dim = ncfile.createDimension(dim_key, Dims[dim_key])
 
+    #time_dim = ncfile.createDimension('time', Dims['time'])     # latitude axis
     for dimensions in ncfile.dimensions.items():
-        print(f"Dimension created: {dimensions}")  
+        print(dimensions)  
 
-    # Creating global attributes 
+    #Creating attributes 
     ncfile.setncatts(GlobParams)
 
     for key, values in data.items():
-        if isinstance(values, dict):
+        if isinstance(values,dict):
             for k_dicts in values:
+                #print(k_dicts)
                 if k_dicts == 'GlobalAttributes':
                     ncfile.setncatts(values[k_dicts])
-        elif isinstance(values, str):
-            continue  # FIX: Skip structural meta-strings cleanly
+        elif isinstance(values,str):
+            values
         else:   
             if np.logical_not(key.startswith("dndlogdp_bin")):
-                if np.logical_not(key.startswith("dp")):
-                    
+                if (np.logical_not(key.startswith("dp"))):
+                    values_shape = np.array(values.shape)
                     key2 = key.split('_')
-                    if len(key2) > 1:
+                    if len(key2)>1:
                         var_name = '_'.join(key2[0:-1])
                     else:
                         var_name = key
-                        
-                    var_dir = data['SourceFlag'].get(key, '') 
+                    var_dir = data['SourceFlag'][key] 
                     if var_dir == '':
                         var_dirname = var_name
+                        shap_keys = var_name
                     else:
                         var_dirname = f'{var_dir}/{var_name}'
-                    
-                    # FIX: Always pull from data['Dims'] instead of using the variable name string. 
-                    # Passing a string to createVariable splits each character into an explicit dimension!
-                    shap_keys = data['Dims'].get(key, ())      
-                    
-                    # Allocate data type variants
-                    if values.dtype == 'float64':
-                        a = ncfile.createVariable(var_dirname, 'f4', shap_keys, zlib=True, complevel=4)
-                    elif values.dtype == 'int64':
-                        a = ncfile.createVariable(var_dirname, 'i4', shap_keys, zlib=True, complevel=4)
+                        shap_keys = data['Dims'][key]       
+                    if values.dtype=='float64':
+                        a = ncfile.createVariable(var_dirname, 'f4', shap_keys,zlib=True,complevel=4)
+                    elif values.dtype=='int64':
+                        a = ncfile.createVariable(var_dirname, 'i4', shap_keys,zlib=True,complevel=4)
                     else:
-                        a = ncfile.createVariable(var_dirname, values.dtype, shap_keys, zlib=True, complevel=4)       
-                    
-                    # Apply attributes
-                    for key3 in data['VariableAttributes'].get(key, {}):
-                        attr_val = data['VariableAttributes'][key][key3]
-                        if attr_val == 'unitless':
-                            attr_val = '1'                        
-                        a.UnusedNameAttribute = attr_val       
+                        a = ncfile.createVariable(var_dirname, values.dtype, shap_keys,zlib=True,complevel=4)       
+                    for key3 in data['VariableAttributes'][key]:
+                        if data['VariableAttributes'][key][key3] == 'unitless':
+                            data['VariableAttributes'][key][key3] = '1'                        
+                        a.UnusedNameAttribute = data['VariableAttributes'][key][key3]       
                         a.renameAttribute("UnusedNameAttribute", key3)
-                    
-                    # FIX: Using ellipsis [...] handles any multi-dimensional shape 
-                    # (1D, 2D, 3D, 4D+) cleanly without checking conditional lens.
-                    a[...] = values
-
-    print("\n--- Generated NetCDF File Structure ---")
+                    if len(data[key].shape)==1:    
+                        a[:] = values
+                    elif len(data[key].shape)==2:
+                        a[:,:] = values
+                    elif len(data[key].shape)==3:    
+                        a[:,:,:] = values
+    # first print the Dataset object to see what we've got
     print(ncfile)
-    ncfile.close()
-    print('Dataset is closed cleanly!')
+    # close the Dataset.
+    ncfile.close(); print('Dataset is closed!')
 
 if __name__ == "__main__":
     # 1. Setup sample system dimensions
