@@ -133,7 +133,7 @@ def Run():
                             "RH":"Relative_Humidity_Ambient_BUCHOLTZ",
                             "ssa_m":"SSA_amb_550nm_ZIEMBA"
                             }
-        G = open(f'./{camp_name}/{POI_files}/SpiralProfiles_{camp_name}.csv', 'r') # open .csv    SpiralProfiles_{camp_name}.csv
+        G = open(f'../ISARA_data_files/{camp_name}/{POI_files}/SpiralProfiles_{camp_name}.csv', 'r') # open .csv    SpiralProfiles_{camp_name}.csv
         g = G.read().splitlines() # read .csv 
         hdrs = g[0].split(",") # define headers
         format_string = "%m/%d/%Y %H:%M:%S"
@@ -172,8 +172,8 @@ def Run():
                             "ssa_m":"SSA_amb_550nm_ZIEMBA"
                             }
         LegID_dictionary = {}
-        for POI_file in os.listdir(f'./{camp_name}/{POI_files}/'):
-            G = importICARTT.imp(f'./{camp_name}/{POI_files}/{POI_file}',2)
+        for POI_file in os.listdir(f'../ISARA_data_files/{camp_name}/{POI_files}/'):
+            G = importICARTT.imp(f'../ISARA_data_files/{camp_name}/{POI_files}/{POI_file}',2)
             kystr = str(int(G["Date_YYYYMMDD"][0]))
             LegID_dictionary[kystr] = G
     prctile = [0,50,68,95,100]  
@@ -192,18 +192,18 @@ def Run():
             for datstr in LegID_dictionary:
                 #a = g[i1].split(",") # split string into array and define as number array
                 #datstr = str(a[0])
-                RSP_Filename =  [f for f in os.listdir(f'./{camp_name}/RSP') if f.__contains__(datstr)]
-                InSitu_Filename_spheres =  [f for f in os.listdir(f'./{camp_name}/AmbientDataFiles/Sphere_kappa0-cri1-33') if (f.__contains__(datstr))]
-                InSitu_Filename_nonspheres = [f for f in os.listdir(f'./{camp_name}/AmbientDataFiles/{nonsphere_type}') if (f.__contains__(datstr))]#InSitu_Filename_nonspheres = InSitu_Filename_spheres#
-                InSitu_Filename_nonspheres2 = [f for f in os.listdir(f'./{camp_name}/AmbientDataFiles/{nonsphere_type2}') if (f.__contains__(datstr))]
-                Lidar_Filename = [f for f in os.listdir(f'./{camp_name}/HSRL') if (f.__contains__(datstr))]
+                RSP_Filename =  [f for f in os.listdir(f'../ISARA_data_files/{camp_name}/RSP') if f.__contains__(datstr)]
+                InSitu_Filename_spheres =  [f for f in os.listdir(f'../ISARA_data_files/{camp_name}/AmbientDataFiles/Sphere_kappa0-cri1-33') if (f.__contains__(datstr))]
+                InSitu_Filename_nonspheres = [f for f in os.listdir(f'../ISARA_data_files/{camp_name}/AmbientDataFiles/{nonsphere_type}') if (f.__contains__(datstr))]#InSitu_Filename_nonspheres = InSitu_Filename_spheres#
+                InSitu_Filename_nonspheres2 = [f for f in os.listdir(f'../ISARA_data_files/{camp_name}/AmbientDataFiles/{nonsphere_type2}') if (f.__contains__(datstr))]
+                Lidar_Filename = [f for f in os.listdir(f'../ISARA_data_files/{camp_name}/HSRL') if (f.__contains__(datstr))]
                 if (len(InSitu_Filename_spheres) == 1) & (len(RSP_Filename) == 1) & (len(Lidar_Filename) == 1):
                     print(InSitu_Filename_spheres[0])
-                    IS1_DirFN = f'./{camp_name}/AmbientDataFiles/Sphere_kappa0-cri1-33/{InSitu_Filename_spheres[0]}'
-                    IS2_DirFN = f'./{camp_name}/AmbientDataFiles/{nonsphere_type}/{InSitu_Filename_nonspheres[0]}'#IS2_DirFN = IS1_DirFN #
-                    IS3_DirFN = f'./{camp_name}/AmbientDataFiles/{nonsphere_type2}/{InSitu_Filename_nonspheres2[0]}'#IS2_DirFN = IS1_DirFN #
-                    RSP_DirFN = f'./{camp_name}/RSP/{RSP_Filename[0]}'
-                    Lid_DirFN = f'./{camp_name}/HSRL/{Lidar_Filename[0]}'
+                    IS1_DirFN = f'../ISARA_data_files/{camp_name}/AmbientDataFiles/Sphere_kappa0-cri1-33/{InSitu_Filename_spheres[0]}'
+                    IS2_DirFN = f'../ISARA_data_files/{camp_name}/AmbientDataFiles/{nonsphere_type}/{InSitu_Filename_nonspheres[0]}'#IS2_DirFN = IS1_DirFN #
+                    IS3_DirFN = f'../ISARA_data_files/{camp_name}/AmbientDataFiles/{nonsphere_type2}/{InSitu_Filename_nonspheres2[0]}'#IS2_DirFN = IS1_DirFN #
+                    RSP_DirFN = f'../ISARA_data_files/{camp_name}/RSP/{RSP_Filename[0]}'
+                    Lid_DirFN = f'../ISARA_data_files/{camp_name}/HSRL/{Lidar_Filename[0]}'
                     FN_suffix = f'{sep_dist}km_{sep_time}min_{datstr}'
                     OPdict = CaseStudy(camp_name,IS1_DirFN,IS2_DirFN,IS3_DirFN,RSP_DirFN,Lid_DirFN,FN_suffix,sep_time,sep_dist,
                                         out_directory_name,source_key_vars,LegID_dictionary[datstr])  
@@ -211,13 +211,13 @@ def Run():
                         output_dictionary[f'{sep_dist}km-{sep_time}min'][f"{datstr}"] = OPdict['data']
                         stdv_dictionary[f'{sep_dist}km-{sep_time}min'][f"{datstr}"] = OPdict['sigma']  
                 elif (len(InSitu_Filename_spheres) >1) & (len(RSP_Filename) == 1) & (len(Lidar_Filename) == 1):
-                    RSP_DirFN = f'./{camp_name}/RSP/{RSP_Filename[0]}'
-                    Lid_DirFN = f'./{camp_name}/HSRL/{Lidar_Filename[0]}'
+                    RSP_DirFN = f'../ISARA_data_files/{camp_name}/RSP/{RSP_Filename[0]}'
+                    Lid_DirFN = f'../ISARA_data_files/{camp_name}/HSRL/{Lidar_Filename[0]}'
                     for ifn in range(len(InSitu_Filename_spheres)):
                         print(InSitu_Filename_spheres[ifn])
-                        IS1_DirFN = f'./{camp_name}/AmbientDataFiles/Sphere_kappa0-cri1-33/{InSitu_Filename_spheres[ifn]}'
-                        IS2_DirFN = f'./{camp_name}/AmbientDataFiles/{nonsphere_type}/{InSitu_Filename_nonspheres[ifn]}'#IS2_DirFN = IS1_DirFN #
-                        IS3_DirFN = f'./{camp_name}/AmbientDataFiles/{nonsphere_type2}/{InSitu_Filename_nonspheres2[ifn]}'#IS2_DirFN = IS1_DirFN #
+                        IS1_DirFN = f'../ISARA_data_files/{camp_name}/AmbientDataFiles/Sphere_kappa0-cri1-33/{InSitu_Filename_spheres[ifn]}'
+                        IS2_DirFN = f'../ISARA_data_files/{camp_name}/AmbientDataFiles/{nonsphere_type}/{InSitu_Filename_nonspheres[ifn]}'#IS2_DirFN = IS1_DirFN #
+                        IS3_DirFN = f'../ISARA_data_files/{camp_name}/AmbientDataFiles/{nonsphere_type2}/{InSitu_Filename_nonspheres2[ifn]}'#IS2_DirFN = IS1_DirFN #
                         FN_suffix = f'{sep_dist}km_{sep_time}min_{datstr}_{ifn}'
                         OPdict = CaseStudy(camp_name,IS1_DirFN,IS2_DirFN,IS3_DirFN,RSP_DirFN,Lid_DirFN,FN_suffix,sep_time,sep_dist,
                                             out_directory_name,source_key_vars,LegID_dictionary[datstr]) 
@@ -225,13 +225,13 @@ def Run():
                             output_dictionary[f'{sep_dist}km-{sep_time}min'][f"{datstr}L{ifn}"] = OPdict['data']
                             stdv_dictionary[f'{sep_dist}km-{sep_time}min'][f"{datstr}L{ifn}"] = OPdict['sigma']            
                 elif (len(InSitu_Filename_spheres) >1) & (len(RSP_Filename) == 1) & (len(Lidar_Filename) >1):
-                    RSP_DirFN = f'./{camp_name}/RSP/{RSP_Filename[0]}'
+                    RSP_DirFN = f'../ISARA_data_files/{camp_name}/RSP/{RSP_Filename[0]}'
                     for ifn in range(len(InSitu_Filename_spheres)):
                         print(InSitu_Filename_spheres[ifn])  
-                        Lid_DirFN = f'./{camp_name}/HSRL/{Lidar_Filename[ifn]}'
-                        IS1_DirFN = f'./{camp_name}/AmbientDataFiles/Sphere_kappa0-cri1-33/{InSitu_Filename_spheres[ifn]}'
-                        IS2_DirFN = f'./{camp_name}/AmbientDataFiles/{nonsphere_type}/{InSitu_Filename_nonspheres[ifn]}'#IS2_DirFN = IS1_DirFN #
-                        IS3_DirFN = f'./{camp_name}/AmbientDataFiles/{nonsphere_type2}/{InSitu_Filename_nonspheres2[ifn]}'#IS2_DirFN = IS1_DirFN #
+                        Lid_DirFN = f'../ISARA_data_files/{camp_name}/HSRL/{Lidar_Filename[ifn]}'
+                        IS1_DirFN = f'../ISARA_data_files/{camp_name}/AmbientDataFiles/Sphere_kappa0-cri1-33/{InSitu_Filename_spheres[ifn]}'
+                        IS2_DirFN = f'../ISARA_data_files/{camp_name}/AmbientDataFiles/{nonsphere_type}/{InSitu_Filename_nonspheres[ifn]}'#IS2_DirFN = IS1_DirFN #
+                        IS3_DirFN = f'../ISARA_data_files/{camp_name}/AmbientDataFiles/{nonsphere_type2}/{InSitu_Filename_nonspheres2[ifn]}'#IS2_DirFN = IS1_DirFN #
                         FN_suffix = f'{sep_dist}km_{sep_time}min_{datstr}_L{ifn}'
                         OPdict = CaseStudy(camp_name,IS1_DirFN,IS2_DirFN,IS3_DirFN,RSP_DirFN,Lid_DirFN,FN_suffix,sep_time,sep_dist,
                                             out_directory_name,source_key_vars,LegID_dictionary[datstr])  
@@ -463,22 +463,22 @@ def Run():
                 for key2 in VertStdev:    
                     VertStdev_trimmed[cntlmt][key2] = np.squeeze(VertStdev[key2][countflg[cntlmt],:]).reshape(1,-1)           
                 aflg1 = np.where((np.logical_not(np.isnan(VertData_trimmed[cntlmt]['Collocated_optical_N_IS'])))&np.logical_not((np.isnan(VertData_trimmed[cntlmt]['Collocated_optical_N_HSRL+RSP']))))                    
-                N_stats_dict = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_optical_N_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_optical_N_HSRL+RSP'][aflg1],prctile)    
+                N_stats_dict = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_optical_N_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_optical_N_HSRL+RSP'][aflg1],prctile)    
 
-                ext_stats_dict355 = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ext_coef_355_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ext_coef_355_HSRL'][aflg1],prctile)
-                ext_stats_dict532 = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ext_coef_532_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ext_coef_532_HSRL'][aflg1],prctile)
-                ext_stats_dict1064 = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ext_coef_1064_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ext_coef_1064_HSRL'][aflg1],prctile)      
+                ext_stats_dict355 = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ext_coef_355_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ext_coef_355_HSRL'][aflg1],prctile)
+                ext_stats_dict532 = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ext_coef_532_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ext_coef_532_HSRL'][aflg1],prctile)
+                ext_stats_dict1064 = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ext_coef_1064_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ext_coef_1064_HSRL'][aflg1],prctile)      
 
-                bsc_stats_dict355 = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_355_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_355_HSRL'][aflg1],prctile)
-                bsc_stats_dict532 = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_532_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_532_HSRL'][aflg1],prctile)
-                bsc_stats_dict1064 = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_1064_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_1064_HSRL'][aflg1],prctile)      
+                bsc_stats_dict355 = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_355_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_355_HSRL'][aflg1],prctile)
+                bsc_stats_dict532 = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_532_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_532_HSRL'][aflg1],prctile)
+                bsc_stats_dict1064 = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_1064_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_bsc_coef_1064_HSRL'][aflg1],prctile)      
 
-                ldr_stats_dict355 = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ldr_355_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ldr_355_HSRL'][aflg1],prctile)
-                ldr_stats_dict532 = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ldr_532_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ldr_532_HSRL'][aflg1],prctile)
-                ldr_stats_dict1064 = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ldr_1064_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ldr_1064_HSRL'][aflg1],prctile)   
+                ldr_stats_dict355 = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ldr_355_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ldr_355_HSRL'][aflg1],prctile)
+                ldr_stats_dict532 = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ldr_532_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ldr_532_HSRL'][aflg1],prctile)
+                ldr_stats_dict1064 = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_total_ldr_1064_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_ldr_1064_HSRL'][aflg1],prctile)   
 
-                lr_stats_dict355 = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_total_lr_355_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_lr_355_HSRL'][aflg1],prctile)
-                lr_stats_dict532 = StatsCode.Comparison(VertData_trimmed[cntlmt]['Collocated_total_lr_532_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_lr_532_HSRL'][aflg1],prctile)      
+                lr_stats_dict355 = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_total_lr_355_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_lr_355_HSRL'][aflg1],prctile)
+                lr_stats_dict532 = Stats_Code.Comparison(VertData_trimmed[cntlmt]['Collocated_total_lr_532_IS'][aflg1],VertData_trimmed[cntlmt]['Collocated_total_lr_532_HSRL'][aflg1],prctile)      
 
                 colnames = ['Collocated_optical_N_cm-3','Collocated_total_355ext_coef_Mm-1','Collocated_total_532ext_coef_Mm-1','Collocated_total_1064ext_coef_Mm-1','Collocated_total_355bsc_coef_Mm-1sr-1',
                             'Collocated_total_532bsc_coef_Mm-1sr-1','Collocated_total_1064bsc_coef_Mm-1sr-1','Collocated_total_355LDR_unitless',

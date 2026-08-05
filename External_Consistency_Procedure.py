@@ -466,7 +466,7 @@ def CaseStudy(
         N_5um = np.trapezoid(coarse_dndlogdp[:,crsidx_5um],x=np.log10(coarse_diameter[crsidx_5um]),axis=1)
         N_5um = np.where(N_5um == '--', np.nan, N_5um)
 
-    HSRL2_Dictionary = collect_netcdf.grabHSRL2(HSRL2_Filename)# convert hsrl data from their netcdf files to dictionaries using the collect_netcdf procedures 
+    HSRL2_Dictionary = Collect_netCDF.grabHSRL2(HSRL2_Filename)# convert hsrl data from their netcdf files to dictionaries using the Collect_netCDF procedures 
     HSRL_data = {}
     HSRL_data["time"] = np.array(HSRL2_Dictionary["hsrl2_time_array"])*3600
     L_hsrl2_time = len(HSRL_data["time"])    
@@ -503,7 +503,7 @@ def CaseStudy(
     else:
         HSRL_data["aid"] = np.full((L_hsrl2_time,L_hsrl2_alt),np.nan)#
 
-    RSP_Dictionary = collect_netcdf.grabRSP(RSP_Filename) # convert rsp data from their netcdf files to dictionaries using the collect_netcdf procedures 
+    RSP_Dictionary = Collect_netCDF.grabRSP(RSP_Filename) # convert rsp data from their netcdf files to dictionaries using the Collect_netCDF procedures 
     RSP_data = {}
     RSP_data["time"] = np.array(RSP_Dictionary["rsp_time_array"])*3600 # convert decimal HAM to SAM
     flightindx = np.where(((RSP_data["time"] >= HSRL_data["time"][0])&(RSP_data["time"] <= HSRL_data["time"][-1])))[0]
@@ -1502,7 +1502,7 @@ def CaseStudy(
                     naltstats[i1,48] = y0   
                     naltstats[i1,-1] = 1    
                 else:   
-                    naltstats[i1,:] = np.hstack((legid,np.nan,np.squeeze(StatsCode.Comparison(x0,y0,prctile))))   
+                    naltstats[i1,:] = np.hstack((legid,np.nan,np.squeeze(Stats_Code.Comparison(x0,y0,prctile))))   
             aotinsitu = {}        
             for iwvl in range(n_wvl):
                 flx1 = np.where(np.logical_not(np.isnan(X_alt["ext"][:,-1,iwvl,0]))&(np.logical_not(np.isnan(Y_alt["ext"][:,iwvl,0]))))[0]
@@ -1536,7 +1536,7 @@ def CaseStudy(
                         altstats['ext'][HSRL_wvl[iwvl]][i1,48] = y1[iwvl]
                         altstats['ext'][HSRL_wvl[iwvl]][i1,-1] = 1
                     else:
-                        altstats['ext'][HSRL_wvl[iwvl]][i1,:] = np.hstack((legid,aotinsitu[iwvl],np.squeeze(StatsCode.Comparison(x1[iwvl],y1[iwvl],prctile)))) 
+                        altstats['ext'][HSRL_wvl[iwvl]][i1,:] = np.hstack((legid,aotinsitu[iwvl],np.squeeze(Stats_Code.Comparison(x1[iwvl],y1[iwvl],prctile)))) 
                 if len(flx2)>0:       
                     if len(x2[iwvl])== 1:
                         altstats['bsc'][HSRL_wvl[iwvl]][i1,:] = np.zeros(57)
@@ -1546,7 +1546,7 @@ def CaseStudy(
                         altstats['bsc'][HSRL_wvl[iwvl]][i1,48] = y2[iwvl]
                         altstats['bsc'][HSRL_wvl[iwvl]][i1,-1] = 1
                     else:
-                        altstats['bsc'][HSRL_wvl[iwvl]][i1,:] = np.hstack((legid,np.nan,np.squeeze(StatsCode.Comparison(x2[iwvl],y2[iwvl],prctile)))) 
+                        altstats['bsc'][HSRL_wvl[iwvl]][i1,:] = np.hstack((legid,np.nan,np.squeeze(Stats_Code.Comparison(x2[iwvl],y2[iwvl],prctile)))) 
                 if len(flxLDR)>0:
                     if len(xLDR[iwvl])==1: 
                         altstats['ldr'][HSRL_wvl[iwvl]][i1,:] = np.zeros(57)    
@@ -1556,7 +1556,7 @@ def CaseStudy(
                         altstats['ldr'][HSRL_wvl[iwvl]][i1,48] = yLDR[iwvl]
                         altstats['ldr'][HSRL_wvl[iwvl]][i1,-1] = 1   
                     else:
-                        altstats['ldr'][HSRL_wvl[iwvl]][i1,:] = np.hstack((legid,np.nan,np.squeeze(StatsCode.Comparison(xLDR[iwvl],yLDR[iwvl],prctile)))) 
+                        altstats['ldr'][HSRL_wvl[iwvl]][i1,:] = np.hstack((legid,np.nan,np.squeeze(Stats_Code.Comparison(xLDR[iwvl],yLDR[iwvl],prctile)))) 
                 if len(flx3)>0:       
                     if HSRL_wvl[iwvl] != 1064:
                         if len(x3[iwvl])== 1:
@@ -1567,7 +1567,7 @@ def CaseStudy(
                             altstats['lr'][HSRL_wvl[iwvl]][i1,48] = y3[iwvl]
                             altstats['lr'][HSRL_wvl[iwvl]][i1,-1] = 1       
                         else:
-                            altstats['lr'][HSRL_wvl[iwvl]][i1,:] = np.hstack((legid,np.nan,np.squeeze(StatsCode.Comparison(x3[iwvl],y3[iwvl],prctile))))                                                                                    
+                            altstats['lr'][HSRL_wvl[iwvl]][i1,:] = np.hstack((legid,np.nan,np.squeeze(Stats_Code.Comparison(x3[iwvl],y3[iwvl],prctile))))                                                                                    
 
             if rsp_dat is not None:       
                 ax0[0,0].errorbar(Y_alt["N"][:,0], altgrid/1000, xerr=Y_alt["N"][:,1], linestyle='none', elinewidth=lw, ecolor='r', capsize=3)

@@ -60,7 +60,7 @@ exit()
 
 #1.2 Collate retrievals for internal consistency analysis
 cd /mnt/b/ISARA_Repo/ISARA_code
-rm ../ISARA_Repo/ISAR_data_files/ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy
+rm ../ISARA_Repo/ISARA_data_files/ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy
 python3 
 import CollateDataFiles
 CollateDataFiles.Run()
@@ -83,8 +83,8 @@ RHw_DLH_DISKIN_
 InletFlag_LARGE_ZIEMBA
 gpsALT_m_THORNHILL
 exit()
-cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/Retrievals
-cp *.npy /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/Retrievals/SMPS
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/Retrievals
+cp *.npy /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/Retrievals/SMPS
 cp *.npy /mnt/d/ACTIVATE/Retrievals/SMPS
 cp *.npy /mnt/e/ACTIVATE/Retrievals/SMPS
 cp *.npy /mnt/f/Backup/ACTIVATE/Retrievals/SMPS
@@ -144,12 +144,12 @@ python3 Synthetic_Data_Closure_Study.py
 ### 3 External Closure ###
 
 #3.1 Generate ambient data files assuming coarse mode is spherical sea salt
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir ../ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/
-mkdir ../ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
+mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
@@ -182,27 +182,27 @@ CAS,CDP,FCDP
 no
 exit()
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/d/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/e/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 
 #3.2) Perform external consistency analysis assuming all particles are spheres
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir ../ISARA_Repo/ISAR_data_files/ACTIVATE/ExternalClosure/
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/
 mkdir /mnt/d/ACTIVATE/ExternalClosure/
 mkdir /mnt/e/ACTIVATE/ExternalClosure/
 mkdir /mnt/f/Backup/ACTIVATE/ExternalClosure/
-mkdir ../ISARA_Repo/ISAR_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
+mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 mkdir /mnt/d/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 mkdir /mnt/e/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 mkdir /mnt/f/Backup/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
-cd ../ISARA_Repo/ISAR_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
+cd ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import Collocate_and_Plot_Amb_Data
-Collocate_and_Plot_Amb_Data.Run()
+import External_Closure_Study
+External_Closure_Study.Run()
 ACTIVATE
 Sphere_kappa0-cri1-33
 Sphere_kappa0-cri1-33
@@ -212,23 +212,23 @@ Falcon
 FalconLegID
 exit()
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 cp * /mnt/d/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 cp * /mnt/e/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 cp * /mnt/f/Backup/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 
 
 #3.3) Generate ambient data files assuming coarse mode has inverse_tophat PSD and is composed of sea salt
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir ../ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/
-mkdir ../ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
+mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
-cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
@@ -258,23 +258,23 @@ CAS,CDP,FCDP
 no
 exit()
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/d/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/e/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 
 
 #3.4) Generate ambient data files assuming coarse mode has equiprobable PSD and is composed of sea salt
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir ../ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criSS
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/equiprobable-criSS
-cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criSS
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
@@ -304,23 +304,23 @@ CAS,CDP,FCDP
 no
 exit()
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criSS
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 cp * /mnt/d/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 cp * /mnt/e/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 
 
 #3.5) Generate ambient data files assuming coarse mode has equiprobable PSD and is composed of dust
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir ../ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criDust
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/equiprobable-criDust
-cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criDust
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
@@ -350,7 +350,7 @@ CAS,CDP,FCDP
 no
 exit()
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criDust
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 cp * /mnt/d/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 cp * /mnt/e/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/equiprobable-criDust
@@ -358,21 +358,21 @@ cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 
 
 #3.6) Perform external consistency analysis assuming fine particles are spheres and coarse particle are spheroids of 2 possible types (e.g., 3 shapes)
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir ../ISARA_Repo/ISAR_data_files/ACTIVATE/ExternalClosure/
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/
 mkdir /mnt/d/ACTIVATE/ExternalClosure/
 mkdir /mnt/e/ACTIVATE/ExternalClosure/
 mkdir /mnt/f/Backup/ACTIVATE/ExternalClosure/
-mkdir ../ISARA_Repo/ISAR_data_files/ACTIVATE/ExternalClosure/Sphere-SS-Dust
+mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere-SS-Dust
 mkdir /mnt/d/ACTIVATE/ExternalClosure/Sphere-SS-Dust
 mkdir /mnt/e/ACTIVATE/ExternalClosure/Sphere-SS-Dust
 mkdir /mnt/f/Backup/ACTIVATE/ExternalClosure/Sphere-SS-Dust
-cd ../ISARA_Repo/ISAR_data_files/ACTIVATE/ExternalClosure/Sphere-SS-Dust
+cd ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere-SS-Dust
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import Collocate_and_Plot_Amb_Data
-Collocate_and_Plot_Amb_Data.Run()
+import External_Closure_Study
+External_Closure_Study.Run()
 ACTIVATE
 equiprobable-criSS
 equiprobable-criDust
@@ -438,7 +438,7 @@ exit()
 
 #1.2)
 cd /mnt/b/ISARA_Repo/ISARA_code
-rm /mnt/b/ISARA_Repo/ISAR_data_files/Retrievals/pacepax-mrg30_cirpas-to_DataRetrievals.npy
+rm /mnt/b/ISARA_Repo/ISARA_data_files/Retrievals/pacepax-mrg30_cirpas-to_DataRetrievals.npy
 python
 import CollateDataFiles
 CollateDataFiles.Run()
@@ -462,20 +462,20 @@ InletFlag_LARGE_ZIEMBA_unitless
 GPS_Altitude_BUCHOLTZ
 exit()
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/Retrievals
-cp *.npy /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/Retrievals/30s
+cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/Retrievals
+cp *.npy /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/Retrievals/30s
 cp *.npy /mnt/d/PACEPAX/Retrievals/30s
 cp *.npy /mnt/e/PACEPAX/Retrievals/30s
 cp *.npy /mnt/f/Backup/PACEPAX/Retrievals/30s
 
 
 #3.1)
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/AmbientDataFiles/
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/AmbientDataFiles/Sphere_kappa0-cri1-33
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
@@ -510,19 +510,19 @@ yes
 -4.8032
 exit()
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/d/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/e/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33
 
 
 #3.2)
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/AmbientDataFiles/
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/AmbientDataFiles/inverse_tophat_kappa0-criSS
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
@@ -558,19 +558,19 @@ yes
 -4.8032
 exit()
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
+cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/d/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/e/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS
 
 
 #3.3)
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/AmbientDataFiles/
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/AmbientDataFiles/equiprobable_kappa0-criSS
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
@@ -606,19 +606,19 @@ yes
 -4.8032
 exit()
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
+cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 cp * /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 cp * /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS
 
 
 #3.4)
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/AmbientDataFiles/
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/AmbientDataFiles/equiprobable_kappa0-criDust
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 mkdir /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 mkdir /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 mkdir /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
@@ -654,28 +654,22 @@ yes
 -4.8032
 exit()
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
+cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 cp * /mnt/d/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 cp * /mnt/e/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 cp * /mnt/f/Backup/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust
 
+#3.5)
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/Sphere-SS-Dust
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/ExternalClosure/
-mkdir /mnt/d/PACEPAX/ExternalClosure/
-mkdir /mnt/e/PACEPAX/ExternalClosure/
-mkdir /mnt/f/Backup/PACEPAX/ExternalClosure/
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/ExternalClosure/Sphere-SS-Dust
-mkdir /mnt/d/PACEPAX/ExternalClosure/Sphere-SS-Dust
-mkdir /mnt/e/PACEPAX/ExternalClosure/Sphere-SS-Dust
-mkdir /mnt/f/Backup/PACEPAX/ExternalClosure/Sphere-SS-Dust
-
-cd /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/ExternalClosure/Sphere-SS-Dust
+cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/Sphere-SS-Dust
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import Collocate_and_Plot_Amb_Data
-Collocate_and_Plot_Amb_Data.Run()
+import External_Closure_Study
+External_Closure_Study.Run()
 PACEPAX
 equiprobable_kappa0-criSS
 equiprobable_kappa0-criDust
@@ -685,27 +679,16 @@ CIRPAS-TO
 FlightData
 exit()
 
-cd /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/Retrievals/ExternalClosure/Sphere-SS-Dust
-cp PACEPAX-External_Closure_* /mnt/d/PACEPAX/Retrievals/ExternalClosureFigs/Sphere-SS-Dust
-cp PACEPAX-External_Closure_* /mnt/e/PACEPAX/Retrievals/ExternalClosureFigs/Sphere-SS-Dust
-cp PACEPAX-External_Closure_* /mnt/f/Backup/PACEPAX/Retrievals/ExternalClosureFigs/Sphere-SS-Dust
-
-
-cd /mnt/b/ISARA_Repo/ISAR_data_files
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/ExternalClosure/
-mkdir /mnt/d/PACEPAX/ExternalClosure/
-mkdir /mnt/e/PACEPAX/ExternalClosure/
-mkdir /mnt/f/Backup/PACEPAX/ExternalClosure/
-mkdir /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
-mkdir /mnt/d/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
-mkdir /mnt/e/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
-mkdir /mnt/f/Backup/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
-cd /mnt/b/ISARA_Repo/ISAR_data_files/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
+#3.6)
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
-import Collocate_and_Plot_Amb_Data
-Collocate_and_Plot_Amb_Data.Run()
+import External_Closure_Study
+External_Closure_Study.Run()
 PACEPAX
 Sphere_kappa0-cri1-33
 Sphere_kappa0-cri1-33
@@ -715,10 +698,173 @@ CIRPAS-TO
 FlightData
 exit()
 
-cd /mnt/b/ISARA_Repo/ISARA_code/PACEPAX/Retrievals/ExternalClosure/Sphere_kappa0-cri1-33
-cp PACEPAX-External_Closure_* /mnt/d/PACEPAX/Retrievals/ExternalClosureFigs/Sphere_kappa0-cri1-33
-cp PACEPAX-External_Closure_* /mnt/e/PACEPAX/Retrievals/ExternalClosureFigs/Sphere_kappa0-cri1-33
-cp PACEPAX-External_Closure_* /mnt/f/Backup/PACEPAX/Retrievals/ExternalClosureFigs/Sphere_kappa0-cri1-33
+
+#3.1)
+cd /mnt/b/ISARA_Repo/ISARA_code
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33_NO_INLET_COR
+cd /mnt/b/ISARA_Repo/ISARA_code
+python3 
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
+PACEPAX
+10.5067/ASDC/SUBORBITAL/PACE-PAX/Analysis/ISARA_1
+30
+30s
+AmbientDataFiles/Sphere_kappa0-cri1-33_NO_INLET_COR
+cirpas-to
+5
+Added product DOI and added ambient properties for various modes. Corrected units of dndlogdp to be the correct cm-3 from m-3 in previous version; Added comment and ancillary data attributes to dndlogdp variable; Added _FillValue attribute and value to all variables; Removed variables with units attribute set as missing; Changed minimum required absorption to run ISARA from 1 Mm-1 to 0 Mm-1. Added veff variable for all modes to 'derived' group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step where applicable; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54.Spheres assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id.
+no
+AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat
+0
+no
+1.33
+0
+180
+Relative_Humidity
+yes
+CAS
+20
+2
+no
+exit()
+
+cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/Sphere_kappa0-cri1-33_NO_INLET_COR
+
+#3.2)
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/inverse_tophat_kappa0-criSS_NO_INLET_COR
+cd /mnt/b/ISARA_Repo/ISARA_code
+python3 
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
+PACEPAX
+10.5067/ASDC/SUBORBITAL/PACE-PAX/Analysis/ISARA_1
+30
+30s
+AmbientDataFiles/inverse_tophat_kappa0-criSS_NO_INLET_COR
+cirpas-to
+5
+Added product DOI and added ambient properties for various modes. Corrected units of dndlogdp to be the correct cm-3 from m-3 in previous version; Added comment and ancillary data attributes to dndlogdp variable; Added _FillValue attribute and value to all variables; Removed variables with units attribute set as missing; Changed minimum required absorption to run ISARA from 1 Mm-1 to 0 Mm-1. Added veff variable for all modes to 'derived' group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step where applicable; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54. Spheroidal seasalt properties assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id.
+yes
+inverse_tophat
+KERNEL_n22k16_181_123
+0
+no
+1.52
+0.00000001
+180
+Relative_Humidity
+yes
+CAS
+20
+2
+no
+exit()
+
+#3.3)
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criSS_NO_INLET_COR
+cd /mnt/b/ISARA_Repo/ISARA_code
+python3 
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
+PACEPAX
+10.5067/ASDC/SUBORBITAL/PACE-PAX/Analysis/ISARA_1
+30
+30s
+AmbientDataFiles/equiprobable_kappa0-criSS_NO_INLET_COR
+cirpas-to
+5
+Added product DOI and added ambient properties for various modes. Corrected units of dndlogdp to be the correct cm-3 from m-3 in previous version; Added comment and ancillary data attributes to dndlogdp variable; Added _FillValue attribute and value to all variables; Removed variables with units attribute set as missing; Changed minimum required absorption to run ISARA from 1 Mm-1 to 0 Mm-1. Added veff variable for all modes to 'derived' group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step where applicable; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54. Spheroidal seasalt properties assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id.
+yes
+equiprobable
+KERNEL_n22k16_181_123
+0
+no
+1.52
+0.00000001
+180
+Relative_Humidity
+yes
+CAS
+20
+2
+no
+exit()
+
+#3.4)
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/equiprobable_kappa0-criDust_NO_INLET_COR
+cd /mnt/b/ISARA_Repo/ISARA_code
+python3 
+import Gen_Amb_Data_Files
+Gen_Amb_Data_Files.Run()
+PACEPAX
+10.5067/ASDC/SUBORBITAL/PACE-PAX/Analysis/ISARA_1
+30
+30s
+AmbientDataFiles/equiprobable_kappa0-criDust_NO_INLET_COR
+cirpas-to
+5
+Added product DOI and added ambient properties for various modes. Corrected units of dndlogdp to be the correct cm-3 from m-3 in previous version; Added comment and ancillary data attributes to dndlogdp variable; Added _FillValue attribute and value to all variables; Removed variables with units attribute set as missing; Changed minimum required absorption to run ISARA from 1 Mm-1 to 0 Mm-1. Added veff variable for all modes to 'derived' group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step where applicable; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54. Spheroidal dust properties assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id.
+yes
+equiprobable
+KERNEL_n22k16_181_123
+0 
+no
+1.52
+0.0043
+180
+Relative_Humidity
+yes
+CAS
+20
+2
+no
+exit()
+
+#3.5)
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/Sphere-SS-Dust_NO_INLET_COR
+cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/Sphere-SS-Dust_NO_INLET_COR
+rm *
+cd /mnt/b/ISARA_Repo/ISARA_code
+python3 
+import External_Closure_Study
+External_Closure_Study.Run()
+PACEPAX
+equiprobable_kappa0-criSS_NO_INLET_COR
+equiprobable_kappa0-criDust_NO_INLET_COR
+ExternalClosure/Sphere-SS-Dust_NO_INLET_COR
+ER2
+CIRPAS-TO
+FlightData
+exit()
+
+#3.6)
+cd /mnt/b/ISARA_Repo/ISARA_data_files
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33_NO_INLET_COR
+cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/Sphere_kappa0-cri1-33_NO_INLET_COR
+rm *
+cd /mnt/b/ISARA_Repo/ISARA_code
+python3 
+import External_Closure_Study
+External_Closure_Study.Run()
+PACEPAX
+Sphere_kappa0-cri1-33_NO_INLET_COR
+Sphere_kappa0-cri1-33_NO_INLET_COR
+ExternalClosure/Sphere_kappa0-cri1-33_NO_INLET_COR
+ER2
+CIRPAS-TO
+FlightData
+exit()
 
 #############################################################################
 

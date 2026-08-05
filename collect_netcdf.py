@@ -36,11 +36,10 @@ def grabRSP(RSP_filename):
     # read the RSP data and display all avalable data products
     rsp_dictionary = h5py.File(RSP_filename, "r")
     #print(f"RSP data products: {rsp_dictionary.keys()}")   # remove comment out to see structure
-    #print(np.array(rsp_dictionary["000-README"])) # remove comment out to see structure
 
     # take the flight date from the RSP readme line 9
-    DATEinfo = np.array(RSP_filename.split("_"))[3] 
-
+    splt_filename = np.array(RSP_filename.split("/"))
+    DATEinfo = np.array(splt_filename[-1].split("_"))[3]
     rsp_Date = [str(DATEinfo)[0:4],str(DATEinfo)[4:6],str(DATEinfo)[6:8]]
 #    rsp_Date = [str(rsp_dictionary["000-README"][9])[24:28],str(rsp_dictionary["000-README"][9])[28:30],
 #                str(rsp_dictionary["000-README"][9])[30:32]]  
