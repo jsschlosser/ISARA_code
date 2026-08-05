@@ -126,7 +126,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#module-utils">utils</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id20">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#utils.Table"><code class="docutils literal notranslate"><span class="pre">Table</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#utils.Table.add_border"><code class="docutils literal notranslate"><span class="pre">Table.add_border()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utils.Table.add_header"><code class="docutils literal notranslate"><span class="pre">Table.add_header()</span></code></a></li>
@@ -158,7 +158,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#module-Collect_netCDF">Collect_netCDF</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id29">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">Requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Collect_netCDF.grabHSRL2"><code class="docutils literal notranslate"><span class="pre">grabHSRL2()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Collect_netCDF.grabRSP"><code class="docutils literal notranslate"><span class="pre">grabRSP()</span></code></a></li>
 </ul>
@@ -606,33 +606,47 @@ and hygroscopicity from absorption and scattering coefficient measurements.</p>
 </ul>
 <dl class="field-list simple">
 <dt class="field-odd">param dp<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
+<dd class="field-odd"><p>array of particle diameters</p>
+</dd>
 <dt class="field-even">type dp<span class="colon">:</span></dt>
-<dd class="field-even"><p></p></dd>
+<dd class="field-even"><p>1-D array</p>
+</dd>
 <dt class="field-odd">param dndlogdp1<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
+<dd class="field-odd"><p>measured size distribution</p>
+</dd>
 <dt class="field-even">type dndlogdp1<span class="colon">:</span></dt>
-<dd class="field-even"><p></p></dd>
+<dd class="field-even"><p>1-D array of size len(dp)</p>
+</dd>
 <dt class="field-odd">param dndlogdp2<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
+<dd class="field-odd"><p>fitted size distribution</p>
+</dd>
 <dt class="field-even">type dndlogdp2<span class="colon">:</span></dt>
-<dd class="field-even"><p></p></dd>
+<dd class="field-even"><p>1-D array of size len(dp)</p>
+</dd>
 <dt class="field-odd">param filename_suffix<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
+<dd class="field-odd"><p>name of file id f</p>
+</dd>
 <dt class="field-even">type filename_suffix<span class="colon">:</span></dt>
-<dd class="field-even"><p></p></dd>
+<dd class="field-even"><p>str</p>
+</dd>
 <dt class="field-odd">param r<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
+<dd class="field-odd"><p>correlation coefficient of fitted vs. measure size distribution</p>
+</dd>
 <dt class="field-even">type r<span class="colon">:</span></dt>
-<dd class="field-even"><p></p></dd>
+<dd class="field-even"><p>float</p>
+</dd>
 <dt class="field-odd">param p<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
+<dd class="field-odd"><p>statistical significance (p-val) of fitted vs. measure size distribution</p>
+</dd>
 <dt class="field-even">type p<span class="colon">:</span></dt>
-<dd class="field-even"><p></p></dd>
+<dd class="field-even"><p>float</p>
+</dd>
 <dt class="field-odd">param file_location<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
+<dd class="field-odd"><p>location to save file</p>
+</dd>
 <dt class="field-even">type file_location<span class="colon">:</span></dt>
-<dd class="field-even"><p></p></dd>
+<dd class="field-even"><p>str</p>
+</dd>
 </dl>
 </section>
 </dd></dl>
@@ -678,12 +692,13 @@ and hygroscopicity from absorption and scattering coefficient measurements.</p>
 </section>
 <section id="example">
 <h3>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h3>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt; output_dictionary = importICT.imp(&quot;activate-mrg1_hu25_20200214_R0.ict&quot;)</span>
-<span class="go">&gt;&gt;&gt; print(output_dictionary)</span>
-<span class="go">output_dictionary =</span>
-<span class="go">    {&#39;Time_Start_seconds&#39;: array([61301., 61302., 61303., ..., 72258., 72259., 72260.]), </span>
-<span class="go">    &#39;Time_Stop_seconds&#39;: array([61302., 61303., 61304., ..., 72259., 72260., 72261.]), </span>
-<span class="go">    &#39;Latitude_THORNHILL_ deg&#39;: array([37.085528, 37.085798, 37.086065, ..., 37.126424, 37.126694, ...            </span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">Import_ICARTT</span>
+<span class="n">output_dictionary</span> <span class="o">=</span> <span class="n">Import_ICARTT</span><span class="o">.</span><span class="n">imp</span><span class="p">(</span><span class="s2">&quot;activate-mrg1_hu25_20200214_R0.ict&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">output_dictionary</span><span class="p">)</span>
+<span class="n">output_dictionary</span> <span class="o">=</span>
+    <span class="p">{</span><span class="s1">&#39;Time_Start_seconds&#39;</span><span class="p">:</span> <span class="n">array</span><span class="p">([</span><span class="mf">61301.</span><span class="p">,</span> <span class="mf">61302.</span><span class="p">,</span> <span class="mf">61303.</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mf">72258.</span><span class="p">,</span> <span class="mf">72259.</span><span class="p">,</span> <span class="mf">72260.</span><span class="p">]),</span> 
+    <span class="s1">&#39;Time_Stop_seconds&#39;</span><span class="p">:</span> <span class="n">array</span><span class="p">([</span><span class="mf">61302.</span><span class="p">,</span> <span class="mf">61303.</span><span class="p">,</span> <span class="mf">61304.</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mf">72259.</span><span class="p">,</span> <span class="mf">72260.</span><span class="p">,</span> <span class="mf">72261.</span><span class="p">]),</span> 
+    <span class="s1">&#39;Latitude_THORNHILL_ deg&#39;</span><span class="p">:</span> <span class="n">array</span><span class="p">([</span><span class="mf">37.085528</span><span class="p">,</span> <span class="mf">37.085798</span><span class="p">,</span> <span class="mf">37.086065</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mf">37.126424</span><span class="p">,</span> <span class="mf">37.126694</span><span class="p">,</span> <span class="o">...</span>            
 </pre></div>
 </div>
 </section>
@@ -855,15 +870,6 @@ Read more <a class="reference external" href="https://docs.scipy.org/doc/scipy/r
 <p>smps.models.GenericParticleSizer
 smps.fit.LogNormalFitResults</p>
 </section>
-<section id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
-<p>Create a single-mode fit:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">smps.fit</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogNormal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">LogNormal</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">midpoints</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">dndlogdp</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">modes</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
 </dd></dl>
 
 </dd></dl>
@@ -886,16 +892,12 @@ not typically created from scratch.</p>
 <dt>modes<span class="classifier">int</span></dt><dd><p>The number of modes fit.</p>
 </dd>
 </dl>
-</section>
-<section id="id14">
-<h3>See Also<a class="headerlink" href="#id14" title="Link to this heading"></a></h3>
-<p>smps.fit.LogNormal</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="fit.LogNormalFitResults.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'number'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fit.LogNormalFitResults.predict" title="Link to this definition"></a></dt>
 <dd><p>Predict new values using the fit model.</p>
-<section id="id15">
-<h4>Parameters<a class="headerlink" href="#id15" title="Link to this heading"></a></h4>
+<section id="id14">
+<h4>Parameters<a class="headerlink" href="#id14" title="Link to this heading"></a></h4>
 <dl class="simple">
 <dt>X<span class="classifier">array-like</span></dt><dd><p>An array of particle diameters at which to predict the 
 number concentration based on the fit model.</p>
@@ -905,22 +907,9 @@ number concentration based on the fit model.</p>
 </dd>
 </dl>
 </section>
-<section id="id16">
-<h4>Returns<a class="headerlink" href="#id16" title="Link to this heading"></a></h4>
+<section id="id15">
+<h4>Returns<a class="headerlink" href="#id15" title="Link to this heading"></a></h4>
 <p>An array of number concentrations.</p>
-</section>
-<section id="id17">
-<h4>Examples<a class="headerlink" href="#id17" title="Link to this heading"></a></h4>
-<p>Predict the number concentration at 1 and 2.5 µm:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">smps.fit</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogNormal</span>
-<span class="gp">&gt;&gt;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">LogNormal</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">midpoints</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">dndlogdp</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">modes</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">])</span>     
-</pre></div>
-</div>
 </section>
 </dd></dl>
 
@@ -928,20 +917,9 @@ number concentration based on the fit model.</p>
 <dt class="sig sig-object py" id="fit.LogNormalFitResults.summary">
 <span class="sig-name descname"><span class="pre">summary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fit.LogNormalFitResults.summary" title="Link to this definition"></a></dt>
 <dd><p>Summary statistics for the fit LogNormal model.</p>
-<section id="id18">
-<h4>Returns<a class="headerlink" href="#id18" title="Link to this heading"></a></h4>
+<section id="id16">
+<h4>Returns<a class="headerlink" href="#id16" title="Link to this heading"></a></h4>
 <p>statsmodels.iolib.table.SimpleTable</p>
-</section>
-<section id="id19">
-<h4>Examples<a class="headerlink" href="#id19" title="Link to this heading"></a></h4>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">smps.fit</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogNormal</span>
-<span class="gp">&gt;&gt;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">LogNormal</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">midpoints</span><span class="p">,</span> <span class="n">obj</span><span class="o">.</span><span class="n">dndlogdp</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">modes</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">results</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
-</pre></div>
-</div>
 </section>
 </dd></dl>
 
@@ -1342,8 +1320,8 @@ list of particle sizes, <cite>dp</cite>.</p>
 <dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
-<section id="id20">
-<h3>Requirements<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
+<section id="id17">
+<h3>Requirements<a class="headerlink" href="#id17" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requests</span></code></p></li>
@@ -1400,8 +1378,8 @@ sections: blank, “N (cm-3)”, “GM (nm)”, and “GSD”.</p>
 <dd><p>Create a 3xn array of particle size bins.</p>
 <p>Compute the lower boundary, upper boundary, and midpoint 
 diameter for each particle size bin.</p>
-<section id="id21">
-<h3>Parameters<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
+<section id="id18">
+<h3>Parameters<a class="headerlink" href="#id18" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>boundaries<span class="classifier">array-like</span></dt><dd><p>A list or array containing all unique lower and upper bounds.</p>
 </dd>
@@ -1422,32 +1400,33 @@ to the arithmetic or geometric mean.</p>
 </dd>
 </dl>
 </section>
-<section id="id22">
-<h3>Returns<a class="headerlink" href="#id22" title="Link to this heading"></a></h3>
+<section id="id19">
+<h3>Returns<a class="headerlink" href="#id19" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>bins<span class="classifier">array-like</span></dt><dd><p>A 3xn array of particle size bins with a (lower boundary, midpoint, upper boundary)
 for each particle size bin.</p>
 </dd>
 </dl>
 </section>
-<section id="id23">
-<h3>Examples<a class="headerlink" href="#id23" title="Link to this heading"></a></h3>
-<p>Create a set of bins from a list of boundaries:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bins</span> <span class="o">=</span> <span class="n">make_bins</span><span class="p">(</span><span class="n">boundaries</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">]))</span>
-</pre></div>
-</div>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
+<p>Create a set of bins from a list of boundaries:
+.. code-block:: python</p>
+<blockquote>
+<div><p>bins = make_bins(boundaries=np.array([0.35, 1.0, 2.5, 10.0]))</p>
+</div></blockquote>
 <p>Create a set of bins from lists of lower and upper boundaries:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt; bins = make_bins(</span>
-<span class="go">&gt;&gt;&gt;    boundaries_left=np.array([0.35, 1.0, 2.5]),</span>
-<span class="go">&gt;&gt;&gt;    boundaries_right=np.array([1.0, 2.5, 10.0])</span>
-<span class="go">&gt;&gt;&gt; )</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bins</span> <span class="o">=</span> <span class="n">make_bins</span><span class="p">(</span>
+   <span class="n">boundaries_left</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">]),</span>
+   <span class="n">boundaries_right</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">])</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <p>Create a set of bins from the lowest boundary, highest boundary, and midpoints:
-.. code-block:: console</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bins</span> <span class="o">=</span> <span class="n">make_bins</span><span class="p">(</span><span class="n">lb</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span> <span class="n">ub</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">midpoints</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]))</span>
-</pre></div>
-</div>
+.. code-block:: python</p>
+<blockquote>
+<div><p>bins = make_bins(lb=0.35, ub=10.0, midpoints=np.array([.5, 2.0, 5.0]))</p>
+</div></blockquote>
 </section>
 </dd></dl>
 
@@ -1486,8 +1465,8 @@ for each particle size bin.</p>
 <dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
-<section id="id24">
-<h3>Requirements<a class="headerlink" href="#id24" title="Link to this heading"></a></h3>
+<section id="id20">
+<h3>Requirements<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
@@ -1519,8 +1498,8 @@ for each particle size bin.</p>
 <dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
-<section id="id25">
-<h3>Requirements<a class="headerlink" href="#id25" title="Link to this heading"></a></h3>
+<section id="id21">
+<h3>Requirements<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sizedistmerge</span></code></p></li>
@@ -1554,8 +1533,8 @@ compressed variables and their associated variable-level attributes.</p>
 <dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
-<section id="id26">
-<h3>Requirements<a class="headerlink" href="#id26" title="Link to this heading"></a></h3>
+<section id="id22">
+<h3>Requirements<a class="headerlink" href="#id22" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">netCDF4</span></code></p></li>
@@ -1596,19 +1575,6 @@ Must include a <code class="docutils literal notranslate"><span class="pre">'for
 <dt class="field-even">type GlobParams<span class="colon">:</span></dt>
 <dd class="field-even"><p>dict</p>
 </dd>
-<dt class="field-odd">return<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
-</dd>
-<dt class="field-even">rtype<span class="colon">:</span></dt>
-<dd class="field-even"><p>NoneType</p>
-</dd>
-<dt class="field-odd">raises KeyError<span class="colon">:</span></dt>
-<dd class="field-odd"><p>If <code class="docutils literal notranslate"><span class="pre">GlobParams['format']</span></code> is missing, or if required keys 
-are missing from the <cite>data</cite> sub-dictionaries.</p>
-</dd>
-<dt class="field-even">raises IOError<span class="colon">:</span></dt>
-<dd class="field-even"><p>If the file data_path cannot be opened for writing.</p>
-</dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1642,8 +1608,8 @@ are missing from the <cite>data</cite> sub-dictionaries.</p>
 <dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
-<section id="id27">
-<h3>Requirements<a class="headerlink" href="#id27" title="Link to this heading"></a></h3>
+<section id="id23">
+<h3>Requirements<a class="headerlink" href="#id23" title="Link to this heading"></a></h3>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">scipy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p>
@@ -1693,8 +1659,7 @@ are missing from the <cite>data</cite> sub-dictionaries.</p>
 <dt class="sig sig-object py" id="Merge_Insitu_Data.Merge">
 <span class="sig-prename descclassname"><span class="pre">Merge_Insitu_Data.</span></span><span class="sig-name descname"><span class="pre">Merge</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Merge_Insitu_Data.Merge" title="Link to this definition"></a></dt>
 <dd><p>Merges multiple ICARTT (.ict) airborne/field instrument files into a uniform time grid.</p>
-<blockquote>
-<div><p>This function uses interactive terminal inputs to locate instrument subdirectories, 
+<p>This function uses interactive terminal inputs to locate instrument subdirectories, 
 parse ICARTT telemetry files chronologically using the <code class="docutils literal notranslate"><span class="pre">importICARTT</span></code> module, 
 and downsample/average disparate parameters to a uniform user-defined temporal step.
 The final product is exported as an aggregated NumPy dictionary object.</p>
@@ -1709,25 +1674,32 @@ The final product is exported as an aggregated NumPy dictionary object.</p>
 <dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
-</div></blockquote>
-<section id="id28">
-<h3>Requirements<a class="headerlink" href="#id28" title="Link to this heading"></a></h3>
-<ul>
+<section id="id24">
+<h3>Requirements<a class="headerlink" href="#id24" title="Link to this heading"></a></h3>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
-<li><dl>
-<dt><code class="docutils literal notranslate"><span class="pre">os</span></code></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sys</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
-<li><p>Input source files must reside in structured paths relative to execution: 
-<code class="docutils literal notranslate"><span class="pre">./[Data_ID]/filename.ict</span></code></p></li>
-<li><p>Datetime strings containing the token substring <code class="docutils literal notranslate"><span class="pre">'fmtdatetime'</span></code> are handled 
-separately by downcasting to 64-bit integer views (<code class="docutils literal notranslate"><span class="pre">i8</span></code>) before averaging.</p></li>
-<li><p>Outputs are cleanly dumped to current working directory as 
-<code class="docutils literal notranslate"><span class="pre">pacepax-mrg[Resolution]_MARINA-TOWER_[Date]_RA.npy</span></code>.</p></li>
+<li><dl class="simple">
+<dt>Input source files must reside in structured paths relative to execution: </dt><dd><p><code class="docutils literal notranslate"><span class="pre">./[Data_ID]/filename.ict</span></code></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Datetime strings containing the token substring <code class="docutils literal notranslate"><span class="pre">'fmtdatetime'</span></code> are handled </dt><dd><p>separately by downcasting to 64-bit integer views (<code class="docutils literal notranslate"><span class="pre">i8</span></code>) before averaging.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Outputs are cleanly dumped to current working directory as </dt><dd><p><code class="docutils literal notranslate"><span class="pre">pacepax-mrg[Resolution]_MARINA-TOWER_[Date]_RA.npy</span></code>.</p>
+</dd>
+</dl>
+</li>
 </ul>
 </div>
 <dl class="field-list simple">
@@ -1744,10 +1716,6 @@ used for bin-averaging data fields.</p></li>
 prompt does not exist on disk.</p>
 </dd>
 </dl>
-</dd>
-</dl>
-</li>
-</ul>
 </section>
 </dd></dl>
 
@@ -1772,8 +1740,8 @@ into a Python dictionary.</p>
 <p>The resulting dictionary structure strictly follows the hierarchy of the 
 corresponding source .h5 file.</p>
 </div>
-<section id="id29">
-<h3>Requirements<a class="headerlink" href="#id29" title="Link to this heading"></a></h3>
+<section id="id25">
+<h3>Requirements<a class="headerlink" href="#id25" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>
@@ -1849,8 +1817,8 @@ directory that is included in your system environment <code class="docutils lite
 <dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
-<section id="id30">
-<h3>Requirements<a class="headerlink" href="#id30" title="Link to this heading"></a></h3>
+<section id="id26">
+<h3>Requirements<a class="headerlink" href="#id26" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code></p></li>
@@ -1882,8 +1850,8 @@ directory that is included in your system environment <code class="docutils lite
 <dd class="field-odd"><p>Python 3.12.13 (Ubuntu 26.04 LTS)</p>
 </dd>
 </dl>
-<section id="id31">
-<h3>Requirements<a class="headerlink" href="#id31" title="Link to this heading"></a></h3>
+<section id="id27">
+<h3>Requirements<a class="headerlink" href="#id27" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code></p></li>

@@ -104,8 +104,8 @@ limitations under the License.</p>
 <ol class="arabic">
 <li><p>Install dependencies listed in requirements.txt. This includes SizeDistMerge from <a class="reference external" href="https://github.com/bochens/SizeDistMerge">https://github.com/bochens/SizeDistMerge</a>.</p></li>
 <li><dl>
-<dt>Create directory for code and data files.</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir<span class="w"> </span>ISARA_Repo
-<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>ISARA_Repo
+<dt>Create directory for code and data files.</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir ISARA_Repo</span>
+<span class="go">cd ISARA_Repo</span>
 </pre></div>
 </div>
 </dd>
@@ -113,18 +113,18 @@ limitations under the License.</p>
 </li>
 <li><p>Clone ISARA.</p></li>
 <li><dl>
-<dt>Create directory for data files that includes directories for the LUT data, desired shape distributions, and each mission of interest.</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir<span class="w"> </span>ISARA_data_files
-<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>ISARA_data_files
-<span class="gp">$ </span>mkdir<span class="w"> </span>LUT_data
-<span class="gp">$ </span>mkdir<span class="w"> </span>ShapeDistributions
-<span class="gp">$ </span>mkdir<span class="w"> </span>ACTIVATE
+<dt>Create directory for data files that includes directories for the LUT data, desired shape distributions, and each mission of interest.</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir ISARA_data_files</span>
+<span class="go">cd ISARA_data_files</span>
+<span class="go">mkdir LUT_data</span>
+<span class="go">mkdir ShapeDistributions</span>
+<span class="go">mkdir ACTIVATE</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl>
-<dt>Create directories for HSRL, RSP, and in situ data. Create directories for size distributiution info and retrievals</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir<span class="w"> </span>AmbientDataFiles<span class="w"> </span>FalconLegID<span class="w"> </span>HSRL<span class="w"> </span>InternalConsistency<span class="w"> </span>MatchedData<span class="w"> </span>Retrievals<span class="w"> </span>SyntheticData<span class="w"> </span>ExternalClosure<span class="w"> </span>FitSDResults<span class="w"> </span>InsituData<span class="w"> </span>RSP<span class="w"> </span>SDBinInfo<span class="w"> </span>SyntheticRetrievals
+<dt>Create directories for HSRL, RSP, and in situ data. Create directories for size distributiution info and retrievals</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir AmbientDataFiles FalconLegID HSRL InternalConsistency MatchedData Retrievals SyntheticData ExternalClosure FitSDResults InsituData RSP SDBinInfo SyntheticRetrievals</span>
 </pre></div>
 </div>
 </dd>
@@ -137,70 +137,78 @@ limitations under the License.</p>
 <h2>Internal Closure<a class="headerlink" href="#internal-closure" title="Link to this heading"></a></h2>
 <ol class="arabic">
 <li><dl>
-<dt>Perform ISARA with in-situ data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
-<span class="gp">$ </span>python3
-<span class="go">&gt;&gt;&gt; import ISARA_Data_Retrieval</span>
-<span class="go">&gt;&gt;&gt; ISARA_Data_Retrieval.RunISARA()</span>
-<span class="go">&gt;&gt;&gt; ACTIVATE</span>
-<span class="go">&gt;&gt;&gt; 2</span>
-<span class="go">&gt;&gt;&gt; SMPS</span>
-<span class="go">&gt;&gt;&gt; 100</span>
-<span class="go">&gt;&gt;&gt; 0</span>
-<span class="go">&gt;&gt;&gt; LAS</span>
-<span class="go">&gt;&gt;&gt; 10000</span>
-<span class="go">&gt;&gt;&gt; 100</span>
-<span class="go">&gt;&gt;&gt; 3</span>
-<span class="go">&gt;&gt;&gt; 450</span>
-<span class="go">&gt;&gt;&gt; 470</span>
-<span class="go">&gt;&gt;&gt; Blue</span>
-<span class="go">&gt;&gt;&gt; 550</span>
-<span class="go">&gt;&gt;&gt; 532</span>
-<span class="go">&gt;&gt;&gt; Green</span>
-<span class="go">&gt;&gt;&gt; 700</span>
-<span class="go">&gt;&gt;&gt; 660</span>
-<span class="go">&gt;&gt;&gt; Red</span>
-<span class="go">&gt;&gt;&gt; 1</span>
-<span class="go">&gt;&gt;&gt; 550</span>
-<span class="go">&gt;&gt;&gt; Green</span>
-<span class="go">&gt;&gt;&gt; no</span>
-<span class="go">&gt;&gt;&gt; InsituData</span>
-<span class="go">&gt;&gt;&gt; AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat</span>
-<span class="go">&gt;&gt;&gt; exit()</span>
+<dt>Perform ISARA with in-situ data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ../ISARA_code</span>
+<span class="go">python3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ISARA_Data_Retrieval</span>
+<span class="n">ISARA_Data_Retrieval</span><span class="o">.</span><span class="n">RunISARA</span><span class="p">()</span>
+<span class="n">ACTIVATE</span>
+<span class="mi">2</span>
+<span class="n">SMPS</span>
+<span class="mi">100</span>
+<span class="mi">0</span>
+<span class="n">LAS</span>
+<span class="mi">10000</span>
+<span class="mi">100</span>
+<span class="mi">3</span>
+<span class="mi">450</span>
+<span class="mi">470</span>
+<span class="n">Blue</span>
+<span class="mi">550</span>
+<span class="mi">532</span>
+<span class="n">Green</span>
+<span class="mi">700</span>
+<span class="mi">660</span>
+<span class="n">Red</span>
+<span class="mi">1</span>
+<span class="mi">550</span>
+<span class="n">Green</span>
+<span class="n">no</span>
+<span class="n">InsituData</span>
+<span class="n">AerosolLUT_1000_100_0</span><span class="mf">.355_650</span><span class="n">bins_2325CRI_ln2rKr_Twomey</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl>
-<dt>Collate retrievals for internal consistency analysis:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
-<span class="gp">$ </span>rm<span class="w"> </span>../ISARA_data_diles/ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy
-<span class="gp">$ </span>python3
-<span class="go">&gt;&gt;&gt; import CollateDataFiles</span>
-<span class="go">&gt;&gt;&gt; CollateDataFiles.Run()</span>
-<span class="go">&gt;&gt;&gt; ACTIVATE</span>
-<span class="go">&gt;&gt;&gt; -activate-large-smps</span>
-<span class="go">&gt;&gt;&gt; hu25</span>
-<span class="go">&gt;&gt;&gt; exit()</span>
+<dt>Collate retrievals for internal consistency analysis:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ../ISARA_code</span>
+<span class="go">rm ../ISARA_data_diles/ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy</span>
+<span class="go">python3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">CollateDataFiles</span>
+<span class="n">CollateDataFiles</span><span class="o">.</span><span class="n">Run</span><span class="p">()</span>
+<span class="n">ACTIVATE</span>
+<span class="o">-</span><span class="n">activate</span><span class="o">-</span><span class="n">large</span><span class="o">-</span><span class="n">smps</span>
+<span class="n">hu25</span>
+<span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl>
-<dt>Perform internal consistency analysis:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
-<span class="gp">$ </span>python3
-<span class="go">&gt;&gt;&gt; import internal_closure_study</span>
-<span class="go">&gt;&gt;&gt; internal_closure_study.Run()</span>
-<span class="go">&gt;&gt;&gt; 450, 550, 700</span>
-<span class="go">&gt;&gt;&gt; 470, 532, 660</span>
-<span class="go">&gt;&gt;&gt; ACTIVATE</span>
-<span class="go">&gt;&gt;&gt; -activate-large-smps</span>
-<span class="go">&gt;&gt;&gt; hu25</span>
-<span class="go">&gt;&gt;&gt; RHw_DLH_DISKIN_</span>
-<span class="go">&gt;&gt;&gt; InletFlag_LARGE_ZIEMBA</span>
-<span class="go">&gt;&gt;&gt; gpsALT_m_THORNHILL</span>
-<span class="go">&gt;&gt;&gt; exit()</span>
-<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code/ACTIVATE/Retrievals
+<dt>Perform internal consistency analysis:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ../ISARA_code</span>
+<span class="go">python3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">internal_closure_study</span>
+<span class="n">internal_closure_study</span><span class="o">.</span><span class="n">Run</span><span class="p">()</span>
+<span class="mi">450</span><span class="p">,</span> <span class="mi">550</span><span class="p">,</span> <span class="mi">700</span>
+<span class="mi">470</span><span class="p">,</span> <span class="mi">532</span><span class="p">,</span> <span class="mi">660</span>
+<span class="n">ACTIVATE</span>
+<span class="o">-</span><span class="n">activate</span><span class="o">-</span><span class="n">large</span><span class="o">-</span><span class="n">smps</span>
+<span class="n">hu25</span>
+<span class="n">RHw_DLH_DISKIN_</span>
+<span class="n">InletFlag_LARGE_ZIEMBA</span>
+<span class="n">gpsALT_m_THORNHILL</span>
+<span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ../ISARA_data_files/ACTIVATE/Retrievals</span>
 </pre></div>
 </div>
 </dd>
@@ -212,50 +220,56 @@ limitations under the License.</p>
 <h2>Synthetic Closure<a class="headerlink" href="#synthetic-closure" title="Link to this heading"></a></h2>
 <ol class="arabic">
 <li><dl>
-<dt>Generate synthetic data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
-<span class="gp">$ </span>python3
-<span class="go">&gt;&gt;&gt; import Synthetic_Data_Creation</span>
-<span class="go">&gt;&gt;&gt; Synthetic_Data_Creation.Run()</span>
-<span class="go">&gt;&gt;&gt; 10000</span>
-<span class="go">&gt;&gt;&gt; ACTIVATE</span>
-<span class="go">&gt;&gt;&gt; 3</span>
-<span class="go">&gt;&gt;&gt; 450</span>
-<span class="go">&gt;&gt;&gt; 470</span>
-<span class="go">&gt;&gt;&gt; Blue</span>
-<span class="go">&gt;&gt;&gt; 550</span>
-<span class="go">&gt;&gt;&gt; 532</span>
-<span class="go">&gt;&gt;&gt; Green</span>
-<span class="go">&gt;&gt;&gt; 700</span>
-<span class="go">&gt;&gt;&gt; 660</span>
-<span class="go">&gt;&gt;&gt; Red</span>
-<span class="go">&gt;&gt;&gt; 1</span>
-<span class="go">&gt;&gt;&gt; 550</span>
-<span class="go">&gt;&gt;&gt; Green</span>
-<span class="go">&gt;&gt;&gt; -activate-large-smps</span>
-<span class="go">&gt;&gt;&gt; hu25</span>
-<span class="go">&gt;&gt;&gt; exit()</span>
+<dt>Generate synthetic data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ../ISARA_code</span>
+<span class="go">python3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">Synthetic_Data_Creation</span>
+<span class="n">Synthetic_Data_Creation</span><span class="o">.</span><span class="n">Run</span><span class="p">()</span>
+<span class="mi">10000</span>
+<span class="n">ACTIVATE</span>
+<span class="mi">3</span>
+<span class="mi">450</span>
+<span class="mi">470</span>
+<span class="n">Blue</span>
+<span class="mi">550</span>
+<span class="mi">532</span>
+<span class="n">Green</span>
+<span class="mi">700</span>
+<span class="mi">660</span>
+<span class="n">Red</span>
+<span class="mi">1</span>
+<span class="mi">550</span>
+<span class="n">Green</span>
+<span class="o">-</span><span class="n">activate</span><span class="o">-</span><span class="n">large</span><span class="o">-</span><span class="n">smps</span>
+<span class="n">hu25</span>
+<span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl>
-<dt>Run ISARA on synthetic data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
-<span class="gp">$ </span>python3
-<span class="go">&gt;&gt;&gt; import Synthetic_Data_Retrieval</span>
-<span class="go">&gt;&gt;&gt; Synthetic_Data_Retrieval.Run()</span>
-<span class="go">&gt;&gt;&gt; exit()</span>
+<dt>Run ISARA on synthetic data:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ../ISARA_code</span>
+<span class="go">python3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">Synthetic_Data_Retrieval</span>
+<span class="n">Synthetic_Data_Retrieval</span><span class="o">.</span><span class="n">Run</span><span class="p">()</span>
+<span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl>
-<dt>Synthetic data closure study:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
-<span class="gp">$ </span>python3
-<span class="go">&gt;&gt;&gt; import Synthetic_Data_Closure_Study</span>
-<span class="go">&gt;&gt;&gt; Synthetic_Data_Closure_Study.Run()</span>
-<span class="go">&gt;&gt;&gt; exit()</span>
+<dt>Synthetic data closure study:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ../ISARA_code</span>
+<span class="go">python3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">Synthetic_Data_Closure_Study</span>
+<span class="n">Synthetic_Data_Closure_Study</span><span class="o">.</span><span class="n">Run</span><span class="p">()</span>
+<span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd>
@@ -267,54 +281,58 @@ limitations under the License.</p>
 <h2>External Closure<a class="headerlink" href="#external-closure" title="Link to this heading"></a></h2>
 <ol class="arabic">
 <li><dl>
-<dt>Generate ambient data files assuming coarse mode is spherical sea salt:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
-<span class="gp">$ </span>mkdir<span class="w"> </span>../ISARA_data_files/ACTIVATE/AmbientDataFiles/
-<span class="gp">$ </span>mkdir<span class="w"> </span>../ISARA_data_files/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
-<span class="gp">$ </span>python3
-<span class="go">&gt;&gt;&gt; import GenAmbDataFiles</span>
-<span class="go">&gt;&gt;&gt; GenAmbDataFiles.Run()</span>
-<span class="go">&gt;&gt;&gt; ACTIVATE</span>
-<span class="go">&gt;&gt;&gt; 10.5067/ASDC/SUBORBITAL/ACTIVATE/Analysis/ISARA_1</span>
-<span class="go">&gt;&gt;&gt; -activate-large-smps</span>
-<span class="go">&gt;&gt;&gt; SMPS</span>
-<span class="go">&gt;&gt;&gt; AmbientDataFiles/Sphere_kappa0-cri1-33</span>
-<span class="go">&gt;&gt;&gt; hu25</span>
-<span class="go">&gt;&gt;&gt; 6</span>
-<span class="go">&gt;&gt;&gt; Added &#39;coarse_dndlogdp&#39; and associated dimensions and lower/upper cutoff diameters to the &#39;derived&#39; group; Added veff variable for all modes to &#39;derived&#39; group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54; Set coarse-mode non-absorbing portion to 0. Corrected calculation of f(RH) from ISARA measurements. Lowered gamma adjustment RH to 0 from 40. Spheres assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id.</span>
-<span class="go">&gt;&gt;&gt; no</span>
-<span class="go">&gt;&gt;&gt; AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat</span>
-<span class="go">&gt;&gt;&gt; 0</span>
-<span class="go">&gt;&gt;&gt; no</span>
-<span class="go">&gt;&gt;&gt; 1.33</span>
-<span class="go">&gt;&gt;&gt; 0</span>
-<span class="go">&gt;&gt;&gt; 180</span>
-<span class="go">&gt;&gt;&gt; RHw_DLH_DISKIN_</span>
-<span class="go">&gt;&gt;&gt; yes</span>
-<span class="go">&gt;&gt;&gt; CAS,CDP,FCDP</span>
-<span class="go">&gt;&gt;&gt; 20</span>
-<span class="go">&gt;&gt;&gt; 1</span>
-<span class="go">&gt;&gt;&gt; no</span>
-<span class="go">&gt;&gt;&gt; exit()</span>
+<dt>Generate ambient data files assuming coarse mode is spherical sea salt:</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ../ISARA_code</span>
+<span class="go">mkdir ../ISARA_data_files/ACTIVATE/AmbientDataFiles/</span>
+<span class="go">mkdir ../ISARA_data_files/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33</span>
+<span class="go">python3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">Gen_Amb_Data_Files</span>
+<span class="n">Gen_Amb_Data_Files</span><span class="o">.</span><span class="n">Run</span><span class="p">()</span>
+<span class="n">ACTIVATE</span>
+<span class="mf">10.5067</span><span class="o">/</span><span class="n">ASDC</span><span class="o">/</span><span class="n">SUBORBITAL</span><span class="o">/</span><span class="n">ACTIVATE</span><span class="o">/</span><span class="n">Analysis</span><span class="o">/</span><span class="n">ISARA_1</span>
+<span class="o">-</span><span class="n">activate</span><span class="o">-</span><span class="n">large</span><span class="o">-</span><span class="n">smps</span>
+<span class="n">SMPS</span>
+<span class="n">AmbientDataFiles</span><span class="o">/</span><span class="n">Sphere_kappa0</span><span class="o">-</span><span class="n">cri1</span><span class="o">-</span><span class="mi">33</span>
+<span class="n">hu25</span>
+<span class="mi">6</span>
+<span class="n">Added</span> <span class="s1">&#39;coarse_dndlogdp&#39;</span> <span class="ow">and</span> <span class="n">associated</span> <span class="n">dimensions</span> <span class="ow">and</span> <span class="n">lower</span><span class="o">/</span><span class="n">upper</span> <span class="n">cutoff</span> <span class="n">diameters</span> <span class="n">to</span> <span class="n">the</span> <span class="s1">&#39;derived&#39;</span> <span class="n">group</span><span class="p">;</span> <span class="n">Added</span> <span class="n">veff</span> <span class="n">variable</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">modes</span> <span class="n">to</span> <span class="s1">&#39;derived&#39;</span> <span class="n">group</span><span class="p">;</span> <span class="n">Corrected</span> <span class="n">units</span> <span class="n">of</span> <span class="n">reff</span> <span class="n">to</span> <span class="n">be</span> <span class="n">um</span><span class="o">.</span> <span class="n">Extended</span> <span class="n">SD</span> <span class="n">truncation</span> <span class="n">to</span> <span class="mi">2</span> <span class="n">um</span> <span class="k">for</span> <span class="n">the</span> <span class="n">retrieval</span> <span class="n">step</span><span class="p">;</span> <span class="n">Extended</span> <span class="n">dry</span> <span class="n">RRI</span> <span class="n">search</span> <span class="nb">range</span> <span class="n">to</span> <span class="mf">1.51</span><span class="o">--</span><span class="mf">1.55</span> <span class="kn">from</span><span class="w"> </span><span class="mf">1.52</span><span class="o">--</span><span class="mf">1.54</span><span class="p">;</span> <span class="n">Set</span> <span class="n">coarse</span><span class="o">-</span><span class="n">mode</span> <span class="n">non</span><span class="o">-</span><span class="n">absorbing</span> <span class="n">portion</span> <span class="n">to</span> <span class="mf">0.</span> <span class="n">Corrected</span> <span class="n">calculation</span> <span class="n">of</span> <span class="n">f</span><span class="p">(</span><span class="n">RH</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">ISARA</span> <span class="n">measurements</span><span class="o">.</span> <span class="n">Lowered</span> <span class="n">gamma</span> <span class="n">adjustment</span> <span class="n">RH</span> <span class="n">to</span> <span class="mi">0</span> <span class="kn">from</span><span class="w"> </span><span class="mf">40.</span> <span class="n">Spheres</span> <span class="n">assumed</span> <span class="k">for</span> <span class="n">coarse</span><span class="o">-</span><span class="n">mode</span><span class="p">;</span> <span class="n">Data</span> <span class="n">produced</span> <span class="k">with</span> <span class="n">SIR</span> <span class="n">SCA</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">MOPSMAP</span><span class="p">;</span> <span class="n">Fixed</span> <span class="n">long</span> <span class="n">names</span> <span class="n">of</span> <span class="n">source</span> <span class="n">variables</span> <span class="n">to</span> <span class="n">include</span> <span class="nb">id</span><span class="o">.</span>
+<span class="n">no</span>
+<span class="n">AerosolLUT_1000_100_0</span><span class="mf">.355_650</span><span class="n">bins_2325CRI_ln2rKr_Twomey</span><span class="o">.</span><span class="n">dat</span>
+<span class="mi">0</span>
+<span class="n">no</span>
+<span class="mf">1.33</span>
+<span class="mi">0</span>
+<span class="mi">180</span>
+<span class="n">RHw_DLH_DISKIN_</span>
+<span class="n">yes</span>
+<span class="n">CAS</span><span class="p">,</span><span class="n">CDP</span><span class="p">,</span><span class="n">FCDP</span>
+<span class="mi">20</span>
+<span class="mi">1</span>
+<span class="n">no</span>
+<span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl>
-<dt>Perform external consistency analysis assuming all particles are spheres</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>../ISARA_code
-<span class="gp">$ </span>mkdir<span class="w"> </span>../ISARA_data_files/ACTIVATE/ExternalClosure/
-<span class="gp">$ </span>mkdir<span class="w"> </span>../ISARA_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
-<span class="gp">$ </span>python3
-<span class="go">&gt;&gt;&gt; import Collocate_and_Plot_Amb_Data</span>
-<span class="go">&gt;&gt;&gt; Collocate_and_Plot_Amb_Data.Run()</span>
-<span class="go">&gt;&gt;&gt; ACTIVATE</span>
-<span class="go">&gt;&gt;&gt; Sphere_kappa0-cri1-33</span>
-<span class="go">&gt;&gt;&gt; Sphere_kappa0-cri1-33</span>
-<span class="go">&gt;&gt;&gt; ExternalClosure/Sphere_kappa0-cri1-33</span>
-<span class="go">&gt;&gt;&gt; KingAir</span>
-<span class="go">&gt;&gt;&gt; Falcon</span>
-<span class="go">&gt;&gt;&gt; FalconLegID</span>
-<span class="go">&gt;&gt;&gt; exit()</span>
+<dt>Perform external consistency analysis assuming all particles are spheres</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ../ISARA_code</span>
+<span class="go">mkdir ../ISARA_data_files/ACTIVATE/ExternalClosure/</span>
+<span class="go">mkdir ../ISARA_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33</span>
+<span class="go">python3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">Collocate_and_Plot_Amb_Data</span>
+<span class="n">Collocate_and_Plot_Amb_Data</span><span class="o">.</span><span class="n">Run</span><span class="p">()</span>
+<span class="n">ACTIVATE</span>
+<span class="n">Sphere_kappa0</span><span class="o">-</span><span class="n">cri1</span><span class="o">-</span><span class="mi">33</span>
+<span class="n">Sphere_kappa0</span><span class="o">-</span><span class="n">cri1</span><span class="o">-</span><span class="mi">33</span>
+<span class="n">ExternalClosure</span><span class="o">/</span><span class="n">Sphere_kappa0</span><span class="o">-</span><span class="n">cri1</span><span class="o">-</span><span class="mi">33</span>
+<span class="n">KingAir</span>
+<span class="n">Falcon</span>
+<span class="n">FalconLegID</span>
+<span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd>

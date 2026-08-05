@@ -16,20 +16,20 @@ def Merge():
 	:Revised: 4 Aug 2026
 	:Language Revision: Python 3.12.13 (Ubuntu 26.04 LTS)
 
-    Requirements
-    ------------ 
-    * ``numpy``
-    * ``os``
+	Requirements
+	------------ 
+	* ``numpy``
+	* ``os``
 	* ``sys``
 	* ``datetime``
 
 	.. note::
 	   * Input source files must reside in structured paths relative to execution: 
-	     ``./[Data_ID]/filename.ict``
+		 ``./[Data_ID]/filename.ict``
 	   * Datetime strings containing the token substring ``'fmtdatetime'`` are handled 
-	     separately by downcasting to 64-bit integer views (``i8``) before averaging.
+		 separately by downcasting to 64-bit integer views (``i8``) before averaging.
 	   * Outputs are cleanly dumped to current working directory as 
-	     ``pacepax-mrg[Resolution]_MARINA-TOWER_[Date]_RA.npy``.
+		 ``pacepax-mrg[Resolution]_MARINA-TOWER_[Date]_RA.npy``.
 
 	:Interactive Inputs:
 		* **Data IDs**: A comma-separated prompt string mapping subdirectories to parse 
@@ -38,7 +38,7 @@ def Merge():
 		  used for bin-averaging data fields.
 
 	:raises FileNotFoundError: If an instrument data directory specified in the terminal 
-	                          prompt does not exist on disk.
+							  prompt does not exist on disk.
 
 	"""
 

@@ -56,22 +56,23 @@ def make_bins(**kwargs):
     --------
     
     Create a set of bins from a list of boundaries:
-    
-    >>> bins = make_bins(boundaries=np.array([0.35, 1.0, 2.5, 10.0]))
+    .. code-block:: python
+
+        bins = make_bins(boundaries=np.array([0.35, 1.0, 2.5, 10.0]))
     
     Create a set of bins from lists of lower and upper boundaries:
 
-    .. code-block:: console
+    .. code-block:: python
 
-        >>> bins = make_bins(
-        >>>    boundaries_left=np.array([0.35, 1.0, 2.5]),
-        >>>    boundaries_right=np.array([1.0, 2.5, 10.0])
-        >>> )
+        bins = make_bins(
+           boundaries_left=np.array([0.35, 1.0, 2.5]),
+           boundaries_right=np.array([1.0, 2.5, 10.0])
+        )
     
     Create a set of bins from the lowest boundary, highest boundary, and midpoints:
-    .. code-block:: console
+    .. code-block:: python
 
-        >>> bins = make_bins(lb=0.35, ub=10.0, midpoints=np.array([.5, 2.0, 5.0]))
+        bins = make_bins(lb=0.35, ub=10.0, midpoints=np.array([.5, 2.0, 5.0]))
     
     """
     boundaries = kwargs.pop("boundaries", None)

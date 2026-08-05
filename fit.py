@@ -476,14 +476,6 @@ class LogNormal(object):
         smps.models.GenericParticleSizer
         smps.fit.LogNormalFitResults
         
-        Examples
-        --------
-        
-        Create a single-mode fit:
-        
-        >>> from smps.fit import LogNormal
-        >>> model = LogNormal()
-        >>> results = model.fit(obj.midpoints, obj.dndlogdp.mean(), modes=1)
 
         """
         
@@ -541,10 +533,6 @@ class LogNormalFitResults(object):
     modes : int
         The number of modes fit.
     
-    
-    See Also
-    --------
-    smps.fit.LogNormal
 
     """
     def __init__(self, params, error_matrix, fittedvalues, modes, **kwargs):
@@ -562,16 +550,7 @@ class LogNormalFitResults(object):
         -------
         statsmodels.iolib.table.SimpleTable
         
-        Examples
-        --------
 
-        >>> from smps.fit import LogNormal
-        >>>
-        >>> model = LogNormal()
-        >>>
-        >>> results = model.fit(obj.midpoints, obj.dndlogdp.mean(), modes=1)
-        >>> results.summary()
-        
         """
         # Convert GM from microns to nm
         params = self.params.copy()
@@ -613,18 +592,6 @@ class LogNormalFitResults(object):
         -------
         An array of number concentrations.
         
-        Examples
-        --------
-        
-        Predict the number concentration at 1 and 2.5 µm:
-        
-        >>> from smps.fit import LogNormal
-        >>>
-        >>> model = LogNormal()
-        >>>
-        >>> results = model.fit(obj.midpoints, obj.dndlogdp.mean(), modes=1)
-        >>> 
-        >>> results.predict([1., 2.5])     
 
         """
         model = models[weight][self.modes-1]

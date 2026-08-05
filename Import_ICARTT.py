@@ -21,11 +21,11 @@ def imp(filename, num_time_columns):
     
     Example
     -------
+    .. code-block:: python
 
-    .. code-block:: console
-
-        >>> output_dictionary = importICT.imp("activate-mrg1_hu25_20200214_R0.ict")
-        >>> print(output_dictionary)
+        import Import_ICARTT
+        output_dictionary = Import_ICARTT.imp("activate-mrg1_hu25_20200214_R0.ict")
+        print(output_dictionary)
         output_dictionary =
             {'Time_Start_seconds': array([61301., 61302., 61303., ..., 72258., 72259., 72260.]), 
             'Time_Stop_seconds': array([61302., 61303., 61304., ..., 72259., 72260., 72261.]), 

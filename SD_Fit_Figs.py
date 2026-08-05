@@ -34,20 +34,20 @@ def plot_SD(dp,dndlogdp1,dndlogdp2,filename_suffix,r,p,file_location):
     * ``mpl_toolkits``
     * ``pylab``
 
-    :param dp:
-    :type dp:
-    :param dndlogdp1:
-    :type dndlogdp1:
-    :param dndlogdp2:
-    :type dndlogdp2:
-    :param filename_suffix:
-    :type filename_suffix:
-    :param r:
-    :type r:
-    :param p:
-    :type p:
-    :param file_location:
-    :type file_location:
+    :param dp: array of particle diameters
+    :type dp: 1-D array
+    :param dndlogdp1: measured size distribution
+    :type dndlogdp1: 1-D array of size len(dp) 
+    :param dndlogdp2: fitted size distribution
+    :type dndlogdp2: 1-D array of size len(dp)
+    :param filename_suffix: name of file id f
+    :type filename_suffix: str
+    :param r: correlation coefficient of fitted vs. measure size distribution 
+    :type r: float
+    :param p: statistical significance (p-val) of fitted vs. measure size distribution 
+    :type p: float
+    :param file_location: location to save file
+    :type file_location: str
     """ 
 
     rcParams['font.size'] = 12

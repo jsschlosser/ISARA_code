@@ -28,9 +28,9 @@ def Comparison(x,y,prctils):
 	* ``libpysal``
 
     :param x: First measurement array.
-    :type x: array_like
+    :type x: 1-D array
     :param y: Second measurement array. Must have the same length as `x`.
-    :type y: array_like
+    :type y: 1-D array
     :param prctils: The physical units of the measurements, defaults to 'units'.
     :type prctils: str, optional
     :return: A 1-D array containing the calculated closure statistics in the following order:

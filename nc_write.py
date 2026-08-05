@@ -36,11 +36,6 @@ def cf19(data_path, data, Dims, GlobParams):
                        Must include a ``'format'`` key specifying the netCDF variant 
                        (e.g., ``'NETCDF4'``, ``'NETCDF4_CLASSIC'``).
     :type GlobParams: dict
-    :return: None
-    :rtype: NoneType
-    :raises KeyError: If ``GlobParams['format']`` is missing, or if required keys 
-                      are missing from the `data` sub-dictionaries.
-    :raises IOError: If the file data_path cannot be opened for writing.
 
     .. note::
        * Floating-point data (``float64``) is downcasted to single-precision (``f4``).
@@ -118,7 +113,7 @@ def cf19(data_path, data, Dims, GlobParams):
     print(ncfile)
     ncfile.close()
     print('Dataset is closed cleanly!')
-    
+
 if __name__ == "__main__":
     # 1. Setup sample system dimensions
     mock_dims = {
