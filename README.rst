@@ -1,4 +1,4 @@
-In Situ Aerosol Retrieval Algorithm (**ISARA**) is an open-source Python codebase that retrieves aerosol particle refractive index and hygroscopicity using user-inputted field campaign instrument data sets. This code relies on SIR SCA for look-up tables and SizeDistMerge for size distribution interpolation [1,2].
+In Situ Aerosol Retrieval Algorithm (**ISARA**) is an open-source Python codebase that retrieves aerosol particle refractive index and hygroscopicity using user-inputted field campaign instrument data sets. This code relies on SIR SCA for look-up tables and SizeDistMerge for size distribution interpolation [1,2]. This code base also features code adapted from Adapted from https://pypi.org/project/py-smps/.
  
 [1] Chemyakin E, Stamnes S, Burton SP, Liu X, Hostetler C, Ferrare R, Cairns B and Dubovik O (2021) Improved Lorenz-Mie Look-Up Table for Lidar and Polarimeter Retrievals. Front. Remote Sens. 2:711106. doi: 10.3389/frsen.2021.711106 
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-adapted from https://pypi.org/project/py-smps/
+adapted from https://pypi.org/project/py-smps/.
 
 :Authors: Joseph Schlosser
 :Revised: 4 Aug 2026

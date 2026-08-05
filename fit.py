@@ -1,5 +1,5 @@
 """
-Functions to support fitting multi-modal distributions. Adapted from https://pypi.org/project/py-smps/
+Functions to support fitting multi-modal distributions. Adapted from https://pypi.org/project/py-smps/.
 
 :Authors: Joseph Schlosser
 :Revised: 4 Aug 2026
