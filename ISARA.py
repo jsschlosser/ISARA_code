@@ -18,7 +18,7 @@ import numpy as np
 
 def Retr_CRI(wvl_dict, val_wvl, measurement_data,CRI_p,LUT_output_variables):  
     """
-    Returns aerosol particle real and imaginary refractive index from three scattering coefficeint measurements, three absorption coefficient measurements, a measured volume concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) mopsmap_wrapper.py must be present in a directory that is in your PATH
+    Returns aerosol particle real and imaginary refractive index from three scattering coefficeint measurements, three absorption coefficient measurements, a measured volume concentration for an aerosol size distribution.
     
     :param wvl_dict: Dictionary of wavelengths associated with each of the scattering and absorption measurements
     :type wvl_dict: numpy dictionary
@@ -126,7 +126,7 @@ def Retr_CRI(wvl_dict, val_wvl, measurement_data,CRI_p,LUT_output_variables):
 
 def Retr_kappa(wvl_dict,val_wvl,measurement_data,RH,kappa_p,CRI_d,LUT_output_variables):
     """
-    Returns aerosol particle hygroscopic growth factor from a humdified scattering coefficeint measurement, dry complex refractive index, and a measured number concentration for an aerosol size distribution. WARNINGS: 1) numpy must be installed to the python environment 2) mopsmap_wrapper.py must be present in a directory that is in your PATH.
+    Returns aerosol particle hygroscopic growth factor from a humdified scattering coefficeint measurement, dry complex refractive index, and a measured number concentration for an aerosol size distribution.
 
     :param wvl_dict: Dictionary of wavelengths associated with each of the scattering and absorption measurements
     :type wvl_dict: numpy dictionary
