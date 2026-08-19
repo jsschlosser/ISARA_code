@@ -60,7 +60,7 @@ exit()
 
 #1.2 Collate retrievals for internal consistency analysis
 cd /mnt/b/ISARA_Repo/ISARA_code
-rm ../ISARA_Repo/ISARA_data_files/ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy
+rm ../ISARA_data_files/ACTIVATE/Retrievals/activate-mrg-activate-large-smps_hu25_DataRetrievals.npy
 python3 
 import Collate_Data_Files
 Collate_Data_Files.Run()
@@ -145,15 +145,15 @@ python3 Synthetic_Data_Closure_Study.py
 
 #3.1 Generate ambient data files assuming coarse mode is spherical sea salt
 cd /mnt/b/ISARA_Repo/ISARA_data_files
-mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/
-mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
-cd /mnt/b/ISARA_Repo/ISARA_code/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
@@ -189,15 +189,15 @@ cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/Sphere_kappa0-cri1-33
 
 #3.2) Perform external consistency analysis assuming all particles are spheres
 cd /mnt/b/ISARA_Repo/ISARA_data_files
-mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/
 mkdir /mnt/d/ACTIVATE/ExternalClosure/
 mkdir /mnt/e/ACTIVATE/ExternalClosure/
 mkdir /mnt/f/Backup/ACTIVATE/ExternalClosure/
-mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 mkdir /mnt/d/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 mkdir /mnt/e/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 mkdir /mnt/f/Backup/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
-cd ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 
@@ -220,11 +220,11 @@ cp * /mnt/f/Backup/ACTIVATE/ExternalClosure/Sphere_kappa0-cri1-33
 
 #3.3) Generate ambient data files assuming coarse mode has inverse_tophat PSD and is composed of sea salt
 cd /mnt/b/ISARA_Repo/ISARA_data_files
-mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/
-mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
@@ -266,7 +266,7 @@ cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/inverse_tophat_kappa0-criSS
 
 #3.4) Generate ambient data files assuming coarse mode has equiprobable PSD and is composed of sea salt
 cd /mnt/b/ISARA_Repo/ISARA_data_files
-mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/
@@ -312,7 +312,7 @@ cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/equiprobable-criSS
 
 #3.5) Generate ambient data files assuming coarse mode has equiprobable PSD and is composed of dust
 cd /mnt/b/ISARA_Repo/ISARA_data_files
-mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/d/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/e/ACTIVATE/AmbientDataFiles/
 mkdir /mnt/f/Backup/ACTIVATE/AmbientDataFiles/
@@ -359,15 +359,15 @@ cp * /mnt/f/Backup/ACTIVATE/AmbientDataFiles/equiprobable-criDust
 
 #3.6) Perform external consistency analysis assuming fine particles are spheres and coarse particle are spheroids of 2 possible types (e.g., 3 shapes)
 cd /mnt/b/ISARA_Repo/ISARA_data_files
-mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/
 mkdir /mnt/d/ACTIVATE/ExternalClosure/
 mkdir /mnt/e/ACTIVATE/ExternalClosure/
 mkdir /mnt/f/Backup/ACTIVATE/ExternalClosure/
-mkdir ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere-SS-Dust
+mkdir /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere-SS-Dust
 mkdir /mnt/d/ACTIVATE/ExternalClosure/Sphere-SS-Dust
 mkdir /mnt/e/ACTIVATE/ExternalClosure/Sphere-SS-Dust
 mkdir /mnt/f/Backup/ACTIVATE/ExternalClosure/Sphere-SS-Dust
-cd ../ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere-SS-Dust
+cd /mnt/b/ISARA_Repo/ISARA_data_files/ACTIVATE/ExternalClosure/Sphere-SS-Dust
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
 python3 

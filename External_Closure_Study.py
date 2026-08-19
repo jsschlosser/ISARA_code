@@ -173,7 +173,7 @@ def Run():
                             }
         LegID_dictionary = {}
         for POI_file in os.listdir(f'../ISARA_data_files/{camp_name}/{POI_files}/'):
-            G = importICARTT.imp(f'../ISARA_data_files/{camp_name}/{POI_files}/{POI_file}',2)
+            G = Import_ICARTT.imp(f'../ISARA_data_files/{camp_name}/{POI_files}/{POI_file}',2)
             kystr = str(int(G["Date_YYYYMMDD"][0]))
             LegID_dictionary[kystr] = G
     prctile = [0,50,68,95,100]  
