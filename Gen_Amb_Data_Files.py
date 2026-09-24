@@ -196,23 +196,26 @@ def Run():
     mode_sizes[mode[0]] = np.array([0.001,1])
     mode_sizes[mode[1]] = np.array([0.1,1])
     mode_sizes[mode[2]] = np.array([1,20])
-    bulk_names = ["NucltoCoarse","AccutoCoarse","NucltoAccu","Coarse"]
+    bulk_names = ["NucltoCoarse","AccutoCoarse","NucltoAccu","Accu","Coarse"]
     bulk_shortnames = {
                         "NucltoCoarse":"total",
                         "AccutoCoarse":"optical",
                         "NucltoAccu":"fine",
+                        "Accu":"accumulation",
                         "Coarse":"coarse"
                       }
     bulk_sizes = {}
     bulk_sizes[bulk_names[0]] = np.array([0.001,20])
     bulk_sizes[bulk_names[1]] = np.array([0.1,20])
-    bulk_sizes[bulk_names[2]] = np.array([0.001,0.1])
-    bulk_sizes[bulk_names[3]] = np.array([1,20])
+    bulk_sizes[bulk_names[2]] = np.array([0.001,1])
+    bulk_sizes[bulk_names[3]] = np.array([0.1,1])
+    bulk_sizes[bulk_names[4]] = np.array([1,20])
     bulk_bounds = {}
     bulk_bounds[bulk_names[0]] = np.array([0,1,2])
     bulk_bounds[bulk_names[1]] = np.array([1,2])
     bulk_bounds[bulk_names[2]] = np.array([0,1])
-    bulk_bounds[bulk_names[3]] = np.array([2])
+    bulk_bounds[bulk_names[3]] = np.array([1])
+    bulk_bounds[bulk_names[4]] = np.array([2])
     inputput_filename_suffix = f'{camp_name_lower}-mrg{resolution}_{reference_platform}'
     output_filename_suffix = f'{camp_name_lower}-ISARAProducts-{reference_platform}'
     insitu_Filename =  [f for f in os.listdir(f'../ISARA_data_files/{camp_name}/Retrievals/{data_directory}') if (f.startswith(inputput_filename_suffix)&f.endswith('.npy')&np.logical_not(f.endswith('_DataRetrievals.npy')))]
@@ -462,6 +465,7 @@ def Run():
               AmbPrps[i_bulk]["amb_A_um2.cm-3"] = np.nansum(AmbPrps_mode["amb_A_um2.cm-3"][lim,...],axis=0)
               AmbPrps[i_bulk]["amb_V_um3.cm-3"] = np.nansum(AmbPrps_mode["amb_V_um3.cm-3"][lim,...],axis=0)
               AmbPrps[i_bulk]["amb_r_eff_um"] = 3*AmbPrps[i_bulk]["amb_V_um3.cm-3"] / AmbPrps[i_bulk]["amb_A_um2.cm-3"] 
+              print(AmbPrps[i_bulk]["amb_r_eff_um"])
               AmbPrps[i_bulk]["amb_M_g.cm-3"] = np.nansum(AmbPrps_mode["amb_M_g.cm-3"][lim,...],axis=0)     
               AmbPrps[i_bulk]['amb_ext_coef_Mm-1'] = np.nansum(AmbPrps_mode['amb_ext_coef_Mm-1'][lim,...],axis=0)
               AmbPrps[i_bulk]['amb_back_coef_Mm-1.sr-1'] = np.nansum(AmbPrps_mode['amb_back_coef_Mm-1.sr-1'][lim,...],axis=0)
@@ -473,6 +477,7 @@ def Run():
               AmbPrps[i_bulk]['amb_IRI_unitless'] = AmbPrps_mode['amb_IRI_unitless'][lim[0],...] * AmbPrps_mode["amb_V_um3.cm-3"][lim[0],...]
               AmbPrps[i_bulk]['amb_LDR_unitless'] = AmbPrps_mode['amb_LDR_unitless'][lim[0],...] * AmbPrps_mode['amb_back_coef_Mm-1.sr-1'][lim[0],...]
               for i_mode in lim[1:]:
+                print(i_mode)
                 AmbPrps[i_bulk]["amb_v_eff_unitless"] += (AmbPrps_mode["amb_v_eff_unitless"][i_mode,...]+1) * (AmbPrps_mode["amb_A_um2.cm-3"][i_mode,...]) / (AmbPrps_mode["amb_r_eff_um"][i_mode,...]**2)
                 AmbPrps[i_bulk]['amb_asym_unitless'] += AmbPrps_mode['amb_asym_unitless'][i_mode,...] * AmbPrps_mode['amb_sca_coef_Mm-1'][i_mode,...]
                 AmbPrps[i_bulk]['amb_RRI_unitless'] += AmbPrps_mode['amb_RRI_unitless'][i_mode,...] * AmbPrps_mode["amb_V_um3.cm-3"][i_mode,...]

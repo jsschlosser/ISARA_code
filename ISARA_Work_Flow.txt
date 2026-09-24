@@ -484,7 +484,7 @@ PACEPAX
 AmbientDataFiles/Sphere_kappa0-cri1-33
 cirpas-to
 5
-Added product DOI and added ambient properties for various modes. Corrected units of dndlogdp to be the correct cm-3 from m-3 in previous version; Added comment and ancillary data attributes to dndlogdp variable; Added _FillValue attribute and value to all variables; Removed variables with units attribute set as missing; Changed minimum required absorption to run ISARA from 1 Mm-1 to 0 Mm-1. Added veff variable for all modes to 'derived' group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step where applicable; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54.Spheres assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id.
+Added product DOI and added ambient properties for various modes. Corrected units of dndlogdp to be the correct cm-3 from m-3 in previous version; Added comment and ancillary data attributes to dndlogdp variable; Added _FillValue attribute and value to all variables; Removed variables with units attribute set as missing; Changed minimum required absorption to run ISARA from 1 Mm-1 to 0 Mm-1. Added veff variable for all modes to 'derived' group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step where applicable; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54.Spheres assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id. Fixed the size range for the fine mode to be 0.001 to 1 um.
 no
 AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat
 0
@@ -527,7 +527,7 @@ PACEPAX
 AmbientDataFiles/inverse_tophat_kappa0-criSS
 cirpas-to
 5
-Added product DOI and added ambient properties for various modes. Corrected units of dndlogdp to be the correct cm-3 from m-3 in previous version; Added comment and ancillary data attributes to dndlogdp variable; Added _FillValue attribute and value to all variables; Removed variables with units attribute set as missing; Changed minimum required absorption to run ISARA from 1 Mm-1 to 0 Mm-1. Added veff variable for all modes to 'derived' group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step where applicable; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54. Spheroidal seasalt properties assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id.
+Added product DOI and added ambient properties for various modes. Corrected units of dndlogdp to be the correct cm-3 from m-3 in previous version; Added comment and ancillary data attributes to dndlogdp variable; Added _FillValue attribute and value to all variables; Removed variables with units attribute set as missing; Changed minimum required absorption to run ISARA from 1 Mm-1 to 0 Mm-1. Added veff variable for all modes to 'derived' group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step where applicable; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54. Spheroidal seasalt properties assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id. Fixed the size range for the fine mode to be 0.001 to 1 um.
 yes
 inverse_tophat
 KERNEL_n22k16_181_123
@@ -602,7 +602,7 @@ PACEPAX
 30s
 AmbientDataFiles/equiprobable_kappa0-criDust
 cirpas-to
-5
+4
 Added product DOI and added ambient properties for various modes. Corrected units of dndlogdp to be the correct cm-3 from m-3 in previous version; Added comment and ancillary data attributes to dndlogdp variable; Added _FillValue attribute and value to all variables; Removed variables with units attribute set as missing; Changed minimum required absorption to run ISARA from 1 Mm-1 to 0 Mm-1. Added veff variable for all modes to 'derived' group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step where applicable; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54. Spheroidal dust properties assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id.
 yes
 equiprobable
@@ -680,7 +680,7 @@ PACEPAX
 30s
 AmbientDataFiles/Sphere_kappa0-cri1-33_NO_INLET_COR
 cirpas-to
-5
+4
 Added product DOI and added ambient properties for various modes. Corrected units of dndlogdp to be the correct cm-3 from m-3 in previous version; Added comment and ancillary data attributes to dndlogdp variable; Added _FillValue attribute and value to all variables; Removed variables with units attribute set as missing; Changed minimum required absorption to run ISARA from 1 Mm-1 to 0 Mm-1. Added veff variable for all modes to 'derived' group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step where applicable; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54.Spheres assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id.
 no
 AerosolLUT_1000_100_0.355_650bins_2325CRI_ln2rKr_Twomey.dat
