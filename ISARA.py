@@ -126,7 +126,7 @@ def Retr_CRI(wvl_dict, val_wvl, measurement_data,CRI_p,LUT_output_variables):
 
 def Retr_kappa(wvl_dict,val_wvl,measurement_data,RH,kappa_p,CRI_d,LUT_output_variables):
     """
-    Returns aerosol particle hygroscopic growth factor from a humdified scattering coefficeint measurement, dry complex refractive index, and a measured number concentration for an aerosol size distribution.
+    Returns aerosol particle hygroscopic growth factor from a humdified scattering coefficeint measurement, dry complex refractive index, and a measured number concentration for an aerosol size distribution. 
 
     :param wvl_dict: Dictionary of wavelengths associated with each of the scattering and absorption measurements
     :type wvl_dict: numpy dictionary

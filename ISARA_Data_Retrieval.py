@@ -81,9 +81,10 @@ def RunISARA():
         iwvl = 0        
         for kwvl in measured_Abs_dry: 
             finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1'] = measured_Abs_dry[kwvl][i1]
-            if (np.logical_not(np.isnan(finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']))&(finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']>=0)):
-                measflg += 1 
-                meas_data[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1'] = finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']
+            if (np.logical_not(np.isnan(finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']))&(finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']<0)):
+                finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1'] = 0
+            measflg += 1 
+            meas_data[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1'] = finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']
             iwvl += 1    
         iwvl = 0
         keycheck = None                          
@@ -93,9 +94,10 @@ def RunISARA():
             else:
                 finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1'] = measured_Sc_dry[kwvl][i1]/(np.exp(gamma[i1]*np.log((100)/(100-RHsc[i1]))))#scat_calc=scat_rh=measured(e^(GAMMA*ln((100-calcRH)/(100-measRH))))#f
             keycheck = kwvl     
-            if (np.logical_not(np.isnan(finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']))&(finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']>1)):
-                measflg += 1
-                meas_data[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1'] = finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']
+            if (np.logical_not(np.isnan(finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']))&(finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']<0)):
+                finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1'] = 0
+            measflg += 1
+            meas_data[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1'] = finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']
             if kwvl.__contains__(str(dry_wvl["sca"][1])):
                 finalout[f'wet_meas_sca_coef_{dry_wvl["sca"][1]}_Mm-1'] = measured_Sc_dry[kwvl][i1]/(np.exp(gamma[i1]*np.log((100-80)/(100-RHsc[i1]))))
                 finalout[f'wet_meas_ext_coef_{dry_wvl["sca"][1]}_Mm-1'] = finalout[f'wet_meas_sca_coef_{dry_wvl["sca"][1]}_Mm-1']+finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][1]}_Mm-1']
