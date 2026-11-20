@@ -81,7 +81,7 @@ def RunISARA():
         iwvl = 0        
         for kwvl in measured_Abs_dry: 
             finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1'] = measured_Abs_dry[kwvl][i1]
-            if (np.logical_not(np.isnan(finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']))&(finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']>1)):
+            if (np.logical_not(np.isnan(finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']))&(finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']>0)):
                 #finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1'] = 0
                 measflg += 1 
                 meas_data[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1'] = finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']
@@ -94,7 +94,7 @@ def RunISARA():
             else:
                 finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1'] = measured_Sc_dry[kwvl][i1]/(np.exp(gamma[i1]*np.log((100)/(100-RHsc[i1]))))#scat_calc=scat_rh=measured(e^(GAMMA*ln((100-calcRH)/(100-measRH))))#f
             keycheck = kwvl     
-            if (np.logical_not(np.isnan(finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']))&(finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']>0)):
+            if (np.logical_not(np.isnan(finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']))&(finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']>1)):
                 #finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1'] = 0
                 measflg += 1
                 meas_data[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1'] = finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']
