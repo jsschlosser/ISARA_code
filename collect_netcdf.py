@@ -39,7 +39,7 @@ def grabRSP(RSP_filename):
 
     # take the flight date from the RSP readme line 9
     splt_filename = np.array(RSP_filename.split("/"))
-    DATEinfo = np.array(splt_filename[-1].split("_"))[3]
+    DATEinfo = np.array(splt_filename[-1].split("_"))[2]
     rsp_Date = [str(DATEinfo)[0:4],str(DATEinfo)[4:6],str(DATEinfo)[6:8]]
 #    rsp_Date = [str(rsp_dictionary["000-README"][9])[24:28],str(rsp_dictionary["000-README"][9])[28:30],
 #                str(rsp_dictionary["000-README"][9])[30:32]]  

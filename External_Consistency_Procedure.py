@@ -512,8 +512,8 @@ def CaseStudy(
     RSP_data["costfunction"] = np.array(RSP_Dictionary["retrieval_normalized_cost_function_total"][flightindx])
     RSP_data["frmttime"] = np.array(RSP_Dictionary["rsp_frmttimedata"])[flightindx]# assign variables for the formatted time (YYYY:MM:DD hh:mm:ss UTC) and time array (decimal HAM UTC) from RSP
     rsp_dur = rsp_scn_dur*int(RSP_Dictionary["rsp_navg_scn"])/2 # calculate and store RSP scan time using scan duration and number of scans 
-    RSP_data["lat"] = np.array(RSP_Dictionary["lat"][flightindx])
-    RSP_data["lon"] = np.array(RSP_Dictionary["lon"][flightindx])
+    RSP_data["lat"] = np.squeeze(np.array(RSP_Dictionary["lat"][flightindx]))
+    RSP_data["lon"] = np.squeeze(np.array(RSP_Dictionary["lon"][flightindx]))
     RSP_data["iri_f"] = np.array(RSP_Dictionary["aerosol_imag_fine_556"][flightindx])
     RSP_data["rri_f"] = np.array(RSP_Dictionary["aerosol_real_fine_556"][flightindx])
     RSP_data["iri_f_unc"] = np.array(RSP_Dictionary["aerosol_imag_fine_556_unc"][flightindx])
@@ -649,6 +649,9 @@ def CaseStudy(
 
             pt_IS = np.array([Collocated_data["IS_Data"]["lat"],Collocated_data["IS_Data"]["lon"],Collocated_data["IS_Data"]["timemid"]/3600]).T   
             kdtree_IS = gen_KDtree(pt_IS,time_scale_factor)            
+            #print("Lat shape :", getattr(RSP_data["lat"], "shape", None), type(RSP_data["lat"]))
+            #print("Lon shape :", getattr(RSP_data["lon"], "shape", None), type(RSP_data["lon"]))
+            #print("Time shape:", getattr(RSP_data["time"], "shape", None), type(RSP_data["time"]))
             pt_RSP = np.array([RSP_data["lat"],RSP_data["lon"],RSP_data["time"]/3600]).T
             kdtree_RSP = gen_KDtree(pt_RSP,time_scale_factor)  
             pt_HSRL = np.array([HSRL_data["lat"],HSRL_data["lon"],HSRL_data["time"]/3600]).T 
