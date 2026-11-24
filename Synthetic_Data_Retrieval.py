@@ -120,6 +120,9 @@ def Run():
         if measflg == 6:        
             finalout['attempt_flag_CRI_unitless'] = 1
             Results = ISARA.Retr_CRI(dry_wvl, val_wvl, meas_data, CRI_p,LUT_output_variables) 
+            for key, value in Results.items():
+                if key.startswith('dry_fit_'):
+                    finalout[key] = value
             if Results["dry_RRI_unitless"] is not None:
                 finalout['attempt_flag_CRI_unitless'] = 2
                 #print(Results["RRIdry"])
@@ -128,6 +131,9 @@ def Run():
                     finalout[key] = Results[key]
                 finalout['attempt_flag_kappa_unitless'] = 1
                 Results = ISARA.Retr_kappa(wet_wvl, val_wvl, meas_data, 80, kappa_p, CRI_dry,LUT_output_variables)
+                for key, value in Results.items():
+                    if key.startswith('wet_fit_'):
+                        finalout[key] = value
                 if Results[f"kappa-{dry_wvl["sca"][1]}_unitless"] is not None:
                     finalout['attempt_flag_kappa_unitless'] = 2
                     for key in Results:

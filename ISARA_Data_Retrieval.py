@@ -76,7 +76,9 @@ def RunISARA():
         finalout = {}
         meas_data = {}
         #finalout['dry_wvl'] = dry_wvl
-        measflg = 0 
+        measflg = 0
+        valid_abs_channels = 0
+        valid_sca_channels = 0
         Lwvl = len(dry_wvl["sca"])
         iwvl = 0        
         for kwvl in measured_Abs_dry: 
@@ -84,6 +86,7 @@ def RunISARA():
             if (np.logical_not(np.isnan(finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']))&(finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']>0)):
                 #finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1'] = 0
                 measflg += 1 
+                valid_abs_channels += 1
                 meas_data[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1'] = finalout[f'dry_meas_abs_coef_{dry_wvl["abs"][iwvl]}_Mm-1']
             iwvl += 1    
         iwvl = 0
@@ -97,6 +100,7 @@ def RunISARA():
             if (np.logical_not(np.isnan(finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']))&(finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']>1)):
                 #finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1'] = 0
                 measflg += 1
+                valid_sca_channels += 1
                 meas_data[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1'] = finalout[f'dry_meas_sca_coef_{dry_wvl["sca"][iwvl]}_Mm-1']
             if kwvl.__contains__(str(dry_wvl["sca"][1])):
                 finalout[f'wet_meas_sca_coef_{dry_wvl["sca"][1]}_Mm-1'] = measured_Sc_dry[kwvl][i1]/(np.exp(gamma[i1]*np.log((100-80)/(100-RHsc[i1]))))
@@ -157,11 +161,30 @@ def RunISARA():
                     fulldpg = np.hstack((fulldpg,Dpg[imode]))
                     fulldpu = np.hstack((fulldpu,Dpu[imode]))
                     fulldpl = np.hstack((fulldpl,Dpl[imode])) 
-        if (keycheck.__contains__('submicron')):
+        if keycheck is not None and keycheck.__contains__('submicron') and fulldpg is not None:
             submicronfilter = np.where(fulldpg<=1)[0]
             fullsd= fullsd[submicronfilter]
             fulldpg = fulldpg[submicronfilter]                    
-        if (dpflg==icount) & (measflg == 6) & len(fullsd[fullsd>6]):        
+            fulldpu = fulldpu[submicronfilter]
+            fulldpl = fulldpl[submicronfilter]
+
+        valid_size_bins_above_threshold = (
+            int(np.count_nonzero(np.isfinite(fullsd) & (fullsd > 6)))
+            if fullsd is not None else 0
+        )
+        required_optical_channels = len(dry_wvl["sca"]) + len(dry_wvl["abs"])
+        optical_measurement_gate = int(measflg == required_optical_channels)
+        size_mode_gate = int(icount > 0 and dpflg == icount)
+        concentration_gate = int(valid_size_bins_above_threshold > 0)
+        finalout['cri_gate_valid_dry_abs_channels_unitless'] = valid_abs_channels
+        finalout['cri_gate_valid_dry_sca_channels_unitless'] = valid_sca_channels
+        finalout['cri_gate_size_modes_present_unitless'] = dpflg
+        finalout['cri_gate_size_bins_above_6_unitless'] = valid_size_bins_above_threshold
+        finalout['cri_gate_flag_optical_measurements_unitless'] = optical_measurement_gate
+        finalout['cri_gate_flag_size_modes_unitless'] = size_mode_gate
+        finalout['cri_gate_flag_concentration_unitless'] = concentration_gate
+
+        if optical_measurement_gate and size_mode_gate and concentration_gate:
             full_sd = np.full(len(full_dp["dpg"]),np.nan)
             full_dpl= np.full(len(full_dp["dpg"]),np.nan)
             full_dpg = np.full(len(full_dp["dpg"]),np.nan)
@@ -184,6 +207,9 @@ def RunISARA():
             meas_data['dpg_um'] = fulldpg  
             finalout['attempt_flag_CRI_unitless'] = 1    
             Results = Retr_CRI(dry_wvl, val_wvl, meas_data, CRI_p,LUT_output_variables)    
+            for key, value in Results.items():
+                if key.startswith('dry_fit_'):
+                    finalout[key] = value
             if Results["dry_RRI_unitless"] is not None:
                 finalout['attempt_flag_CRI_unitless'] = 2
                 #print(Results["RRIdry"])
@@ -193,6 +219,9 @@ def RunISARA():
                 if np.logical_not(np.isnan(finalout[f'wet_meas_sca_coef_{dry_wvl["sca"][1]}_Mm-1'])):
                     finalout['attempt_flag_kappa_unitless'] = 1
                     Results = Retr_kappa(wet_wvl, val_wvl, meas_data, 80, kappa_p, CRI_dry,LUT_output_variables)
+                    for key, value in Results.items():
+                        if key.startswith('wet_fit_'):
+                            finalout[key] = value
                     if Results[f'kappa-{dry_wvl["sca"][1]}_unitless'] is not None:
                         finalout['attempt_flag_kappa_unitless'] = 2
                         for key in Results:
@@ -429,6 +458,22 @@ def RunISARA():
             output_dict['VariableAttributes']["attempt_flag_kappa_unitless"]['long_name'] = 'Flags points where all measurements required for ISARA CRI and kappa retrieval and whether or not kappa was successfully retrieved.'
             output_dict['VariableAttributes']["attempt_flag_kappa_unitless"]['flag_values'] = '0 1 2'   
             output_dict['VariableAttributes']["attempt_flag_kappa_unitless"]['flag_meanings'] = 'no_attempt attempt success' 
+            gate_attributes = {
+                'cri_gate_valid_dry_abs_channels_unitless': 'Number of valid dry absorption channels.',
+                'cri_gate_valid_dry_sca_channels_unitless': 'Number of valid dry scattering channels.',
+                'cri_gate_size_modes_present_unitless': 'Number of configured size modes present.',
+                'cri_gate_size_bins_above_6_unitless': 'Number of size bins with dN/dlogDp greater than 6 cm-3.',
+                'cri_gate_flag_optical_measurements_unitless': 'Whether all required dry optical channels passed input checks.',
+                'cri_gate_flag_size_modes_unitless': 'Whether all configured size modes were present.',
+                'cri_gate_flag_concentration_unitless': 'Whether any size bin exceeded the concentration threshold.',
+            }
+            for key, long_name in gate_attributes.items():
+                output_dict['VariableAttributes'][key] = {
+                    'short_name': key,
+                    'units': '1',
+                    'long_name': long_name,
+                    'ACVSNC_standard_name': 'none',
+                }
             output_dict['VariableAttributes']["cal_fRH_550_unitless"] = {}    
             output_dict['VariableAttributes']["cal_fRH_550_unitless"]['short_name'] = 'cal_fRH'
             output_dict['VariableAttributes']["cal_fRH_550_unitless"]['units'] = '1'
@@ -568,6 +613,13 @@ def RunISARA():
                         else:
                             output_dict['VariableAttributes'][key2] = {}
                             output_dict['VariableAttributes'][key2]['_FillValue'] = np.nan
+                        if key2.startswith(('dry_fit_', 'wet_fit_')):
+                            output_dict['VariableAttributes'][key2]['units'] = (
+                                'Mm-1' if key2.endswith('_Mm-1') else '1'
+                            )
+                            output_dict['VariableAttributes'][key2]['long_name'] = (
+                                key2.replace('_', ' ')
+                            )
                         
                         output_dict[key2][i1] = results_line[key2]
 
