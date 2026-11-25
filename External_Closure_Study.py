@@ -183,9 +183,9 @@ def Run():
     output_dictionary = {}
     stdv_dictionary = {}
     for sep_dist in additional_spatial_separation_constraint:
-        print(sep_dist)
+        #print(sep_dist)
         for sep_time in additional_time_separation_constraint:
-            print(sep_time)
+            #print(sep_time)
             output_filename = f"{camp_name}-External_Closure_{sep_dist}km_{sep_time}min.npy" 
             output_dictionary[f'{sep_dist}km-{sep_time}min'] = {} 
             stdv_dictionary[f'{sep_dist}km-{sep_time}min'] = {} 
