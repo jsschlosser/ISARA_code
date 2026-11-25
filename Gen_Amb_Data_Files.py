@@ -192,7 +192,8 @@ def Run():
 
     mode = ["Nucl","Accu","Coarse"]
     mode_sizes = {}
-    mode_sizes[mode[0]] = np.array([0.001,1])
+    # These intervals are disjoint because bulk products sum mode contributions.
+    mode_sizes[mode[0]] = np.array([0.001,0.1])
     mode_sizes[mode[1]] = np.array([0.1,1])
     mode_sizes[mode[2]] = np.array([1,20])
     bulk_names = ["NucltoCoarse","AccutoCoarse","NucltoAccu","Accu","Coarse"]
@@ -346,6 +347,7 @@ def Run():
 
         coarseflag = None
         sd_coarse = None
+        sd_n_coarse = None
         if coarsemode == "yes":
           for coarse_keyname in coarsemode_keynames:
             if coarseflag is None:
@@ -390,7 +392,10 @@ def Run():
             target_sd_n[np.isnan(target_sd_n)] = 0
             dNdlnr_fine_amb = target_sd_n
             fine_bounds = np.where((rp_interp<LBcutoff/2))[0]
-          valid_data2 = np.where((np.logical_not(np.isnan(sd_n_coarse[:,i1]))))[0]
+          if sd_n_coarse is not None:
+            valid_data2 = np.where(np.logical_not(np.isnan(sd_n_coarse[:,i1])))[0]
+          else:
+            valid_data2 = np.array([], dtype=int)
           if len(valid_data2)>2:
             sd_n = sd_n_coarse[valid_data2,i1]
             dp_coarse = dpg_coarse_full[valid_data2]/2
@@ -399,15 +404,17 @@ def Run():
             target_sd_n[np.isnan(target_sd_n)] = 0
             dNdlnr_coarse_amb = target_sd_n
             course_bounds = np.where((rp_interp>=LBcutoff/2))[0]
-          if (len(valid_data)>=2) & (len(valid_data2)>=2):
+          if len(valid_data)>2 and len(valid_data2)>2:
             dNdlnr_w_interp[fine_bounds,i1] = dNdlnr_fine_amb[fine_bounds]
             dNdlnr_w_interp[course_bounds,i1] = dNdlnr_coarse_amb[course_bounds] 
-          elif (len(valid_data)>=2) & (len(valid_data2<2)):  
+          elif len(valid_data)>2 and len(valid_data2)<=2:
             dNdlnr_w_interp[:,i1] = dNdlnr_fine_amb
           #elif (len(valid_data)==0) & (len(valid_data2)>2):   
           #  dNdlnr_w_interp[:,i1] = dNdlnr_coarse_amb
           #  RRIf[:,i1] = RRIc[:,i1]
           #  IRIf[:,i1] = IRIc[:,i1]
+        # Convert the input dN/dlog10(Dp) values to dN/dln(r) for integration.
+        dNdlnr_w_interp /= np.log(10)
         dAdlnr_w_interp = (4*np.pi)*((rp_interp[:,None])**2)*dNdlnr_w_interp
         dVdlnr_w_interp = (4*np.pi/3)*((rp_interp[:,None])**3)*dNdlnr_w_interp     
         rri = dict()
