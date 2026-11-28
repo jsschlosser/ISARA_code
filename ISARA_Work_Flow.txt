@@ -630,7 +630,6 @@ cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/AmbientDataFiles/equiprobable_kapp
 cd /mnt/b/ISARA_Repo/ISARA_data_files
 mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/
 mkdir /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/Sphere-SS-Dust
-
 cd /mnt/b/ISARA_Repo/ISARA_data_files/PACEPAX/ExternalClosure/Sphere-SS-Dust
 rm *
 cd /mnt/b/ISARA_Repo/ISARA_code
@@ -777,7 +776,7 @@ PACEPAX
 30s
 AmbientDataFiles/equiprobable_kappa0-criDust_NO_INLET_COR
 cirpas-to
-5
+6
 Added product DOI and added ambient properties for various modes. Corrected units of dndlogdp to be the correct cm-3 from m-3 in previous version; Added comment and ancillary data attributes to dndlogdp variable; Added _FillValue attribute and value to all variables; Removed variables with units attribute set as missing; Changed minimum required absorption to run ISARA from 1 Mm-1 to 0 Mm-1. Added veff variable for all modes to 'derived' group; Corrected units of reff to be um. Extended SD truncation to 2 um for the retrieval step where applicable; Extended dry RRI search range to 1.51--1.55 from 1.52--1.54. Spheroidal dust properties assumed for coarse-mode; Data produced with SIR SCA instead of MOPSMAP; Fixed long names of source variables to include id.
 yes
 equiprobable
