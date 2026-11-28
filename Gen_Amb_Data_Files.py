@@ -399,8 +399,8 @@ def Run():
             valid_data2 = np.array([], dtype=int)
           if len(valid_data2)>2:
             sd_n = sd_n_coarse[valid_data2,i1]
-            dp_coarse = dpg_coarse_full[valid_data2]/2
-            dpg_edges = sdm.edges_from_mids_geometric(dp_coarse)
+            dp_coarse_diameter = dpg_coarse_full[valid_data2]
+            dpg_edges = sdm.edges_from_mids_geometric(dp_coarse_diameter)
             target_sd_n = sdm.rebin_dndlog_by_edges_overlap(dpg_edges * 1000, dp_grid_edges * 1000, sd_n)
             target_sd_n[np.isnan(target_sd_n)] = 0
             dNdlnr_coarse_amb = target_sd_n
